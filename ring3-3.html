@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品1詳細</title>
+    <link rel="stylesheet" href="stylesheet.css"> <!-- CSSファイルを適用 -->
+</head>
+
+<div class="header">
+    <a href="index.html" class="header-logo">Ayra</a>
+    <ul class="nav-list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="onlineshop.html">Online shop</a></li>
+        <li><a href="custom.html">Custom</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<body>
+    <header class="ring-category">
+        <h1>Category</h1>
+        <nav class="category">
+            <a href="onlineshop.html">Online shop</a> |
+            <a href="ring2.html">ドゥヴェ</a> |
+            <a href="ring5.html">ヴァーティカル</a> |
+            <a href="ring6.html">スクリュー</a> |
+            <a href="ring4.html">チャトヴァリ</a> |
+            <a href="ring1.html">エーカム</a>
+        </nav>
+    </header>
+
+    <div class="product-detail">
+       
+        <div class="product-images">
+            <img id="main-image" src="../images/グリーンカイヤナイト.フローライト.シトリン.jpg" alt="商品1横から">
+            
+            <div class="thumbnail-container">
+                <img class="thumbnail" src="../images/緑カイヤナイト.フローライト.シトリン正面.jpg" alt="商品1正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="../images/緑カイヤナイト.フローライト.シトリンイメージ (2).JPG" alt="商品1の別角度" onclick="swapImages(this)">
+            </div>
+        </div>
+       
+        <div class="product-info">
+            <h1>グリーンカイヤナイト/フローライト/シトリン</h1>
+            <p><strong>素材:</strong>グリーンカイヤナイト/フローライト/シトリン</p>
+            <p><strong>価格:</strong>¥5,600</p>
+            <p><strong>サイズ:</strong></p>
+            <div class="tags">
+                <a href="tag.html?tag=グリーンカイヤナイト" class="tag">グリーンカイヤナイト</a>
+                <a href="tag.html?tag=カイヤナイト" class="tag">カイヤナイト</a>
+                <a href="tag.html?tag=フローライト" class="tag">フローライト</a>
+                <a href="tag.html?tag=シトリン" class="tag">シトリン</a>
+            </div>
+            <button class="buy-button">カートに入れる</button>
+        </div>
+
+    </div>
+
+    <div class="related-products-container">
+        <h2>Related items</h2>
+        <div id="related-products">
+            
+            <div id="related-items" class="product-grid"></div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <a href="https://www.instagram.com/ayra_rings" target="_blank">
+            <img src="../images/図1.png" alt="Instagram" class="instagram-icon">
+        </a>
+        <ul class="nav-list">
+            <li><a href="about.html">About</a></li>
+        <li><a href="onlineshop.html">Online shop</a></li>
+        <li><a href="custom.html">Custom</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        
+        // 商品データ（実際はサーバーやデータベースで管理）
+        const products = [
+        { 
+            name: "クリスタルクォーツ丸形", 
+            price: "¥2,600",
+            tags: ["クリスタルクォーツ", "丸形"], 
+            img: "../images/クリスタルクォーツ丸横.jpg",
+            url: "ring1-1.html" 
+        },
+        { 
+            name: "クリスタルクォーツ楕円形",
+            price: "¥3,500",
+            tags: ["クリスタルクォーツ", "楕円形", "透明"],                 
+            img: "../images/クリスタルクォーツ楕円横.jpg",
+            url: "ring1-2.html"
+        },
+        { 
+            name: "クリスタルクォーツ五角形",
+            price: "¥4,000", 
+            tags: ["クリスタルクォーツ", "多角形", "透明"], 
+            img: "../images/クリスタルクォーツ五角形横.jpg",
+            url: "ring1-3.html"
+        },
+        { 
+            name: "ローズクォーツ",
+            price: "¥3,000", 
+            tags: ["ローズクォーツ", "長方形"], 
+            img: "../images/ローズクォーツ長方形横.jpg",
+            url: "ring1-4.html"
+        },
+        { 
+            name: "スマイル ピンク",
+            price: "¥3,300",
+            tags: ["エナメル", "ピンク"],
+            img: "../images/ピンクスマイル横.jpg",
+            url: "ring1-5.html"
+        },
+        { 
+            name: "カーネリアン",
+            price: "¥3,000",
+            tags: ["カーネリアン", "雫形", "オレンジ"],
+            img: "../images/カーネリアン雫横.jpg",
+            url: "ring1-6.html"
+        },
+        { 
+            name: "グリーンアメジスト",
+            price: "¥4,400",
+            tags: ["グリーンアメジスト", "長方形", "緑"],
+            img: "../images/緑アメジスト横.jpg",
+            url: "ring1-7.html" 
+        },
+        { 
+            name: "アメジスト",
+            price: "¥4,400", 
+            tags: ["アメジスト", "楕円形", "紫"], 
+            img: "../images/アメジスト楕円横.jpg",
+            url: "ring1-8.html"
+        },
+        { 
+            name: "カルセドニー",
+            price: "¥2,500", 
+            tags: ["カルセドニー", "丸形", "水色", "カボション"], 
+            img: "../images/カルセドニー横.jpg",
+            url: "ring1-9.html" 
+        },
+        { 
+            name: "モナリザピンク",
+            price: "¥2,500", 
+            tags: ["モナリザピンク", "丸形", "ピンク", "カボション"],
+            img: "../images/モナリザピンク横.jpg",
+            url: "ring1-10.html" 
+        },
+        
+        { 
+            name: "ローズクォーツ/クリスタルクォーツ",
+            price: "¥4,000", 
+            tags: ["ローズクォーツ", "クリスタルクォーツ", "透明"], 
+            img: "../images/ローズ.クリスタル横.jpg",
+            url: "ring2-1.html" 
+        },
+        { 
+            name: "カイヤナイト/アメジスト",
+            price: "¥5,800", 
+            tags: ["カイヤナイト", "アメジスト", "青", "紫"], 
+            img: "../images/カイヤナイト.アメジスト横.jpg",
+            url: "ring2-2.html" 
+        },
+        { 
+            name: "カーネリアン/シトリン",
+            price: "¥4,000", 
+            tags: ["カーネリアン", "シトリン", "オレンジ"], 
+            img: "../images/カーネリアン.シトリン横.jpg",
+            url: "ring2-3.html" 
+        },
+        { 
+            name: "ラリマー/カイヤナイト/タンザナイト",
+            price: "¥5,800", 
+            tags: ["ラリマー", "カイヤナイト", "タンザナイト", "青"], 
+            img: "../images/ラリマー.カイヤナイト.タンザナイト.jpg",
+            url: "ring3-1.html" 
+        },
+        { 
+            name: "グリーンハイドロクォーツ/ラリマー/フローライト",
+            price: "¥8,500", 
+            tags: ["グリーンハイドロクォーツ", "ラリマー", "フローライト", "緑"], 
+            img: "../images/緑ハイド.ラリマー.フローライト.jpg",
+            url: "ring3-2.html" 
+        },
+        { 
+            name: "グリーンカイヤナイト/フローライト/シトリン",
+            price: "¥5,600", 
+            tags: ["グリーンカイヤナイト", "カイヤナイト", "フローライト", "シトリン"], 
+            img: "../images/グリーンカイヤナイト.フローライト.シトリン.jpg",
+            url: "ring3-3.html" 
+        },
+        { 
+            name: "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー",
+            price: "¥5,600", 
+            tags: ["クリスタルクォーツ", "ブルードゥルージー", "ホワイトドゥルージー", "透明", "白", "青"], 
+            img: "../images/クリスタル.ドゥルージー.ドゥルージー横.jpg",
+            url: "ring3-4.html" 
+        },
+        { 
+            name: "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド",
+            price: "¥5,800", 
+            tags: ["カイヤナイト", "グリーンカイヤナイト", "ハーキマーダイヤモンド", "青"], 
+            img: "../images/カイヤナイト.緑カイヤナイト.ハーキマー横.jpg",
+            url: "ring3-5.html" 
+        },
+        { 
+            name: "ローズクォーツ/アクアマリン/シトリン",
+            price: "¥5,600", 
+            tags: ["ローズクォーツ", "アクアマリン", "シトリン"], 
+            img: "../images/ローズクォーツ.アクアマリン.シトリン.jpg",
+            url: "ring3-6.html" 
+        },
+        { 
+            name: "フローライト/アメジスト/シトリン",
+            price: "¥5,600", 
+            tags: ["フローライト", "アメジスト", "シトリン"], 
+            img: "../images/フローライト.アメジスト.シトリン横.jpg",
+            url: "ring3-7.html" 
+        },
+        { 
+            name: "ローズクォーツ/ガーネット/アメジスト",
+            price: "¥5,200", 
+            tags: ["ローズクォーツ", "ガーネット", "アメジスト", "紫"], 
+            img: "../images/ローズクォーツ.ガーネット.アメジスト.jpg",
+            url: "ring3-8.html" 
+        },
+        { 
+            name: "グリーンカイヤナイト/クリスタルクォーツ/アパタイト",
+            price: "¥5,800", 
+            tags: ["グリーンカイヤナイト", "カイヤナイト", "クリスタルクォーツ", "アパタイト", "青"], 
+            img: "../images/緑カイヤナイト.クリスタルクォーツ.アパタイト.jpg",
+            url: "ring3-9.html" 
+        },
+        { 
+            name: "カイヤナイト/アメジスト/シトリン",
+            price: "¥5,600", 
+            tags: ["カイヤナイト", "アメジスト", "シトリン"], 
+            img: "../images/カイヤナイト.アメジスト.シトリン.jpg",
+            url: "ring3-10.html" 
+        },
+        { 
+            name: "クリスタルクォーツ/カイヤナイト/タンザナイト",
+            price: "¥5,600", 
+            tags: ["クリスタルクォーツ", "カイヤナイト", "タンザナイト", "青", "紫"], 
+            img: "../images/クリスタル.カイヤナイト.タンザナイト横.jpg",
+            url: "ring3-11.html" 
+        },
+        { 
+            name: "タンザナイト/アメジスト/ガーネット/ローズクォーツ",
+            price: "¥5,800", 
+            tags: ["タンザナイト", "アメジスト", "ガーネット", "ローズクォーツ", "紫"], 
+            img: "../images/紫4粒横.jpg",
+            url: "ring4-1.html" 
+        },
+        { 
+            name: "アマゾナイト/ソーラークォーツ/シトリン/アゲート",
+            price: "¥5,800", 
+            tags: ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色"], 
+            img: "../images/水色4粒横.jpg",
+            url: "ring4-2.html" 
+        },
+        { 
+            name: "アメジスト",
+            price: "¥5,000", 
+            tags: ["アメジスト", "紫"], 
+            img: "../images/アメジスト縦3横.jpg",
+            url: "ring5-1.html" 
+        },
+        { 
+            name: "アクアマリン/アメジスト/シトリン",
+            price: "¥5,000", 
+            tags: ["アクアマリン", "アメジスト", "シトリン"], 
+            img: "../images/アクア.アメジスト.シトリン縦3横.jpg",
+            url: "ring5-2.html" 
+        },
+        { 
+            name: "クリスタルクォーツ",
+            price: "¥5,800", 
+            tags: ["クリスタルクォーツ", "透明"], 
+            img: "../images/クリスタルクォーツ縦3横.jpg",
+            url: "ring5-3.html" 
+        },
+        { 
+            name: "フローライト",
+            price: "¥5,000", 
+            tags: ["フローライト", "緑"], 
+            img: "../images/フローライト縦3横.jpg",
+            url: "ring5-4.html" 
+        },
+        { 
+            name: "アクアマリン",
+            price: "¥4,000", 
+            tags: ["アクアマリン", "水色"], 
+            img: "../images/アクアマリン正面.jpg",
+            url: "ring6-1.html"
+        },
+        { 
+            name: "ハーキマーダイヤモンド/クリスタルクォーツ",
+            price: "¥5,000", 
+            tags: ["ハーキマーダイヤモンド", "クリスタルクォーツ", "透明"], 
+            img: "../images/ハーキマー.クリスタル横.jpg",
+            url: "ring6-2.html" 
+        },
+        ];
+         
+        const currentProduct = products.find(p => p.url === "ring3-3.html");
+        
+        // 関連商品を取得（同じタグを含む）
+const relatedProducts = products.filter(p => 
+    p !== currentProduct && // 自分自身を除外
+    p.tags.some(tag => currentProduct.tags.includes(tag)) // タグが一致する商品を取得
+);
+
+console.log("Related items:", relatedProducts);
+
+// 関連商品をHTMLに表示
+const relatedContainer = document.getElementById("related-products");
+if (relatedProducts.length > 0) {
+    relatedProducts.forEach(product => {
+        const productElement = document.createElement("div");
+        productElement.classList.add("related-product"); // ✅ クラスを追加
+        productElement.innerHTML = `
+            <a href="${product.url}">
+                <img src="${product.img}" alt="${product.name}" width="100">
+                <p>${product.name}</p>
+                <p>${product.price}</p>
+            </a>
+        `;
+        relatedContainer.appendChild(productElement);
+    });
+} else {
+    relatedContainer.innerHTML = "<p>関連商品がありません</p>";
+}
+
+
+    function swapImages(thumbnail) {
+        let mainImage = document.getElementById("main-image");
+
+        // 現在のメイン画像を一時保存
+        let tempSrc = mainImage.src;
+
+        // クリックされたサムネイルの画像をメイン画像に設定
+        mainImage.src = thumbnail.src;
+
+        // 元のメイン画像をサムネイルに戻す
+        thumbnail.src = tempSrc;
+    }
+    </script>
+
+</body>
+
+</html>
+
