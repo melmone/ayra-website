@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header {  
     font-family: serif;
     display: flex;
@@ -648,4 +649,656 @@ html, body {
 
 #gallery h2 {
     font-size: 30px;
+=======
+.header {  
+    font-family: serif;
+    display: flex;
+    background-color: #D2C6D8;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.header-logo {
+    font-size: 60px;
+    padding-left: 30px;
+    text-decoration: none;
+    color: #991b1b;
+}
+
+img {
+    width: 500px;
+    height: 400px;
+}
+
+.category a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.category a:hover {
+    color: gray;
+}
+
+header h1 {
+    font-size: 14px;
+}
+
+.nav-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    padding-top: 35px;
+    padding-left: 40px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-list li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.nav-list a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* ✅ スライドショー全体の設定 */
+.slideshow-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
+}
+
+/* ✅ 各スライドのスタイル */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* ✅ スライド画像のサイズ調整 */
+.slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を画面いっぱいに調整 */
+}
+
+/* ✅ アクティブなスライドを表示 */
+.active {
+    opacity: 1;
+}
+
+.main {
+    background-color: #fff;
+    
+    padding-top: 0px;
+    width: 100%;
+}
+
+p {
+    text-align: center;
+    font-family: serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: serif;
+
+}
+
+.figures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.figures figure {
+    width: 80%;
+   
+}
+
+.figures img {
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
+}
+
+.figures a {
+    font-family: serif;
+    color: black;
+    text-decoration: none;
+}
+
+.figures a:hover {
+    color: gray;
+}
+
+.figures img:hover {
+    filter: grayscale(30%);
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 35px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ラベル */
+label {
+    font-family: serif;
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 入力欄 */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 必須項目のスタイル */
+.required {
+    color: red;
+    font-size: 14px;
+}
+
+/* 送信ボタン */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #0d4888;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.footer img {
+    justify-content: center; 
+}
+
+.footer ul {
+    justify-content: center;  /* アイテムを横方向に中央寄せ */
+    align-items: center;      /* アイテムを縦方向に中央寄せ */
+    height: 100px;            /* フッターの高さを設定（適宜調整） */
+}
+
+.footer li {
+    font-size: 15px;
+    font-family: serif;
+}
+
+
+
+.instagram-icon {
+    display: block;  /* ブロック要素に変更 */
+    margin: 0 auto;  /* 左右のマージンを自動で調整（中央寄せ） */
+    width: 40px;  /* アイコンの幅 */
+    height: 40px; /* アイコンの高さ */
+    padding-top: 30px;
+    transition: transform 0.3s ease; /* ホバー時のアニメーション */
+}
+
+/* ホバー時にアイコンを少し拡大 */
+.instagram-icon:hover {
+    transform: scale(1.1);
+}
+
+.product-container {
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.product-container img {
+    width: 90%;
+    height: auto;
+    transition: 0.3s;
+    margin-top: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
+}
+
+.product-container a:hover {
+    color: gray;
+}
+
+.product-container img:hover {
+    filter: grayscale(30%);
+}
+
+.product-info {
+    font-family: serif;
+}
+
+.product-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/*左側の商品画像*/
+.product-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/*メイン画像*/
+#main-image {
+    width: 400px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
+}
+
+/* サムネイル画像（小さい画像） */
+.thumbnail-container {
+    display: flex;  /* 横並びにする */
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+
+.thumbnail {
+    width: 70px !important; /* サムネイルを小さめに */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s; opacity 0.3s ease-in-out;
+}
+
+/* サムネイルのホバー時のアニメーション */
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* 右側の商品情報 */
+.product-info {
+    max-width: 400px;    
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.buy-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #cc5500;
+}
+
+.product-images img {
+    width: 20px;
+    height: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
+}
+
+/*右側の商品情報*/
+.product-info {
+    max-width: 400px;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    text-align: left;
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列均等 */
+    gap: 20px; /* 画像の間隔 */
+    text-align: center;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+
+#product-list img {
+    width: 50%;  /* または適切な幅 */
+    height: auto; /* 高さを自動調整 */
+    object-fit: cover; /* 縦横比を崩さない */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
+}
+
+
+
+.tags {
+    display: flex; /* 横並びにする */
+    flex-wrap: wrap; /* タグが多い場合は折り返す */
+    gap: 10px; /* タグ同士の間隔 */
+}
+
+.tag {
+    display: inline-block; /* 枠で囲むための設定 */
+    padding: 5px 12px; /* タグの内側余白 */
+    border: 1px solid #ccc; /* 枠線の色 */
+    border-radius: 10px; /* 丸みのある枠 */
+    background-color: #f8f8f8; /* 背景色 */
+    color: #333; /* 文字の色 */
+    text-decoration: none; /* アンダーバーを消す */
+    font-size: 14px; /* 文字サイズ */
+    transition: 0.3s ease; /* ホバー時のアニメーション */
+  }
+
+.tag:hover {
+    background-color: #eae8e8; /* ホバー時の背景色 */
+    border-color: #aaa; /* ホバー時の枠の色 */
+ }
+
+
+.product:hover img {
+    filter: grayscale(30%); /* 画像を少しグレーに */
+    transition: 0.3s; /* スムーズな変化 */
+}
+
+.product:hover h2 {
+    color: gray;
+    transition: 0.3s;
+}
+
+
+.buy-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #cc5500;
+}
+
+.related-products-container {
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+#related-products a {
+    text-decoration: none !important;
+    color: #000 !important;    
+}
+
+#related-products {
+    flex-grow: 1;
+    display: flex;
+    gap: 15px;
+   
+    overflow-x: auto;
+    align-items: flex-start;
+    white-space: nowrap; /* 横並びを維持 */
+}
+
+#related-products h2 {
+    margin-bottom: 10px;
+}
+
+
+#related-products img {
+    width: 150px; /* 画像サイズ調整 */
+    height: auto;
+    object-fit: cover; /* 必要に応じてサイズ調整 */
+    margin-right: 10px; /* 画像間の余白 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* ホバー時に動きをつける */
+}
+
+#related-products img:hover {
+    transform: scale(1.05); /* ホバー時に拡大 */
+    
+}
+
+.related-product {
+    flex: 0 0 auto; /* 要素の幅を固定 */
+    text-align: center;
+    width: 150px; /* 適切な幅を設定 */
+    align-items: center; 
+}
+
+.related-product img {
+    width: 100%;
+    height: auto;
+}
+
+.related-product p {
+    margin: 5px 0 0;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+#related-items {
+    display: flex;         /* 横並びに配置 */
+    gap: 20px;             /* 商品間の余白 */
+}
+
+#related-items a {
+    text-decoration: none !important; /* アンダーバーを消す */
+    color: #000 !important; /* 文字色を黒に */
+    font-size: 14px; /* フォントサイズ調整（必要に応じて変更） */
+    display: block; /* クリック範囲を広げるためにブロック要素に */
+    text-align: center;
+}
+
+.main {
+    background-color: #fff;
+    
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+}
+
+
+
+#news {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+#news h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+.news-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+.news-list li {
+    display: flex;
+    gap: 1em;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+.news-date {
+    color: #888;
+    min-width: 100px;
+  }
+  
+.news-content {
+    flex: 1;
+  }
+
+#gallery figures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3列に分割 */
+}
+
+.ring-category {
+    font-family: serif;
+}
+
+#gallery {
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+#about h2 {
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+#custom h2 {
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+#products h2 {
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+#contact h2 {
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+#contact p {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 100vh;         /* ビューポートの高さに合わせる */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #950042;
+    width: 100%;
+    max-width: 100%;   
+    padding: 20px 0; 
+}
+  
+#intro {
+    margin-top: 80px;
+}
+
+.gallery-images {
+    display: flex;    
+    
+}
+
+.gallery-item {
+    width: 70%;
+    height: auto;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+
+
+.nav-list2 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    padding-top: 35px;
+    padding-left: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list2 li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.nav-list2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.MainImage {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.category {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#gallery h2 {
+    font-size: 30px;
+>>>>>>> 343627c94adf022e4ead2aa870ea836affa74722
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -134,4 +135,142 @@
         </script>
 
   </body>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <title>Ayra</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+        <div class="header">
+            <a href="index.html" class="header-logo">Ayra</a>
+            <ul class="nav-list">
+                <li><a href="about.html">About</a></li>
+                <li><a href="onlineshop.html">Online shop</a></li>
+                <li><a href="custom.html">Custom</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    <div class="main">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="../images/slideshow4.JPG" alt="スライド画像1">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow2.JPG" alt="スライド画像2">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow6 (2).JPG" alt="スライド画像3">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow7.JPG" alt="スライド画像4">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow3.JPG" alt="スライド画像7">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow1.JPG" alt="スライド画像6">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow8.JPG" alt="スライド画像7">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow6.JPG" alt="スライド画像7">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow10.JPG" alt="スライド画像7">
+            </div>
+            <div class="slide fade">
+                <img src="../images/slideshow9.JPG" alt="スライド画像7">
+            </div>
+        </div>
+    
+        <section id="intro">
+            <intro>
+                <p>天然石、半貴石のラフジュエリーリングを取り揃えております。</p>
+                <p>インド・ジャイプールの工房で作られたリングは、すべて一点物。</p>
+                <p>あえて磨きをかけていない石そのものの個性や美しさをお楽しみください。</p>
+            </intro>
+        </section>
+        
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <figures class="figures">
+            <figure>
+                <a href="gallery1.html">
+                    <img src="../images/アメジスト3イメージ.JPG" alt="画像3">
+                </a>
+            </figure>
+
+            <figure>
+                <a href="gallery2.html">
+                    <img src="../images/緑ハイドロ.ラリマー.フローライトイメージ.JPG" alt="画像2">
+                </a>
+            </figure>
+
+            <figure>
+                <a href="gallery3.html">
+                    <img src="../images/IMG_8444.JPG" alt="画像1">
+                </a>
+            </figure>
+
+            <figure>
+                <a href="gallery4.html">
+                    <img src="../images/image0.jpeg" alt="画像1">
+                </a>
+            </figure>        
+            </figures>
+        </section>   
+    </div>
+    
+    <div class="footer">
+        <a href="https://www.instagram.com/ayra_rings" target="_blank">
+            <img src="../images/図1.png" alt="Instagram" class="instagram-icon">
+        </a>
+        <ul class="nav-list2">
+            <li><a href="about.html">About</a></li>
+            <li><a href="onlineshop.html">Online shop</a></li>
+            <li><a href="custom.html">Custom</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let slides = document.querySelectorAll(".slide");
+            let currentIndex = 0;
+        
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove("active");
+                    if (i === index) {
+                        slide.classList.add("active");
+                    }
+                });
+            }
+        
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+        
+            // 初回表示
+            showSlide(currentIndex);
+        
+            // 5秒ごとにスライドを切り替え
+            setInterval(nextSlide, 5000);
+        });
+        </script>
+
+  </body>
+>>>>>>> 343627c94adf022e4ead2aa870ea836affa74722
 </html>
