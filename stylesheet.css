@@ -121,28 +121,28 @@ h2 {
     padding-top: 30px;
 }
 
-.figures figure {
+.figures0 figure {
     width: 80%;
    
 }
 
-.figures img {
+.figures0 img {
     width: 100%;
     height: auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
 }
 
-.figures a {
+.figures0 a {
     font-family: serif;
     color: black;
     text-decoration: none;
 }
 
-.figures a:hover {
+.figures0 a:hover {
     color: gray;
 }
 
-.figures img:hover {
+.figures0 img:hover {
     filter: grayscale(30%);
 }
 
@@ -234,6 +234,30 @@ button:hover {
     padding-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.figures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.figures figure {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 画像を水平方向で中央揃え */
+    align-items: center;     /* 画像を垂直方向で中央揃え */
+    margin:0;
+   
+}
+
+.figures img {
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
 }
 
 .product-container a {
@@ -537,22 +561,21 @@ button:hover {
     flex: 1;
   }
 
-#gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3列に分割 */
-    justify-content: space-between;
-}
 
 .ring-category {
     font-family: serif;
 }
 
 #gallery {
+    display: grid;
     padding-top: 30px;
     font-size: 2em;
     justify-content: space-between;
 }
 
+#gallery h2 {
+    text-align: center;
+}
 #about h2 {
     padding-top: 30px;
     font-size: 2em;
