@@ -1,3 +1,18 @@
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 横方向のはみ出しを防止 */
+  }
+  
+
+  
+  img, div, section, article {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  
+
 .header {  
     font-family: serif;
     display: flex;
