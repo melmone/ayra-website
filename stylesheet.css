@@ -1,15 +1,11 @@
-html {
+html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* 横方向のはみ出しを防止 */
+    overflow-x: hidden; /* 横スクロール防止 */
   }
   
-
-  
-  img, div, section, article {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+  * {
+    box-sizing: border-box;
   }
   
 
@@ -31,10 +27,6 @@ html {
     color: #991b1b;
 }
 
-img {
-    width: 500px;
-    height: 400px;
-}
 
 .category a {
     text-decoration: none;
