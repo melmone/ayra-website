@@ -12,6 +12,14 @@
     <div class="wrapper">
         <div class="header">
             <a href="index.html" class="header-logo">Ayra</a>
+            
+            
+            <div class="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
             <ul class="nav-list">
                 <li><a href="about.html">About</a></li>
                 <li><a href="onlineshop.html">Online shop</a></li>
@@ -57,11 +65,11 @@
         </div>
     
         <section id="intro">
-            <intro>
+            <div class="introduction">
                 <p>天然石、半貴石のラフジュエリーリングを取り揃えております。</p>
                 <p>インド・ジャイプールの工房で作られたリングは、すべて一点物。</p>
                 <p>あえて磨きをかけていない石そのものの個性や美しさをお楽しみください。</p>
-            </intro>
+            </div>
         </section>
         
         <section id="gallery">
@@ -107,7 +115,20 @@
         </ul>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navList = document.querySelector(".nav-list");
+  
+      hamburger.addEventListener("click", function () {
+        navList.classList.toggle("active");
+      });
+    });
+  </script>
+  
 </body>
+
     
     <script>
         document.addEventListener("DOMContentLoaded", function () {
