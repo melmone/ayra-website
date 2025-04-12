@@ -27,8 +27,6 @@ body {
 
 .header-logo img {
     height: 130px;
-
-
 }
 
 .category a {
@@ -162,6 +160,22 @@ header h1 {
 }
 
 @media (max-width: 768px) {
+
+    .header {  
+        font-family: serif;
+        display: flex;
+        background-color: #D2C6D8;
+        background-size: cover;
+        height: 100px;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-logo img {
+        height: 100px;
+    }
+
     .introduction p {
         text-align: center;
         font-size: 16px;
@@ -173,7 +187,48 @@ header h1 {
         font-size: 16px;
         font-family: serif;
     }
-
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px auto;
+        padding: 0 10px;
+      }
+    
+      .product-images {
+        align-items: center;
+      }
+    
+      #main-image {
+        width: 90%; /* 横幅の90%にしてスマホ画面にフィット */
+        max-width: 300px;
+      }
+    
+      .thumbnail-container {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    
+      .thumbnail {
+        width: 60px;
+      }
+    
+      .product-info {
+        max-width: 100%;
+        text-align: center;
+      }
+    
+      .product-info h1 {
+        font-size: 20px;
+      }
+    
+      .product-info p {
+        font-size: 14px;
+      }
+    
+      .buy-button {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
 }
 
 p {
@@ -393,6 +448,7 @@ button:hover {
 
 .product-info {
     font-family: serif;
+    max-width: 400px;
 }
 
 .product-detail {
@@ -441,9 +497,6 @@ button:hover {
 }
 
 /* 右側の商品情報 */
-.product-info {
-    max-width: 400px;    
-}
 
 .product-info h1 {
     font-size: 24px;
