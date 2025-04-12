@@ -55,6 +55,10 @@ header h1 {
     align-items: center;     /* 垂直中央（今回の目的） */
 }
 
+.nav-list a:hover {
+    color: gray;
+}
+
 .nav-list li {
     list-style: none;
     margin-right: 30px;
@@ -101,14 +105,16 @@ header h1 {
 
 /* 共通部分 */
 .hamburger-menu {
+    font-size: 34px; 
+    cursor: pointer;
     display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
     position: absolute;
-  top: 15px;
-  right: 20px;
-  }
+    top: 12px;
+    right: 20px;
+}
   
   .hamburger-menu .bar {
     height: 3px;
@@ -116,12 +122,16 @@ header h1 {
     background-color: #333;
     margin: 4px 0;
     transition: 0.4s;
-  }
+}
   
+
+
+
   /* モバイル時のみ表示 */
   @media (max-width: 768px) {
     .hamburger-menu {
       display: flex;
+      top: 20px;
     }
   
     .nav-list {
@@ -129,7 +139,7 @@ header h1 {
       flex-direction: column;
       background-color: #fff;
       position: absolute;
-      top: 60px;
+      top: 100px;
       right: 0;
       width: 100%;
       padding: 10px;
@@ -160,6 +170,12 @@ header h1 {
 }
 
 @media (max-width: 768px) {
+
+    .introduction p {
+        text-align: center;
+        font-family: serif;
+        font-size: 16px;
+    }
 
     .header {  
         font-family: serif;
@@ -403,7 +419,31 @@ button:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
 }
 
-
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+  
+  .image-wrapper img {
+    display: block;
+    width: 90%;
+    height: auto;
+    position: relative;
+  }
+  
+  .sold-out-label {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    background-color: rgba(100, 100, 100, 0.7); /* 半透明のグレー */
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    
+  }
+  
 
 .product-container {
     display: grid;
@@ -415,12 +455,14 @@ button:hover {
     
 }
 
-.product-container product {
+.product-container .product {
     width: 100%;
     
     justify-content: center; /* 水平方向で中央揃え */
     align-items: center;     /* 垂直方向で中央揃え */
 }
+
+
 
 
 .product-container a {
