@@ -154,6 +154,12 @@ header h1 {
       margin: 10px 0;
       text-align: center;
     }
+
+    figcaption {
+        font-size: 12px;
+
+    }
+    
   }
   
 
@@ -167,15 +173,12 @@ header h1 {
 .introduction p {
     text-align: center;
     font-family: serif;
+    font-size: 24px;
 }
 
 @media (max-width: 768px) {
 
-    .introduction p {
-        text-align: center;
-        font-family: serif;
-        font-size: 16px;
-    }
+    
 
     .header {  
         font-family: serif;
@@ -194,7 +197,7 @@ header h1 {
 
     .introduction p {
         text-align: center;
-        font-size: 16px;
+        font-size: 12px;
         font-family: serif;
     }
 
@@ -290,6 +293,7 @@ h2 {
 .figures0 img:hover {
     filter: grayscale(30%);
 }
+
 
 form {
     max-width: 400px;
