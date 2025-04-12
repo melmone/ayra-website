@@ -101,6 +101,9 @@ header h1 {
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+    position: absolute;
+  top: 15px;
+  right: 20px;
   }
   
   .hamburger-menu .bar {
@@ -126,6 +129,7 @@ header h1 {
       right: 0;
       width: 100%;
       padding: 10px;
+      z-index: 999; /* 写真より前に表示 */
     }
   
     .nav-list.active {

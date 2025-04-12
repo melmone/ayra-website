@@ -41,10 +41,10 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/クリスタルバイパス横.jpg" alt="商品1横から">
+            <img id="main-image" src="images/ハーキマー.クリスタル横.jpg" alt="商品1横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/ハーキマー.クリスタル横.jpg" alt="商品1正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/クリスタルバイパス横.jpg" alt="商品1正面" onclick="swapImages(this)">
                 <img class="thumbnail" src="images/クリスタルバイパスイメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
             </div>
         </div>
@@ -83,6 +83,18 @@
         <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger-menu");
+          const navList = document.querySelector(".nav-list");
+      
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+        });
+      </script>
+    </body>
 
     <script>
         

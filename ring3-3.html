@@ -87,6 +87,17 @@
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger-menu");
+          const navList = document.querySelector(".nav-list");
+      
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+        });
+      </script>
+    </body>
+    <script>
         
         // 商品データ（実際はサーバーやデータベースで管理）
         const products = [
