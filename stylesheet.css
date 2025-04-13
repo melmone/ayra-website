@@ -43,6 +43,13 @@ header h1 {
     font-size: 14px;
 }
 
+#tag-title {
+    padding-top: 20px;
+    font-family: serif;
+    font-size: 20px;
+    color: #6d6c6c;
+}
+
 .nav-list {
     display: flex;
     flex-wrap: wrap; /* 横幅が足りなければ次の行に折り返す */
@@ -127,40 +134,7 @@ header h1 {
 
 
 
-  /* モバイル時のみ表示 */
-  @media (max-width: 768px) {
-    .hamburger-menu {
-      display: flex;
-      top: 20px;
-    }
   
-    .nav-list {
-      display: none;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 100px;
-      right: 0;
-      width: 100%;
-      padding: 10px;
-      z-index: 999; /* 写真より前に表示 */
-    }
-  
-    .nav-list.active {
-      display: flex;
-    }
-  
-    .nav-list li {
-      margin: 10px 0;
-      text-align: center;
-    }
-
-    figcaption {
-        font-size: 12px;
-
-    }
-    
-  }
   
 
 .main {
@@ -176,78 +150,8 @@ header h1 {
     font-size: 24px;
 }
 
-@media (max-width: 768px) {
-
-    
-
-    .header {  
-        font-family: serif;
-        display: flex;
-        background-color: #D2C6D8;
-        background-size: cover;
-        height: 100px;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .header-logo img {
-        height: 100px;
-    }
-
-    .introduction p {
-        text-align: center;
-        font-size: 12px;
-        font-family: serif;
-    }
-
-    .category a {
-        text-align: center;
-        font-size: 16px;
-        font-family: serif;
-    }
-    .product-detail {
-        flex-direction: column;
-        align-items: center;
-        margin: 30px auto;
-        padding: 0 10px;
-      }
-    
-      .product-images {
-        align-items: center;
-      }
-    
-      #main-image {
-        width: 90%; /* 横幅の90%にしてスマホ画面にフィット */
-        max-width: 300px;
-      }
-    
-      .thumbnail-container {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-    
-      .thumbnail {
-        width: 60px;
-      }
-    
-      .product-info {
-        max-width: 100%;
-        text-align: center;
-      }
-    
-      .product-info h1 {
-        font-size: 20px;
-      }
-    
-      .product-info p {
-        font-size: 14px;
-      }
-    
-      .buy-button {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
+.br-sp {
+    display: none;
 }
 
 p {
@@ -448,10 +352,17 @@ button:hover {
     
   }
   
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 子要素（画像）を中央に配置 */
+    
+}
 
 .product-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     justify-items: center; /* 各アイテムを中央に配置 */
     text-align: center;
@@ -461,24 +372,22 @@ button:hover {
 
 .product-container .product {
     width: 100%;
-    
     justify-content: center; /* 水平方向で中央揃え */
     align-items: center;     /* 垂直方向で中央揃え */
+    justify-content: space-between;
 }
-
-
 
 
 .product-container a {
     text-decoration: none;
     color: black;
+    justify-content: center; /* 水平方向で中央揃え */
 }
-
-
 
 .product-container img {
     width: 90%;
     height: auto;
+    justify-content: center; /* 水平方向で中央揃え */
     transition: 0.3s;
     margin-top: 30px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
@@ -595,7 +504,7 @@ button:hover {
 
 
 #product-list img {
-    width: 50%;  /* または適切な幅 */
+    width: 80%;  /* または適切な幅 */
     height: auto; /* 高さを自動調整 */
     object-fit: cover; /* 縦横比を崩さない */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
@@ -888,4 +797,124 @@ html, body {
 
 #gallery h2 {
     font-size: 30px;
+}
+
+/* モバイル時のみ表示 */
+@media (max-width: 768px) {
+        .br-sp {
+            display: inline;
+            margin-top: 8px;  /* 好きな高さに調整できる */
+            content: "";      /* Safari対策（あってもなくてもOK） */
+          }
+        
+        
+    
+        .header {  
+            font-family: serif;
+            display: flex;
+            background-color: #D2C6D8;
+            background-size: cover;
+            height: 100px;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .header-logo img {
+            height: 100px;
+        }
+    
+        .introduction p {
+            text-align: center;
+            font-size: 12px;
+            font-family: serif;
+        }
+    
+        .category a {
+            text-align: center;
+            font-size: 16px;
+            font-family: serif;
+        }
+        .product-detail {
+            flex-direction: column;
+            align-items: center;
+            margin: 30px auto;
+            padding: 0 10px;
+          }
+        
+          .product-images {
+            align-items: center;
+          }
+        
+          #main-image {
+            width: 90%; /* 横幅の90%にしてスマホ画面にフィット */
+            max-width: 300px;
+          }
+        
+          .thumbnail-container {
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+        
+          .thumbnail {
+            width: 60px;
+          }
+        
+          .product-info {
+            max-width: 100%;
+            text-align: center;
+          }
+        
+          .product-info h1 {
+            font-size: 20px;
+          }
+        
+          .product-info p {
+            font-size: 14px;
+          }
+        
+          .buy-button {
+            font-size: 16px;
+            padding: 10px 20px;
+          }
+    .hamburger-menu {
+      display: flex;
+      top: 20px;
+    }
+
+    #product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2列均等 */
+        gap: 20px; /* 画像の間隔 */
+        text-align: center;
+        cursor: pointer;
+        font-size: 10px;
+    }
+  
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 100px;
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      z-index: 999; /* 写真より前に表示 */
+    }
+  
+    .nav-list.active {
+      display: flex;
+    }
+  
+    .nav-list li {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    figcaption {
+        font-size: 12px;
+
+    }
+    
 }
