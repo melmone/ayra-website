@@ -920,5 +920,10 @@ html, body {
         font-size: 12px;
 
     }
+
+    .footer li {
+        font-size: 8px;
+        font-family: serif;
+    }
     
 }
