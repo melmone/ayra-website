@@ -963,7 +963,7 @@ html, body {
       }
 
       .footer li {
-        font-size: 12px; /*スマホように小さく*/
+        font-size: 8px; /*スマホように小さく*/
         font-family: serif;
     }
 }
