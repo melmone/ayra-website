@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: auto;
     overflow-x: hidden; /* 横スクロール防止 */
   }
   
@@ -136,15 +136,11 @@ header h1 {
   
 
 
-
-  
-  
-
 .main {
     background-color: #fff;
     margin-top: 0px;
     padding-top: 0px;
-    width: 100%;
+    width: auto;
 }
 
 .introduction p {
@@ -349,7 +345,7 @@ button:hover {
     background-color: rgba(100, 100, 100, 0.7); /* 半透明のグレー */
     color: white;
     text-align: center;
-    padding: 8px 0;
+    padding: 16px 0;
     font-size: 16px;
     font-weight: bold;
     
@@ -934,7 +930,7 @@ html, body {
         background-color: rgba(100, 100, 100, 0.7); /* 半透明のグレー */
         color: white;
         text-align: center;
-        padding: 8px 0;
+        padding: 4px 0;
         font-size: 12px;
         font-weight: bold;
       }
