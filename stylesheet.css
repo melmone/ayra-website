@@ -961,4 +961,9 @@ html, body {
         font-size: 12px;
         font-weight: bold;
       }
+
+      .footer li {
+        font-size: 12px; /*スマホように小さく*/
+        font-family: serif;
+    }
 }
