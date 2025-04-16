@@ -6,7 +6,15 @@ body {
     width: auto;
     overflow-x: hidden; /* 横スクロール防止 */
   }
-  
+
+.ring-title {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.ring-intro {
+    padding-top: 20px;
+}
   
 
 .header {  
