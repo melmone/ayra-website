@@ -25,10 +25,10 @@
             <li><a href="news.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
+        
         <div class="cart-icon-wrapper">
             <a href="cart.html">
-              <img src="images/cart-icon.png" alt="カート" class="cart-icon">
+              <img src="images/cart.png" alt="カート" class="cart-icon">
               <span class="cart-count" id="cart-count">0</span>
             </a>
           </div>
@@ -386,23 +386,7 @@ if (relatedProducts.length > 0) {
 
     const relatedItems = document.getElementById('related-items');
 
-    // 左スクロール
-    document.getElementById('prevBtn').addEventListener('click', (event) => {
-        event.preventDefault();
-        relatedItems.scrollBy({
-            left: -200, // 左に200pxスクロール
-            behavior: 'smooth'
-        });
-    });
-
-    // 右スクロール
-    document.getElementById('nextBtn').addEventListener('click', (event) => {
-        event.preventDefault();
-        relatedItems.scrollBy({
-            left: 200, // 右に200pxスクロール
-            behavior: 'smooth'
-        });
-    });
+   
 
     </script>
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カート | Ayra</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+  <div class="cart-container">
+    <h2>ショッピングカート</h2>
+    <div id="cart-items"></div>
+    <div id="total-price"></div>
+  </div>
+
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const cartContainer = document.getElementById('cart-items');
+    const totalPriceEl = document.getElementById('total-price');
+
+    if (cartItems.length === 0) {
+      cartContainer.innerHTML = '<p class="empty-message">カートに商品がありません。</p>';
+    } else {
+      let total = 0;
+      cartItems.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'cart-item';
+        itemElement.innerHTML = `
+          <span class="cart-item-name">${item.name}</span>
+          <span>¥${item.price.toLocaleString()}</span>
+        `;
+        cartContainer.appendChild(itemElement);
+        total += item.price;
+      });
+
+      totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
+    }
+  </script>
+</body>
+</html>
