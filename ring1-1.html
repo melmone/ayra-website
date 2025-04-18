@@ -86,7 +86,7 @@
           });
         });
       </script>
-    </body>
+    
 
     
     <div class="related-products-container">
@@ -390,7 +390,7 @@ if (relatedProducts.length > 0) {
 
     </script>
 
-<script>
+    <script>
     // カートに追加する関数
     document.querySelector(".buy-button").addEventListener("click", function () {
       const product = {
@@ -398,7 +398,8 @@ if (relatedProducts.length > 0) {
         material: "クリスタルクォーツ",
         price: 2600,
         size: "9号",
-        quantity: 1
+        quantity: 1,
+        image: document.getElementById("main-image").src  // 商品画像のURL
       };
   
       // 現在のカート情報を取得

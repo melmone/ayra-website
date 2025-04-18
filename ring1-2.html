@@ -28,10 +28,10 @@
 
         <div class="cart-icon-wrapper">
             <a href="cart.html">
-              <img src="images/cart-icon.png" alt="カート" class="cart-icon">
+              <img src="images/cart.png" alt="カート" class="cart-icon">
               <span class="cart-count" id="cart-count">0</span>
             </a>
-          </div>
+        </div>
         </div>
     </div>
 
@@ -61,7 +61,7 @@
         </div>
        
         <div class="product-info">
-            <h1>クリスタルクォーツ 10号</h1>
+            <h1 class="product-title">クリスタルクォーツ 10号</h1>
             <p><strong>素材:</strong>クリスタルクォーツ</p>
             <p><strong>価格:</strong> ¥3,500</p>
             <p><strong>サイズ:</strong>10号</p>
@@ -382,16 +382,20 @@ if (relatedProducts.length > 0) {
         // 元のメイン画像をサムネイルに戻す
         thumbnail.src = tempSrc;
     }
+
+    const relatedItems = document.getElementById('related-items');
+
     </script>
     <script>
         // カートに追加する関数
         document.querySelector(".buy-button").addEventListener("click", function () {
           const product = {
             title: document.querySelector(".product-title").textContent,
-            material: "クリスタルクォーツ",
+            material: "クリスタルクォーツ 10号",
             price: 3500,
             size: "10号",
             quantity: 1
+            image: document.getElementById("main-image").src  // 商品画像のURL
           };
       
           // 現在のカート情報を取得
@@ -412,40 +416,39 @@ if (relatedProducts.length > 0) {
           alert("カートに追加しました！");
         });
       </script>
-      
-      
-      <script>
-        // カートデータをローカルストレージに保存
-        function addToCart(product) {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          cart.push(product);
-          localStorage.setItem('cart', JSON.stringify(cart));
-          updateCartCount();
-        }
-      
-        // バッジ表示更新
-        function updateCartCount() {
-          const cart = JSON.parse(localStorage.getItem('cart')) || [];
-          const countElem = document.getElementById('cart-count');
-          countElem.textContent = cart.length;
-          countElem.style.display = cart.length > 0 ? 'inline-block' : 'none';
-        }
-      
-        // ページ読み込み時にも更新
-        document.addEventListener('DOMContentLoaded', updateCartCount);
-      
-        // ボタンにイベント追加
-        document.querySelector('.buy-button').addEventListener('click', function () {
-          const product = {
-            name: document.querySelector('.product-title').textContent,
-            price: 3500,
-            size: '10号',
-            image: document.getElementById('main-image').src
-          };
-          addToCart(product);
-          alert("商品をカートに追加しました！");
-        });
-      </script>
+  
+  <script>
+    // カートデータをローカルストレージに保存
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
+  
+    // バッジ表示更新
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const countElem = document.getElementById('cart-count');
+      countElem.textContent = cart.length;
+      countElem.style.display = cart.length > 0 ? 'inline-block' : 'none';
+    }
+  
+    // ページ読み込み時にも更新
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  
+    // ボタンにイベント追加
+    document.querySelector('.buy-button').addEventListener('click', function () {
+      const product = {
+        name: document.querySelector('.product-title').textContent,
+        price: 2600,
+        size: '9号',
+        image: document.getElementById('main-image').src
+      };
+      addToCart(product);
+      alert("商品をカートに追加しました！");
+    });
+  </script>
       
 </body>
 
