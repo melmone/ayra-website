@@ -15,10 +15,14 @@
     <div id="cart-items"></div>
     <div id="total-price"></div>
   </div>
+  
+  <!-- ご購入手続きへボタン -->
+<div class="checkout-area">
+    <button id="checkout-button" class="checkout-button">ご購入手続きへ</button>
+  </div>
 
   <script>
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-
     const cartContainer = document.getElementById('cart-items');
     const totalPriceEl = document.getElementById('total-price');
 
@@ -30,11 +34,12 @@
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
         itemElement.innerHTML = `
-          <span class="cart-item-name">${item.name}</span>
+          <span class="cart-item-name">${item.title}</span>
           <span>¥${item.price.toLocaleString()}</span>
         `;
         cartContainer.appendChild(itemElement);
-        total += item.price;
+
+        total += parseInt(item.price, 10);
       });
 
       totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
@@ -42,46 +47,73 @@
   </script>
 
 <script>
-    // カート表示を更新する関数
     function renderCart() {
       const cart = JSON.parse(localStorage.getItem('cart')) || [];
       const container = document.getElementById('cart-container');
-      container.innerHTML = ''; // 一度初期化
-
+      container.innerHTML = ''; // 初期化
+  
+      const cartItemsDiv = document.createElement('div');
+      cartItemsDiv.id = 'cart-items';
+      container.appendChild(cartItemsDiv);
+  
       if (cart.length === 0) {
-        container.innerHTML = '<p>カートに商品がありません。</p>';
+        cartItemsDiv.innerHTML = '<p class="empty-message">カートに商品がありません。</p>';
         return;
       }
-
+  
+      let total = 0;
+  
       cart.forEach((item, index) => {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'cart-item';
-
+  
         itemDiv.innerHTML = `
           <img src="${item.image}" alt="${item.title}">
           <div class="cart-item-info">
             <p><strong>${item.title}</strong></p>
-            <p>価格: ¥${item.price}</p>
+            <p>価格: ¥${Number(item.price).toLocaleString()}</p>
           </div>
           <img src="images/trash-icon.png" alt="削除" class="delete-btn" data-index="${index}">
         `;
-
-        container.appendChild(itemDiv);
+  
+        cartItemsDiv.appendChild(itemDiv);
+  
+        // 合計計算（文字列でも数値に変換）
+        total += parseInt(item.price, 10);
       });
-
-      // 削除ボタンにイベント追加
+  
+      // 合計金額の表示
+      const totalPriceEl = document.createElement('div');
+      totalPriceEl.id = 'total-price';
+      totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
+      container.appendChild(totalPriceEl);
+  
+      // 削除ボタンにイベントを追加
       document.querySelectorAll('.delete-btn').forEach(btn => {
         btn.addEventListener('click', function () {
           const index = this.getAttribute('data-index');
-          cart.splice(index, 1); // 該当商品を削除
+          cart.splice(index, 1);
           localStorage.setItem('cart', JSON.stringify(cart));
           renderCart(); // 再描画
         });
       });
     }
-
+  
     // 初期表示
     document.addEventListener('DOMContentLoaded', renderCart);
   </script>
+  
+  
+  
+  <script>
+    // ボタンをクリックで checkout.html に遷移
+    document.getElementById('checkout-button').addEventListener('click', function () {
+      window.location.href = 'checkout.html';
+    });
+  </script>
+　
+
+
+
 </body>
 </html>

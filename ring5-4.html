@@ -56,8 +56,10 @@
         <div class="product-info">
             <h1 class="product-title">グリーンフローライト 9号</h1>
             <p><strong>素材:</strong>グリーンフローライト</p>
-            <p><strong>価格:</strong>¥5,000</p>
+            <p><strong>価格:</strong>¥5,600</p>
             <p><strong>サイズ:</strong>9号</p>
+            <p><strong>商品番号:</strong>C006-9</p>
+
             <div class="tags">
                 <a href="tag.html?tag=グリーンフローライト" class="tag">グリーンフローライト</a>
                 <a href="tag.html?tag=フローライト" class="tag">フローライト</a>
@@ -383,36 +385,52 @@ if (relatedProducts.length > 0) {
         thumbnail.src = tempSrc;
     }
     </script>
-    <script>
-        // カートに追加する関数
-        document.querySelector(".buy-button").addEventListener("click", function () {
-          const product = {
-            title: document.querySelector(".product-title").textContent,
-            material: "グリーンフローライト",
-            price: 5600,
-            size: "9号",
-            quantity: 1,
-            image: document.getElementById("main-image").src  // 商品画像のURL
-          };
-      
-          // 現在のカート情報を取得
-          let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      
-          // すでに同じ商品があるか確認（タイトルとサイズで判定）
-          const existing = cart.find(item => item.title === product.title && item.size === product.size);
-      
-          if (existing) {
-            existing.quantity += 1;
-          } else {
-            cart.push(product);
-          }
-      
-          // カートを保存
-          localStorage.setItem("cart", JSON.stringify(cart));
-      
-          alert("カートに追加しました！");
-        });
-      </script>
+   <script>
+    // カートに商品を追加する関数
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+      // 同じ商品（タイトルとサイズが一致）を探す
+      const existing = cart.find(item => item.title === product.title && item.size === product.size);
+  
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        product.quantity = 1;
+        cart.push(product);
+      }
+  
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
+  
+    // カート内商品の合計数量を数えてバッジに表示
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  
+      const countElem = document.getElementById('cart-count');
+      countElem.textContent = totalQuantity;
+      countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+    }
+  
+    // ページ読み込み時にバッジを更新
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  
+    // ボタンが押されたら実行
+    document.querySelector('.buy-button').addEventListener('click', function () {
+      const product = {
+        title: document.querySelector('.product-title').textContent,
+        material: "グリーンフローライト 9号",
+        price: 5600,
+        size: "9号",
+        image: document.getElementById("main-image").src
+      };
+  
+      addToCart(product);
+      alert("カートに追加しました！");
+    });
+  </script>
       
       
       

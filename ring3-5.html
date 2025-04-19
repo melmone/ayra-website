@@ -45,24 +45,26 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/カイヤナイト.緑カイヤナイト.ハーキマー横.jpg" alt="商品1横から">
+            <img id="main-image" src="images/カイヤ.緑カイヤ.ハーキマー9-10号横.jpg" alt="商品1横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/カイヤナイト.緑カイヤナイト.ハーキマー正面.jpg" alt="商品1正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/カイヤ.緑カイヤ.ハーキマー9-10号正面.jpg" alt="商品1正面" onclick="swapImages(this)">
                 <img class="thumbnail" src="images/カイヤナイト.緑カイヤナイト.ハーキマーイメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
         <div class="product-info">
-            <h1 class="product-title">カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 9号</h1>
+            <h1 class="product-title">カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 9-10号</h1>
             <p><strong>素材:</strong>カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド</p>
-            <p><strong>価格:</strong>¥5,800</p>
-            <p><strong>サイズ:</strong>9号</p>
+            <p><strong>価格:</strong>¥7,000</p>
+            <p><strong>サイズ:</strong>9-10号</p>
+            <p><strong>商品番号:</strong>C009-9</p>
             <div class="tags">
                 <a href="tag.html?tag=カイヤナイト" class="tag">カイヤナイト</a>
                 <a href="tag.html?tag=グリーンカイヤナイト" class="tag">グリーンカイヤナイト</a>
                 <a href="tag.html?tag=ハーキマーダイヤモンド" class="tag">ハーキマーダイヤモンド</a>
                 <a href="tag.html?tag=9号" class="tag">9号</a>
+                <a href="tag.html?tag=10号" class="tag">10号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -386,32 +388,48 @@ if (relatedProducts.length > 0) {
     </script>
 
 <script>
-    // カートに追加する関数
-    document.querySelector(".buy-button").addEventListener("click", function () {
-      const product = {
-        title: document.querySelector(".product-title").textContent,
-        material: "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 9号",
-        price: 7000,
-        size: "9号",
-        quantity: 1,
-        image: document.getElementById("main-image").src  // 商品画像のURL
-      };
+    // カートに商品を追加する関数
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
   
-      // 現在のカート情報を取得
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-      // すでに同じ商品があるか確認（タイトルとサイズで判定）
+      // 同じ商品（タイトルとサイズが一致）を探す
       const existing = cart.find(item => item.title === product.title && item.size === product.size);
   
       if (existing) {
         existing.quantity += 1;
       } else {
+        product.quantity = 1;
         cart.push(product);
       }
   
-      // カートを保存
-      localStorage.setItem("cart", JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
   
+    // カート内商品の合計数量を数えてバッジに表示
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  
+      const countElem = document.getElementById('cart-count');
+      countElem.textContent = totalQuantity;
+      countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+    }
+  
+    // ページ読み込み時にバッジを更新
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  
+    // ボタンが押されたら実行
+    document.querySelector('.buy-button').addEventListener('click', function () {
+      const product = {
+        title: document.querySelector('.product-title').textContent,
+        material: "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 9号",
+        price: 7000,
+        size: "9号",
+        image: document.getElementById("main-image").src
+      };
+  
+      addToCart(product);
       alert("カートに追加しました！");
     });
   </script>

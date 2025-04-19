@@ -876,14 +876,14 @@ html, body {
     flex-grow: 1;
   }
   
-  .delete-btn {
-    width: 10px;          /* アイコンの幅 */
-    height: 10px;         /* 高さ */
+  img.delete-btn {
+    width: 25px;          /* アイコンの幅 */
+    height: 25px;         /* 高さ */
     cursor: pointer;
     transition: filter 0.3s ease;
   }
   
-  .delete-btn:hover {
+  img.delete-btn:hover {
     filter: grayscale(100%) brightness(80%);
   }
   
@@ -909,6 +909,88 @@ html, body {
   
   .cart-close-button:hover {
     background-color: #ddd;
+  }
+  
+  .checkout-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
+  .checkout-button:hover {
+    background-color: #444;
+  }
+  
+  .checkout-form {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  #paypal-button-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  #paypal-button-container > div {
+    max-width: 380px;  /* お好みの幅に調整可能 */
+    width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  .back-button {
+    display: block;
+    margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .back-button:hover {
+    background-color: #222;
+  }
+
+  .checkout-form {
+    display: block;
+    text-align: left;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px;
+    
+
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+
+  #checkout-form input[type="email"],
+  #checkout-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
   }
   
 

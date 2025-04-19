@@ -26,6 +26,13 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
+            <div class="cart-icon-wrapper">
+                <a href="cart.html">
+                  <img src="images/cart.png" alt="カート" class="cart-icon">
+                  <span class="cart-count" id="cart-count">0</span>
+                </a>
+              </div>
         </div>
     </div>
 
@@ -58,6 +65,8 @@
             <p><strong>素材:</strong>タンザナイト/アメジスト/ガーネット/ローズクォーツ</p>
             <p><strong>価格:</strong>¥5,800</p>
             <p><strong>サイズ:</strong>8号</p>
+            <p><strong>商品番号:</strong>D001-8</p>
+
             <div class="tags">
                 <a href="tag.html?tag=タンザナイト" class="tag">タンザナイト</a>
                 <a href="tag.html?tag=アメジスト" class="tag">アメジスト</a>
@@ -90,12 +99,7 @@
         <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <div class="cart-icon-wrapper">
-            <a href="cart.html">
-              <img src="images/cart.png" alt="カート" class="cart-icon">
-              <span class="cart-count" id="cart-count">0</span>
-            </a>
-          </div>
+        
         </div>
     </div>
 
@@ -387,32 +391,48 @@ if (relatedProducts.length > 0) {
     </script>
 
 <script>
-    // カートに追加する関数
-    document.querySelector(".buy-button").addEventListener("click", function () {
-      const product = {
-        title: document.querySelector(".product-title").textContent,
-        material: "タンザナイト/アメジスト/ガーネット/ローズクォーツ 8号",
-        price: 5800,
-        size: "8号",
-        quantity: 1,
-        image: document.getElementById("main-image").src  // 商品画像のURL
-      };
+    // カートに商品を追加する関数
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
   
-      // 現在のカート情報を取得
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-      // すでに同じ商品があるか確認（タイトルとサイズで判定）
+      // 同じ商品（タイトルとサイズが一致）を探す
       const existing = cart.find(item => item.title === product.title && item.size === product.size);
   
       if (existing) {
         existing.quantity += 1;
       } else {
+        product.quantity = 1;
         cart.push(product);
       }
   
-      // カートを保存
-      localStorage.setItem("cart", JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
   
+    // カート内商品の合計数量を数えてバッジに表示
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  
+      const countElem = document.getElementById('cart-count');
+      countElem.textContent = totalQuantity;
+      countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+    }
+  
+    // ページ読み込み時にバッジを更新
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  
+    // ボタンが押されたら実行
+    document.querySelector('.buy-button').addEventListener('click', function () {
+      const product = {
+        title: document.querySelector('.product-title').textContent,
+        material: "タンザナイト/アメジスト/ガーネット/ローズクォーツ 8号",
+        price: 5800,
+        size: "8号",
+        image: document.getElementById("main-image").src
+      };
+  
+      addToCart(product);
       alert("カートに追加しました！");
     });
   </script>

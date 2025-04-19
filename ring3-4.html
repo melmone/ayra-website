@@ -61,10 +61,11 @@
         </div>
        
         <div class="product-info">
-            <h1 class="product-title">クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10号</h1>
+            <h1 class="product-title">クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10-12号</h1>
             <p><strong>素材:</strong>クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー</p>
-            <p><strong>価格:</strong>¥5,600</p>
-            <p><strong>サイズ:</strong>10号</p>
+            <p><strong>価格:</strong>¥6,500</p>
+            <p><strong>サイズ:</strong>10-12号</p>
+            <p><strong>商品番号:</strong>B008-10</p>
             <div class="tags">
                 <a href="tag.html?tag=クリスタルクォーツ" class="tag">クリスタルクォーツ</a>
                 <a href="tag.html?tag=ブルードゥルージー" class="tag">ブルードゥルージー</a>
@@ -73,6 +74,8 @@
                 <a href="tag.html?tag=青" class="tag">青</a>
                 <a href="tag.html?tag=白" class="tag">白</a>
                 <a href="tag.html?tag=10号" class="tag">10号</a>
+                <a href="tag.html?tag=11号" class="tag">11号</a>
+                <a href="tag.html?tag=12号" class="tag">12号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -388,38 +391,52 @@ if (relatedProducts.length > 0) {
         thumbnail.src = tempSrc;
     }
     </script>
-
 <script>
-    // カートに追加する関数
-    document.querySelector(".buy-button").addEventListener("click", function () {
-      const product = {
-        title: document.querySelector(".product-title").textContent,
-        material: "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10号",
-        price: 6500,
-        size: "10号",
-        quantity: 1,
-        image: document.getElementById("main-image").src  // 商品画像のURL
-      };
+    // カートに商品を追加する関数
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
   
-      // 現在のカート情報を取得
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-      // すでに同じ商品があるか確認（タイトルとサイズで判定）
+      // 同じ商品（タイトルとサイズが一致）を探す
       const existing = cart.find(item => item.title === product.title && item.size === product.size);
   
       if (existing) {
         existing.quantity += 1;
       } else {
+        product.quantity = 1;
         cart.push(product);
       }
   
-      // カートを保存
-      localStorage.setItem("cart", JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
   
+    // カート内商品の合計数量を数えてバッジに表示
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  
+      const countElem = document.getElementById('cart-count');
+      countElem.textContent = totalQuantity;
+      countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+    }
+  
+    // ページ読み込み時にバッジを更新
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  
+    // ボタンが押されたら実行
+    document.querySelector('.buy-button').addEventListener('click', function () {
+      const product = {
+        title: document.querySelector('.product-title').textContent,
+        material: "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10号",
+        price: 6500,
+        size: "10号",
+        image: document.getElementById("main-image").src
+      };
+  
+      addToCart(product);
       alert("カートに追加しました！");
     });
   </script>
-  
 </body>
 
 </html>

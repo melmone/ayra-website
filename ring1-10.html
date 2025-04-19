@@ -66,6 +66,7 @@
             <p><strong>素材:</strong>ピンクカルセドニー</p>
             <p><strong>価格:</strong>¥3,500</p>
             <p><strong>サイズ:</strong>9号</p>
+            <p><strong>商品番号:</strong>A0011-9</p>
             <div class="tags">
                 <a href="tag.html?tag=モナリザピンク" class="tag">ピンクカルセドニー</a>
                 <a href="tag.html?tag=丸形" class="tag">丸型</a>
@@ -421,40 +422,52 @@ if (relatedProducts.length > 0) {
           alert("カートに追加しました！");
         });
       </script>
-      
       <script>
-        // カートデータをローカルストレージに保存
+        // カートに商品を追加する関数
         function addToCart(product) {
           let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          cart.push(product);
+      
+          // 同じ商品（タイトルとサイズが一致）を探す
+          const existing = cart.find(item => item.title === product.title && item.size === product.size);
+      
+          if (existing) {
+            existing.quantity += 1;
+          } else {
+            product.quantity = 1;
+            cart.push(product);
+          }
+      
           localStorage.setItem('cart', JSON.stringify(cart));
           updateCartCount();
         }
       
-        // バッジ表示更新
+        // カート内商品の合計数量を数えてバッジに表示
         function updateCartCount() {
           const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      
           const countElem = document.getElementById('cart-count');
-          countElem.textContent = cart.length;
-          countElem.style.display = cart.length > 0 ? 'inline-block' : 'none';
+          countElem.textContent = totalQuantity;
+          countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
         }
       
-        // ページ読み込み時にも更新
+        // ページ読み込み時にバッジを更新
         document.addEventListener('DOMContentLoaded', updateCartCount);
       
-        // ボタンにイベント追加
+        // ボタンが押されたら実行
         document.querySelector('.buy-button').addEventListener('click', function () {
           const product = {
-            name: document.querySelector('.product-title').textContent,
-            price: 2600,
-            size: '9号',
-            image: document.getElementById('main-image').src
+            title: document.querySelector('.product-title').textContent,
+            material: "カルセドニー 10号",
+            price: 3000,
+            size: "10号",
+            image: document.getElementById("main-image").src
           };
+      
           addToCart(product);
-          alert("商品をカートに追加しました！");
+          alert("カートに追加しました！");
         });
       </script>
-      
 </body>
 
 </html>
