@@ -859,6 +859,52 @@ html, body {
     margin-top: 50px;
   }
 
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  .cart-item img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+  }
+  .cart-item-info {
+    flex-grow: 1;
+  }
+  .delete-btn {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+
+  .cart-close-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+    z-index: 1000;
+  }
+  
+  .cart-close-button:hover {
+    background-color: #ddd;
+  }
+  
+
 /* モバイル時のみ表示 */
 @media (max-width: 768px) {
         .br-sp {

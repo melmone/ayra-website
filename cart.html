@@ -6,9 +6,11 @@
   <title>カート | Ayra</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
 
-  <div class="cart-container">
+<body>
+  <div class="cart-close-button" onclick="history.back()">✕</div>
+
+  <div id="cart-container" class="cart-container">
     <h2>ショッピングカート</h2>
     <div id="cart-items"></div>
     <div id="total-price"></div>
@@ -37,6 +39,49 @@
 
       totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
     }
+  </script>
+
+<script>
+    // カート表示を更新する関数
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const container = document.getElementById('cart-container');
+      container.innerHTML = ''; // 一度初期化
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p>カートに商品がありません。</p>';
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'cart-item';
+
+        itemDiv.innerHTML = `
+          <img src="${item.image}" alt="${item.title}">
+          <div class="cart-item-info">
+            <p><strong>${item.title}</strong></p>
+            <p>価格: ¥${item.price}</p>
+          </div>
+          <img src="images/trash-icon.png" alt="削除" class="delete-btn" data-index="${index}">
+        `;
+
+        container.appendChild(itemDiv);
+      });
+
+      // 削除ボタンにイベント追加
+      document.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const index = this.getAttribute('data-index');
+          cart.splice(index, 1); // 該当商品を削除
+          localStorage.setItem('cart', JSON.stringify(cart));
+          renderCart(); // 再描画
+        });
+      });
+    }
+
+    // 初期表示
+    document.addEventListener('DOMContentLoaded', renderCart);
   </script>
 </body>
 </html>
