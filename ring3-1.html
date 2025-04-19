@@ -394,7 +394,8 @@ if (relatedProducts.length > 0) {
         material: "ラリマー/カイヤナイト/タンザナイト 8号",
         price: 6800,
         size: "8号",
-        quantity: 1
+        quantity: 1,
+        image: document.getElementById("main-image").src  // 商品画像のURL
       };
   
       // 現在のカート情報を取得
@@ -413,39 +414,6 @@ if (relatedProducts.length > 0) {
       localStorage.setItem("cart", JSON.stringify(cart));
   
       alert("カートに追加しました！");
-    });
-  </script>
-  
-  <script>
-    // カートデータをローカルストレージに保存
-    function addToCart(product) {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.push(product);
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCartCount();
-    }
-  
-    // バッジ表示更新
-    function updateCartCount() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const countElem = document.getElementById('cart-count');
-      countElem.textContent = cart.length;
-      countElem.style.display = cart.length > 0 ? 'inline-block' : 'none';
-    }
-  
-    // ページ読み込み時にも更新
-    document.addEventListener('DOMContentLoaded', updateCartCount);
-  
-    // ボタンにイベント追加
-    document.querySelector('.buy-button').addEventListener('click', function () {
-      const product = {
-        name: document.querySelector('.product-title').textContent,
-        price: 2600,
-        size: '9号',
-        image: document.getElementById('main-image').src
-      };
-      addToCart(product);
-      alert("商品をカートに追加しました！");
     });
   </script>
   

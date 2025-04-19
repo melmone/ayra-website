@@ -875,11 +875,18 @@ html, body {
   .cart-item-info {
     flex-grow: 1;
   }
+  
   .delete-btn {
+    width: 10px;          /* アイコンの幅 */
+    height: 10px;         /* 高さ */
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    transition: filter 0.3s ease;
   }
+  
+  .delete-btn:hover {
+    filter: grayscale(100%) brightness(80%);
+  }
+  
 
   .cart-close-button {
     position: fixed;
