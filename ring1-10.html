@@ -53,10 +53,10 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="https://i.imgur.com/ubWQk7u.jpg" alt="商品10横から">
+            <img id="main-image" src="images/ピンクモナリザ9号横.jpg" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="https://i.imgur.com/emu0JTY.jpg" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/ピンクモナリザ9号正面.jpg" alt="商品10正面" onclick="swapImages(this)">
                 <img class="thumbnail" src="images/モナリザピンクイメージ.JPG" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
@@ -458,9 +458,9 @@ if (relatedProducts.length > 0) {
         document.querySelector('.buy-button').addEventListener('click', function () {
           const product = {
             title: document.querySelector('.product-title').textContent,
-            material: "カルセドニー 10号",
+            material: "カルセドニー 9号",
             price: 3000,
-            size: "10号",
+            size: "9号",
             image: document.getElementById("main-image").src
           };
       
