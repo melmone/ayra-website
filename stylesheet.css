@@ -1,5 +1,3 @@
-
-
 body {
     margin: 0;
     padding: 0;
@@ -150,6 +148,10 @@ header h1 {
     padding-top: 0px;
     width: auto;
     overflow-x: hidden; /* 横スクロール防止 */
+}
+
+.intro p {
+    font-size: 20px;
 }
 
 .introduction p {
@@ -342,7 +344,10 @@ button:hover {
 
 .image-wrapper {
     position: relative;
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 子要素（画像）を中央に配置 */
+    
 }
   
   .image-wrapper img {
@@ -365,13 +370,43 @@ button:hover {
     
   }
   
-  .image-wrapper {
+
+.main-image-wrapper {
+   
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center; /* 子要素（画像）を中央に配置 */
+    width: fit-content;     /* ← これが重要！ */
     
-}
+  }
+
+#main-image2 {
+    max-width: 100%;
+    width: 400px;
+    display: block;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
+    
+    position: relative;
+  }
+
+  .sold-out-label2 {
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+   
+    background-color: rgba(100, 100, 100, 0.7); /* 半透明のグレー */
+    color: white;
+    padding: 16px 0;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    box-sizing: border-box;  /* ← 余計なはみ出し防止 */
+  }
 
 .product-container {
     display: grid;
@@ -438,7 +473,9 @@ button:hover {
 
 /*メイン画像*/
 #main-image {
+    max-width: 100%;
     width: 400px;
+    display: block;
     height: auto;
     transition: opacity 0.3s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* わずかに影をつける */
@@ -844,56 +881,56 @@ html, body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-  }
+}
 
-  .cart-item {
+.cart-item {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
-  }
+}
 
-  .cart-item-name {
+.cart-item-name {
     font-weight: bold;
-  }
+}
 
-  .empty-message {
+.empty-message {
     text-align: center;
     font-size: 18px;
     margin-top: 50px;
-  }
+}
 
-
-  .cart-item {
+.cart-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
-  }
-  .cart-item img {
+}
+
+.cart-item img {
     width: 80px;
     height: auto;
     margin-right: 10px;
-  }
-  .cart-item-info {
+}
+
+.cart-item-info {
     flex-grow: 1;
-  }
+}
   
-  img.delete-btn {
+img.delete-btn {
     width: 25px;          /* アイコンの幅 */
     height: 25px;         /* 高さ */
     cursor: pointer;
     transition: filter 0.3s ease;
-  }
+}
   
-  img.delete-btn:hover {
+img.delete-btn:hover {
     filter: grayscale(100%) brightness(80%);
-  }
+}
   
-
-  .cart-close-button {
+.cart-close-button {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -910,13 +947,13 @@ html, body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.2s;
     z-index: 1000;
-  }
+}
   
-  .cart-close-button:hover {
+.cart-close-button:hover {
     background-color: #ddd;
-  }
+}
   
-  .checkout-button {
+.checkout-button {
     background-color: black;
     color: white;
     padding: 10px 20px;
@@ -925,18 +962,18 @@ html, body {
     cursor: pointer;
     font-size: 16px;
     border-radius: 4px;
-  }
+}
   
-  .checkout-button:hover {
+.checkout-button:hover {
     background-color: #444;
-  }
+}
   
-  .checkout-form {
+.checkout-form {
     margin-top: 40px;
     padding: 20px;
     border-top: 1px solid #ccc;
     text-align: center;
-  }
+}
   
   #paypal-button-container {
     display: flex;
@@ -1023,6 +1060,10 @@ html, body {
         .header-logo img {
             height: 100px;
         }
+
+        .intro p {
+            font-size: 15px;
+        }
     
         .introduction p {
             text-align: center;
@@ -1059,6 +1100,11 @@ html, body {
             width: 90%; /* 横幅の90%にしてスマホ画面にフィット */
             max-width: 300px;
           }
+
+         #main-image2 {
+            
+            max-width: 300px;
+         } 
         
           .thumbnail-container {
             justify-content: center;
