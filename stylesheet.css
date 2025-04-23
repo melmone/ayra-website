@@ -357,6 +357,43 @@ button:hover {
     position: relative;
   }
   
+  .faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 16px 0;
+  }
+
+  .faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    display: none;
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  .faq-toggle {
+    font-size: 24px;
+    transition: transform 0.3s;
+  }
+
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+
+  .faq-item.open .faq-toggle {
+    transform: rotate(45deg); /* + を×にする */
+  }
+
+
+
+
+
   .sold-out-label {
     position: absolute;
     bottom: 0;

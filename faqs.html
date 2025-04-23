@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <title>Ayra</title>
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <div class="header">
+          <a href="index.html" class="header-logo">
+              <img src="images/Ayraロゴ.jpg" alt="冠付きロゴ">
+          </a>
+
+      <div class="hamburger-menu">
+          ☰
+      </div>
+      
+      <ul class="nav-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="onlineshop.html">Online shop</a></li>
+          <li><a href="custom.html">Custom</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </div>
+  </div>
+
+  <section id="products">
+    <h2>よくあるご質問</h2>
+
+    <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            注文してからどれくらいで発送されますか？
+            <span class="faq-toggle">＋</span>
+          </div>
+          <div class="faq-answer">
+            通常、ご注文後2〜3営業日以内に発送いたします。
+          </div>
+        </div>
+    
+        <div class="faq-item">
+          <div class="faq-question">
+            支払い方法には何がありますか？
+            <span class="faq-toggle">＋</span>
+          </div>
+          <div class="faq-answer">
+            クレジットカード、PayPalがご利用いただけます。
+          </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+              支払い方法には何がありますか？
+              <span class="faq-toggle">＋</span>
+            </div>
+            <div class="faq-answer">
+              クレジットカード、PayPalがご利用いただけます。
+            </div>
+        </div>
+    
+        <!-- 必要に応じて以下に項目を追加 -->
+    
+      </div>
+    
+      <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+          question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('open');
+    
+            const icon = question.querySelector('.faq-toggle');
+            icon.textContent = faqItem.classList.contains('open') ? '－' : '＋';
+          });
+        });
+      </script>
+    
+
+  <div class="footer">
+    <a href="https://www.instagram.com/ayra_rings" target="_blank">
+        <img src="images/図1.png" alt="Instagram" class="instagram-icon">
+    </a>
+    <ul class="nav-list2">
+        <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</body>
+</html>
