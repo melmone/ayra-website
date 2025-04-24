@@ -157,7 +157,16 @@
         <!-- 必要に応じて以下に項目を追加 -->
     
       </div>
-    
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger-menu");
+          const navList = document.querySelector(".nav-list");
+      
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+        });
+      </script>
       <script>
         document.querySelectorAll('.faq-question').forEach(question => {
           question.addEventListener('click', () => {

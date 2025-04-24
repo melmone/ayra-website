@@ -45,12 +45,24 @@
       totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
     }
   </script>
-
 <script>
     function renderCart() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const now = new Date().getTime();
+      const THIRTY_MINUTES = 30 * 60 * 1000;
+  
+      // カートを取得 & 30分経過商品を削除
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart = cart.filter(item => !item.timestamp || (now - item.timestamp < THIRTY_MINUTES));
+      localStorage.setItem('cart', JSON.stringify(cart));
+  
       const container = document.getElementById('cart-container');
       container.innerHTML = ''; // 初期化
+  
+      // 警告メッセージの追加
+      const warningMsg = document.createElement('p');
+      warningMsg.className = 'cart-warning';
+      warningMsg.innerText = '※カート内の商品は30分後に自動的に削除されます';
+      container.appendChild(warningMsg);
   
       const cartItemsDiv = document.createElement('div');
       cartItemsDiv.id = 'cart-items';
@@ -77,18 +89,14 @@
         `;
   
         cartItemsDiv.appendChild(itemDiv);
-  
-        // 合計計算（文字列でも数値に変換）
         total += parseInt(item.price, 10);
       });
   
-      // 合計金額の表示
       const totalPriceEl = document.createElement('div');
       totalPriceEl.id = 'total-price';
       totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
       container.appendChild(totalPriceEl);
   
-      // 削除ボタンにイベントを追加
       document.querySelectorAll('.delete-btn').forEach(btn => {
         btn.addEventListener('click', function () {
           const index = this.getAttribute('data-index');
@@ -103,15 +111,14 @@
     document.addEventListener('DOMContentLoaded', renderCart);
   </script>
   
-  
-  
+
   <script>
-    // ボタンをクリックで checkout.html に遷移
-    document.getElementById('checkout-button').addEventListener('click', function () {
-      window.location.href = 'checkout.html';
-    });
-  </script>
-　
+    const warningMsg = document.createElement('p');
+warningMsg.className = 'cart-warning';
+warningMsg.innerText = '※カート内の商品は30分後に自動的に削除されます';
+container.insertBefore(warningMsg, cartItemsDiv);
+</script>
+  
 
 
 

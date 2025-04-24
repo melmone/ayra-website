@@ -52,8 +52,10 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/クリスタルクォーツ楕円横.jpg" alt="商品1横から">
-            
+            <div class="main-image-box">
+                <img id="main-image" src="images/クリスタルクォーツ楕円横.jpg" alt="商品1横から">
+                <div class="sold-out-overlay" id="sold-out-label">SOLD OUT</div>
+            </div>
             <div class="thumbnail-container">
                 <img class="thumbnail" src="images/クリスタル楕円.正面.jpg" alt="商品1正面" onclick="swapImages(this)">
                 <img class="thumbnail" src="images/ローズクォーツ.アクアマリン.シトリンイメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
@@ -63,6 +65,7 @@
         <div class="product-info">
             <h1 class="product-title">クリスタルクォーツ 10号</h1>
             <p><strong>素材:</strong>クリスタルクォーツ</p>
+            <p><strong>ベース:</strong>Brass, 18K gold plated</p>
             <p><strong>価格:</strong> ¥3,500</p>
             <p><strong>サイズ:</strong>10号</p>
             <p><strong>商品番号:</strong>A001-10</p>
@@ -455,7 +458,19 @@ if (relatedProducts.length > 0) {
       
         // カート内商品の合計数量を数えてバッジに表示
         function updateCartCount() {
-          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const now = new Date().getTime();
+            const THIRTY_MINUTES = 30 * 60 * 1000;
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // 30分以上経過した商品を削除
+        cart = cart.filter(item => {
+        return !item.timestamp || (now - item.timestamp < THIRTY_MINUTES);
+        });
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+          
           const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
       
           const countElem = document.getElementById('cart-count');
@@ -466,6 +481,49 @@ if (relatedProducts.length > 0) {
         // ページ読み込み時にバッジを更新
         document.addEventListener('DOMContentLoaded', updateCartCount);
       
+
+        // SOLD OUTデータを保存する関数
+  function markAsSoldOut(title) {
+    const soldOutItems = JSON.parse(localStorage.getItem('soldOutItems')) || [];
+    if (!soldOutItems.includes(title)) {
+      soldOutItems.push(title);
+      localStorage.setItem('soldOutItems', JSON.stringify(soldOutItems));
+    }
+  }
+
+  // 商品がSOLD OUTか確認し、表示する関数
+  function checkSoldOutStatus(title) {
+    const soldOutItems = JSON.parse(localStorage.getItem('soldOutItems')) || [];
+    if (soldOutItems.includes(title)) {
+      const label = document.getElementById('sold-out-label');
+      if (label) {
+        label.style.display = 'block';
+      }
+    }
+  }
+
+
+
+
+
+
+
+        // カートに追加する処理（タイムスタンプ付き）
+        function addToCart(item) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const timestamp = new Date().getTime();
+            item.timestamp = timestamp;
+            item.quantity = 1;
+
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+
+            // SOLD OUTにマークして表示
+            markAsSoldOut(item.title);
+            checkSoldOutStatus(item.title);
+            }
+
         // ボタンが押されたら実行
         document.querySelector('.buy-button').addEventListener('click', function () {
           const product = {
@@ -477,8 +535,14 @@ if (relatedProducts.length > 0) {
           };
       
           addToCart(product);
-          alert("カートに追加しました！");
+          alert("カートに追加しました！※30分で自動的に削除されます");
         });
+
+        // ページ読み込み時にSOLD OUTチェック
+  document.addEventListener('DOMContentLoaded', function () {
+    const productTitle = document.querySelector('.product-title').textContent;
+    checkSoldOutStatus(productTitle);
+  });
       </script>
       
       
