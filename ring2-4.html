@@ -13,19 +13,25 @@
             <a href="index.html" class="header-logo">
                 <img src="images/Ayraロゴ.jpg" alt="冠付きロゴ">
             </a>
-            
-            
-            <div class="hamburger-menu">
-                ☰
-            </div>
-            
-            <ul class="nav-list">
-                <li><a href="about.html">About</a></li>
-                <li><a href="onlineshop.html">Online shop</a></li>
-                <li><a href="custom.html">Custom</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+  
+        <div class="hamburger-menu">
+            ☰
+        </div>
+        
+        <ul class="nav-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="onlineshop.html">Online shop</a></li>
+            <li><a href="custom.html">Custom</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="cart-icon-wrapper">
+            <a href="cart.html">
+              <img src="images/cart.png" alt="カート" class="cart-icon">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
         </div>
     </div>
 
@@ -45,26 +51,30 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/ピンクドゥルージー縦横.jpg" alt="商品1横から">
-            
+            <div class="main-image-wrapper">
+                <img id="main-image2" src="images/黒トルマリン.ハーキマー横.jpg" alt="商品1横から">
+                <div class="sold-out-label2">SOLD OUT</div>
+            </div>
+
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/ピンクドゥルージー縦正面.jpg" alt="商品1正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/ピンクドゥルージー縦イメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/黒トルマリン.ハーキマー正面.jpg" alt="商品1正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/黒トルマリン.クリスタルイメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
         <div class="product-info">
-            <h1 class="product-title">ピンクドゥルージー 9号</h1>
-            <p><strong>素材:</strong>ピンクドゥルージー</p>
-            <p><strong>価格:</strong>¥6,500</p>
-            <p><strong>サイズ:</strong>9号</p>
-            <p><strong>商品番号:</strong>C016-9</p>
-
+            <h1 class="product-title">ブラックトルマリン/ハーキマーダイヤモンド 9-10号</h1>
+            <p><strong>素材:</strong>ブラックトルマリン/ハーキマーダイヤモンド</p>
+            <p><strong>価格:</strong>¥6,000</p>
+            <p><strong>サイズ:</strong>9-10号</p>
+            <p><strong>商品番号:</strong>B006-9</p>
             <div class="tags">
-                <a href="tag.html?tag=ピンクドゥルージー" class="tag">ピンクドゥルージー 9号</a>
-                <a href="tag.html?tag=ドゥルージー 9号" class="tag">ドゥルージー</a>
-                <a href="tag.html?tag=ピンク" class="tag">ピンク</a>
+                <a href="tag.html?tag=ブラックトルマリン" class="tag">ブラックトルマリン</a>
+                <a href="tag.html?tag=ハーキマーダイヤモンド" class="tag">ハーキマーダイヤモンド</a>
+                <a href="tag.html?tag=黒" class="tag">黒</a>
+                <a href="tag.html?tag=透明" class="tag">透明</a>
                 <a href="tag.html?tag=9号" class="tag">9号</a>
+                <a href="tag.html?tag=10号" class="tag">10号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -73,9 +83,10 @@
 
     <div class="related-products-container">
         <h2>Related items</h2>
-        <div id="related-products">     
+        <div id="related-products">
             <div id="related-items" class="product-grid"></div>
         </div>
+        
     </div>
 
     <div class="footer">
@@ -87,15 +98,8 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <div class="cart-icon-wrapper">
-            <a href="cart.html">
-              <img src="images/cart.png" alt="カート" class="cart-icon">
-              <span class="cart-count" id="cart-count">0</span>
-            </a>
-          </div>
         </div>
     </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
           const hamburger = document.querySelector(".hamburger-menu");
@@ -106,7 +110,7 @@
           });
         });
       </script>
-
+    
 
     <script>
         
@@ -389,7 +393,7 @@
         },
         ];
          
-        const currentProduct = products.find(p => p.url === "ring5-4.html");
+        const currentProduct = products.find(p => p.url === "ring2-4.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -438,9 +442,9 @@ if (relatedProducts.length > 0) {
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "クリスタルクォーツ",  // 素材
-        price: 3500,  // 価格
-        size: "10号",  // サイズ
+        material: "ブラックトルマリン/ハーキマーダイヤモンド 9-10号",  // 素材
+        price: 6000,  // 価格
+        size: "9-10号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
@@ -496,9 +500,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
   </script>
-      
-      
-      
+
 </body>
 
 </html>

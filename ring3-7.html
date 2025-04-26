@@ -54,10 +54,10 @@
         </div>
        
         <div class="product-info">
-            <h1 class="product-title">フローライト/アメジスト/シトリン 9号</h1>
+            <h1 class="product-title">フローライト/アメジスト/シトリン 9-10号</h1>
             <p><strong>素材:</strong>フローライト/アメジスト/シトリン</p>
-            <p><strong>価格:</strong>¥8,000</p>
-            <p><strong>サイズ:</strong>9号</p>
+            <p><strong>価格:</strong>¥15,000</p>
+            <p><strong>サイズ:</strong>9-10号</p>
             <p><strong>商品番号:</strong>C011-9</p>
 
             <div class="tags">
@@ -83,11 +83,8 @@
             <img src="images/図1.png" alt="Instagram" class="instagram-icon">
         </a>
         <ul class="nav-list2">
-            <li><a href="about.html">About</a></li>
-        <li><a href="onlineshop.html">Online shop</a></li>
-        <li><a href="custom.html">Custom</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
 
         <div class="cart-icon-wrapper">
@@ -433,83 +430,70 @@ if (relatedProducts.length > 0) {
         // 元のメイン画像をサムネイルに戻す
         thumbnail.src = tempSrc;
     }
-    </script>
-
-<script>
     // カートに追加する関数
+    document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount(); // ← これを最初に実行！
+
     document.querySelector(".buy-button").addEventListener("click", function () {
-      const product = {
-        title: document.querySelector(".product-title").textContent,
-        material: "フローライト/アメジスト/シトリン 9号",
-        price: 5800,
-        size: "9号",
-        quantity: 1,
-        image: document.getElementById("main-image").src  // 商品画像のURLs
-      };
-  
-      // 現在のカート情報を取得
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-      // すでに同じ商品があるか確認（タイトルとサイズで判定）
-      const existing = cart.find(item => item.title === product.title && item.size === product.size);
-  
-      if (existing) {
-        existing.quantity += 1;
-      } else {
-        cart.push(product);
-      }
-  
-      // カートを保存
-      localStorage.setItem("cart", JSON.stringify(cart));
-  
-      alert("カートに追加しました！");
+    const product = {
+        title: document.querySelector(".product-title").textContent,  // 商品名
+        material: "フローライト/アメジスト/シトリン 9-10号",  // 素材
+        price: 15000,  // 価格
+        size: "9-10号",  // サイズ
+        quantity: 1,  // 数量
+        image: document.getElementById("main-image").src  // 商品画像のURL
+    };
+
+    addToCart(product); // ← 自作関数にまとめて呼び出すだけ！
+
+        alert("商品がカートに追加されました！※30分でカートから削除されます");
     });
-  </script>
-  <script>
-    // カートに商品を追加する関数
-    function addToCart(product) {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
-      // 同じ商品（タイトルとサイズが一致）を探す
-      const existing = cart.find(item => item.title === product.title && item.size === product.size);
-  
-      if (existing) {
+});
+
+// カートデータをローカルストレージに保存
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    const existing = cart.find(item => item.id === product.id);
+
+    if (existing) {
         existing.quantity += 1;
-      } else {
-        product.quantity = 1;
-        cart.push(product);
-      }
-  
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCartCount();
+        existing.timestamp = new Date().getTime(); // タイムスタンプ更新
+    } else {
+    product.timestamp = new Date().getTime(); // 新しい商品にもtimestampを追加
+    cart.push(product);
     }
-  
-    // カート内商品の合計数量を数えてバッジに表示
-    function updateCartCount() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
-  
-      const countElem = document.getElementById('cart-count');
-      countElem.textContent = totalQuantity;
-      countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
-    }
-  
-    // ページ読み込み時にバッジを更新
-    document.addEventListener('DOMContentLoaded', updateCartCount);
-  
-    // ボタンが押されたら実行
-    document.querySelector('.buy-button').addEventListener('click', function () {
-      const product = {
-        title: document.querySelector('.product-title').textContent,
-        material: "フローライト/アメジスト/シトリン 9号",
-        price: 8000,
-        size: "10号",
-        image: document.getElementById("main-image").src
-      };
-  
-      addToCart(product);
-      alert("カートに追加しました！");
-    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+}
+
+    // ★新しい updateCartCount（これだけでOK！）
+function updateCartCount() {
+    const THIRTY_MINUTES = 30 * 60 * 1000;
+    const now = new Date().getTime();
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // 30分以内の商品だけ残す
+    cart = cart.filter(item => !item.timestamp || (now - item.timestamp < THIRTY_MINUTES));
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const countElem = document.getElementById('cart-count');
+    countElem.textContent = totalQuantity;
+    countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+}
+
+// ページ読み込み時にもチェック
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount(); // ページ読み込み時にまず1回チェックする
+
+    // 5秒ごとにカート内容をチェック・更新（テスト用）
+    setInterval(updateCartCount, 5000); 
+});
+
   </script>
 </body>
 

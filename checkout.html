@@ -24,32 +24,36 @@
   <!-- ▼ここにPayPalのコードを貼り付け▼ -->
   <div id="paypal-button-container"></div>
   
-
   <br>
   <button class="back-button" onclick="history.back()">← カートに戻る</button>
 
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=JPY"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=AT8cSY5uNZPTDuIEpFSCkQ4_mIFeEU30WAuXl9wK64vIodxOA9R2EXBatYNxt50vKM76XRE_TFztEnH0&currency=JPY"></script>
   
   <script>
-  paypal.Buttons({
-    createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: '1000' // ← ここに合計金額を動的に入れるように後ほど変更できます
-          }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-      return actions.order.capture().then(function(details) {
-        alert('決済が完了しました。ありがとうございます！');
-        localStorage.removeItem('cart');
-        location.reload(); // カートをクリアして再読み込み
-      });
-    }
-  }).render('#paypal-button-container');
-</script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const total = cart.reduce((sum, item) => sum + item.price, 0); // item.price に価格が入ってる前提
+  
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: total.toString()
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('決済が完了しました。ありがとうございます！');
+          localStorage.removeItem('cart');
+          location.reload();
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>
+
+
 
 
 
