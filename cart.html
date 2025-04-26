@@ -40,30 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-  <script>
-    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartContainer = document.getElementById('cart-items');
-    const totalPriceEl = document.getElementById('total-price');
-
-    if (cartItems.length === 0) {
-      cartContainer.innerHTML = '<p class="empty-message">カートに商品がありません。</p>';
-    } else {
-      let total = 0;
-      cartItems.forEach(item => {
-        const itemElement = document.createElement('div');
-        itemElement.className = 'cart-item';
-        itemElement.innerHTML = `
-          <span class="cart-item-name">${item.title}</span>
-          <span>¥${item.price.toLocaleString()}</span>
-        `;
-        cartContainer.appendChild(itemElement);
-
-        total += parseInt(item.price, 10);
-      });
-
-      totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
-    }
-  </script>
+  
   <script>
     function renderCart() {
       const now = new Date().getTime();
