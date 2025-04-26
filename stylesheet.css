@@ -400,19 +400,21 @@ button:hover {
     position: relative;
     display: inline-block;
   }
-  
+
+
   .sold-out-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    background-color: rgba(255, 0, 0, 0.7);
+    width: 100%;
+    background-color:  rgba(100, 100, 100, 0.7); 
     color: white;
     text-align: center;
-    padding: 8px;
+    padding: 16px 0;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 25px;
     display: none; /* 初期は非表示 */
+    pointer-events: none; /* マウスイベントを通す */
   }
   
 
@@ -1013,7 +1015,14 @@ img.delete-btn:hover {
     background-color: #ddd;
 }
   
+.checkout-area {
+    display: flex;
+    justify-content: center;
+}
+
+
 .checkout-button {
+    
     background-color: black;
     color: white;
     padding: 10px 20px;
@@ -1022,6 +1031,7 @@ img.delete-btn:hover {
     cursor: pointer;
     font-size: 16px;
     border-radius: 4px;
+    text-decoration: none;
 }
   
 .checkout-button:hover {
@@ -1095,6 +1105,8 @@ img.delete-btn:hover {
     box-sizing: border-box;
   }
   
+
+
 
 /* モバイル時のみ表示 */
 @media (max-width: 768px) {
@@ -1268,6 +1280,24 @@ img.delete-btn:hover {
         padding: 4px 0;
         font-size: 12px;
         font-weight: bold;
+      }
+
+
+      
+
+      .sold-out-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        background-color:  rgba(100, 100, 100, 0.7); 
+        color: white;
+        text-align: center;
+        padding: 12px 0;
+        font-weight: bold;
+        font-size: 18px;
+        box-sizing: border-box;  /* ← 余計なはみ出し防止 */ 
+        display: none; /* 初期は非表示 */
+        pointer-events: none; /* マウスイベントを通す */
       }
 
       .footer li {

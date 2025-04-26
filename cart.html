@@ -18,8 +18,29 @@
   
   <!-- ご購入手続きへボタン -->
 <div class="checkout-area">
-    <button id="checkout-button" class="checkout-button">ご購入手続きへ</button>
-  </div>
+    <a href="checkout.html" id="checkout-button" class="checkout-button">ご購入手続きへ</a>
+</div>
+
+<span id="cart-count" class="cart-badge">0</span>
+
+
+<script>
+    // カートをローカルストレージに保存
+localStorage.setItem("cart", JSON.stringify(cart));
+
+// カートの個数を更新 ← 追加！
+updateCartCount();
+
+// ユーザーに確認メッセージを表示
+alert("商品がカートに追加されました！");
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount(); // ← ページ読み込み時に呼ぶ
+    // 既存の buy-button イベントなどもここに書いてOK
+});
+
+</script>
+
 
   <script>
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -45,7 +66,7 @@
       totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
     }
   </script>
-<script>
+  <script>
     function renderCart() {
       const now = new Date().getTime();
       const THIRTY_MINUTES = 30 * 60 * 1000;
@@ -108,17 +129,16 @@
     }
   
     // 初期表示
-    document.addEventListener('DOMContentLoaded', renderCart);
+    document.addEventListener('DOMContentLoaded', function () {
+  renderCart(); // 初回表示
+
+  // ← ★これを追加：5秒ごとにカートを再描画（削除チェック用）
+  setInterval(renderCart, 5000);
+    });
   </script>
   
 
-  <script>
-    const warningMsg = document.createElement('p');
-warningMsg.className = 'cart-warning';
-warningMsg.innerText = '※カート内の商品は30分後に自動的に削除されます';
-container.insertBefore(warningMsg, cartItemsDiv);
-</script>
-  
+ 
 
 
 
