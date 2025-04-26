@@ -398,16 +398,16 @@
         const currentProduct = products.find(p => p.url === "ring3-4.html");
         
         // 関連商品を取得（同じタグを含む）
-const relatedProducts = products.filter(p => 
+        const relatedProducts = products.filter(p => 
     p !== currentProduct && // 自分自身を除外
     p.tags.some(tag => currentProduct.tags.includes(tag)) // タグが一致する商品を取得
 );
 
-console.log("Related items:", relatedProducts);
+        console.log("Related items:", relatedProducts);
 
-// 関連商品をHTMLに表示
-const relatedContainer = document.getElementById("related-products");
-if (relatedProducts.length > 0) {
+        // 関連商品をHTMLに表示
+        const relatedContainer = document.getElementById("related-products");
+        if (relatedProducts.length > 0) {
     relatedProducts.forEach(product => {
         const productElement = document.createElement("div");
         productElement.classList.add("related-product"); // ✅ クラスを追加
@@ -437,53 +437,70 @@ if (relatedProducts.length > 0) {
         // 元のメイン画像をサムネイルに戻す
         thumbnail.src = tempSrc;
     }
-    </script>
-<script>
-    // カートに商品を追加する関数
-    function addToCart(product) {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
-      // 同じ商品（タイトルとサイズが一致）を探す
-      const existing = cart.find(item => item.title === product.title && item.size === product.size);
-  
-      if (existing) {
-        existing.quantity += 1;
-      } else {
-        product.quantity = 1;
-        cart.push(product);
-      }
-  
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCartCount();
-    }
-  
-    // カート内商品の合計数量を数えてバッジに表示
-    function updateCartCount() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
-  
-      const countElem = document.getElementById('cart-count');
-      countElem.textContent = totalQuantity;
-      countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
-    }
-  
-    // ページ読み込み時にバッジを更新
-    document.addEventListener('DOMContentLoaded', updateCartCount);
-  
-    // ボタンが押されたら実行
-    document.querySelector('.buy-button').addEventListener('click', function () {
-      const product = {
-        title: document.querySelector('.product-title').textContent,
-        material: "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10号",
-        price: 6500,
-        size: "10号",
-        image: document.getElementById("main-image").src
-      };
-  
-      addToCart(product);
-      alert("カートに追加しました！");
+    // カートに追加する関数
+    document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount(); // ← これを最初に実行！
+
+    document.querySelector(".buy-button").addEventListener("click", function () {
+    const product = {
+        title: document.querySelector(".product-title").textContent,  // 商品名
+        material: "クリスタルクォーツ",  // 素材
+        price: 3500,  // 価格
+        size: "10号",  // サイズ
+        quantity: 1,  // 数量
+        image: document.getElementById("main-image").src  // 商品画像のURL
+    };
+
+    addToCart(product); // ← 自作関数にまとめて呼び出すだけ！
+
+        alert("商品がカートに追加されました！※30分でカートから削除されます");
     });
-  </script>
+});
+
+// カートデータをローカルストレージに保存
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    const existing = cart.find(item => item.id === product.id);
+
+    if (existing) {
+        existing.quantity += 1;
+        existing.timestamp = new Date().getTime(); // タイムスタンプ更新
+    } else {
+    product.timestamp = new Date().getTime(); // 新しい商品にもtimestampを追加
+    cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+}
+
+    // ★新しい updateCartCount（これだけでOK！）
+function updateCartCount() {
+    const THIRTY_MINUTES = 30 * 60 * 1000;
+    const now = new Date().getTime();
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // 30分以内の商品だけ残す
+    cart = cart.filter(item => !item.timestamp || (now - item.timestamp < THIRTY_MINUTES));
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const countElem = document.getElementById('cart-count');
+    countElem.textContent = totalQuantity;
+    countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+}
+
+// ページ読み込み時にもチェック
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount(); // ページ読み込み時にまず1回チェックする
+
+    // 5秒ごとにカート内容をチェック・更新（テスト用）
+    setInterval(updateCartCount, 5000); 
+});
+</script>
 </body>
 
 </html>
