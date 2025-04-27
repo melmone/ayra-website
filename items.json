@@ -42,323 +42,406 @@
 
       "A003-10": {
         "name": "クリスタルクォーツ 10号",
-        "price": ,
-        "stock": ,
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["クリスタルクォーツ","多角形", "透明", "10号"],
+        "image": "images/クリスタル五角形10号横.jpg",
+        "url": "ring1-3-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A003-11": {
+        "name": "クリスタルクォーツ 11号",
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["クリスタルクォーツ","多角形", "透明", "11号"],
+        "image": "images/クリスタル五角形横.jpg",
+        "url": "ring1-3.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A004-11②": {
+        "name": "ローズクォーツ 11号",
+        "price": 1500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ローズクォーツ","長方形", "11号"],
+        "image": "images/ローズクォーツ長方形横.jpg",
+        "url": "ring1-4.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A005-14": {
+        "name": "スマイル ピンク 14号",
+        "price": 3500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["エナメル", "ピンク", "14号"],
+        "image": "images/ピンクスマイル横.jpg",
+        "url": "ring1-5.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A006-11": {
+        "name": "カーネリアン 11号",
+        "price": 3500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["カーネリアン","雫形", "オレンジ", "11号"],
+        "image": "images/カーネリアン横.jpg",
+        "url": "ring1-6.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A008-9": {
+        "name": "グリーンアメジスト 9号",
+        "price": 8000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["グリーンアメジスト", "長方形", "緑", "9号"],
+        "image": "images/緑アメジスト横.jpg",
+        "url": "ring1-7.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A009-12": {
+        "name": "アメジスト 12号",
+        "price": 8000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["アメジスト", "楕円形", "紫", "12号"],
+        "image": "images/アメジスト楕円横.jpg",
+        "url": "ring1-8.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A010-10①": {
+        "name": "カルセドニー 10号",
+        "price": 3500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["カルセドニー", "丸形", "水色", "カボション", "10号"],
+        "image": "images/カルセドニー横.jpg",
+        "url": "ring1-9.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A011-9": {
+        "name": "モナリザピンク 9号",
+        "price": 3500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["モナリザピンク", "丸形", "ピンク", "カボション", "9号"],
+        "image": "images/ピンクモナリザ9号横.jpg",
+        "url": "ring1-10.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A011-10": {
+        "name": "モナリザピンク 10号",
+        "price": 3500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["モナリザピンク", "丸形", "ピンク", "カボション", "10号"],
+        "image": "images/モナリザピンク10号横.jpg",
+        "url": "ring1-10-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "A012-14": {
+        "name": "スマイル イエロー 14号",
+        "price": 3500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["エナメル", "イエロー", "14号"],
+        "image": "images/黄スマイル横.jpg",
+        "url": "ring1-11.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "B001-9": {
+        "name": "アクアマリン 8-11号",
+        "price": 5000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["アクアマリン", "水色", "8号", "9号", "10号"],
+        "image": "images/アクアマリン正面.jpg",
+        "url": "ring6-1.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "B002-12": {
+        "name": "ローズクォーツ/クリスタルクォーツ 12-14号",
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ローズクォーツ", "クリスタルクォーツ", "透明", "12号", "13号", "14号"],
+        "image": "images/クリスタル.ローズ横.jpg",
+        "url": "ring2-1.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "B003-12": {
+        "name": "ハーキマーダイヤモンド/クリスタルクォーツ 12-14号",
+        "price": 10000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ハーキマーダイヤモンド", "クリスタルクォーツ", "透明", "12号"],
+        "image": "images/ハーキマー.クリスタル横.jpg",
+        "url": "ring6-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
-        "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+      "B004-12": {
+        "name": "カイヤナイト/アメジスト 12号-14号",
+        "price": 8000,
+        "stock": 1,
+        "soldOut": true,
+        "tags": ["カイヤナイト", "アメジスト", "青", "紫", "12号", "13号", "14号"],
+        "image": "images/カイヤナイト.アメジスト横.jpg",
+        "url": "ring2-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "B005-10": {
+        "name": "カーネリアン/シトリン 10-11号",
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["カーネリアン", "シトリン", "オレンジ", "10号", "11号"],
+        "image": "images/カーネリアン.シトリン横.jpg",
+        "url": "ring2-3.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
-        "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+      "B006-9": {
+        "name": "ブラックトルマリン/ハーキマーダイヤモンド 9-10号",
+        "price": 6000,
+        "stock": 1,
+        "soldOut": true,
+        "tags": ["ブラックトルマリン", "ハーキマーダイヤモンド", "黒", "透明", "9号", "10号"],
+        "image": "images/黒トルマリン.ハーキマー横.jpg",
+        "url": "ring2-4.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C001-10": {
+        "name": "ラリマー/カイヤナイト/タンザナイト 8-10 号",
+        "price": 10000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ラリマー", "カイヤナイト", "タンザナイト", "青", "8号", "9号", "10号"],
+        "image": "images/ラリマー.カイヤナイト.タンザナイト.jpg",
+        "url": "ring3-1.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C002-12": {
+        "name": "グリーンハイドロクォーツ/ラリマー/フローライト 12-14号",
+        "price": 20000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["グリーンハイドロクォーツ", "ラリマー", "フローライト", "緑", "12号", "13号", "14号"],
+        "image": "images/緑ハイド.ラリマー.フローライト.jpg",
+        "url": "ring3-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C003-10": {
+        "name": "アメジスト 10号",
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["アメジスト", "紫", "10号"],
+        "image": "images/アメジスト縦3横.jpg",
+        "url": "ring5-1.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C004-9": {
+        "name": "アクアマリン/アメジスト/シトリン 9号",
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["アクアマリン", "アメジスト", "シトリン", "9号"],
+        "image": "images/アクア.アメジスト.シトリン縦3横.jpg",
+        "url": "ring5-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C005-9": {
+        "name": "クリスタルクォーツ 9号",
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["クリスタルクォーツ", "透明", "9号"],
+        "image": "images/クリスタルクォーツ縦3横.jpg",
+        "url": "ring5-3.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C006-10": {
+        "name": "フローライト 10号",
+        "price": 6000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["フローライト", "緑", "10号"],
+        "image": "images/フローライト縦3横.jpg",
+        "url": "ring5-4.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C016-9": {
+        "name": "ピンクドゥルージー 9号",
+        "price": 6500,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ピンクドゥルージー", "ドゥルージー", "ピンク", "9号"],
+        "image": "images/ピンクドゥルージー縦横.jpg",
+        "url": "ring5-5html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C007-11": {
+        "name": "グリーンカイヤナイト/フローライト/シトリン 11-12号",
+        "price": 12000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["グリーンカイヤナイト", "カイヤナイト", "フローライト", "シトリン", "11号", "12号"],
+        "image": "images/グリーンカイヤナイト.フローライト.シトリン.jpg",
+        "url": "ring3-3.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      
+
+      "C008-10": {
+        "name": "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10-12号",
+        "price": 10000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["クリスタルクォーツ", "ブルードゥルージー", "ホワイトドゥルージー", "透明", "白", "青", "10号", "11号", "12号"],
+        "image": "images/クリスタル.ドゥルージー.ドゥルージー横.jpg",
+        "url": "ring3-4.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C009-9": {
+        "name": "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 9-10号",
+        "price": 12000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["カイヤナイト", "グリーンカイヤナイト", "ハーキマーダイヤモンド", "青", "9号", "10号"],
+        "image": "images/カイヤ.緑カイヤ.ハーキマー9-10号横.jpg",
+        "url": "ring3-5.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C009-10": {
+        "name": "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 10-12号",
+        "price": 12000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["カイヤナイト", "グリーンカイヤナイト", "ハーキマーダイヤモンド", "青", "10号", "11号", "12号"],
+        "image": "images/カイヤ.緑カイヤ.ハーキマー.10-12号横.jpg",
+        "url": "ring3-5-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C010-9": {
+        "name": "ローズクォーツ/アクアマリン/シトリン 8-10号",
+        "price": 15000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ローズクォーツ", "アクアマリン", "シトリン", "8号", "9号", "10号"],
+        "image": "images/ローズクォーツ.アクアマリン.シトリン8-10号横.jpg",
+        "url": "ring3-6-2.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C010-12": {
+        "name": "ローズクォーツ/アクアマリン/シトリン 11-13号",
+        "price": 15000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ローズクォーツ", "アクアマリン", "シトリン", "11号", "12号", "13号"],
+        "image": "images/ローズ.アクア.シトリン12号横.jpg",
+        "url": "ring3-6.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C011-9": {
+        "name": "フローライト/アメジスト/シトリン 9-10号",
+        "price": 15000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["フローライト", "アメジスト", "シトリン", "9号", "10号"],
+        "image": "images/フローライト.アメジスト.シトリン横.jpg",
+        "url": "ring3-7.html"
       },
 
-      "": {
-        "name": "",
-        "price": ,
-        "stock": ,
+      "C012-9": {
+        "name": "ローズクォーツ/ガーネット/アメジスト 8-11号",
+        "price": 10000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["",""],
-        "image": "",
-        "url": ""
+        "tags": ["ローズクォーツ", "ガーネット", "アメジスト", "紫", "8号", "9号", "10号", "11号"],
+        "image": "images/ローズクォーツ.ガーネット.アメジスト.jpg",
+        "url": "ring3-8.html"
       },
+
+      "C013-11": {
+        "name": "グリーンカイヤナイト/クリスタルクォーツ/アパタイト 10-14号",
+        "price": 10000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["グリーンカイヤナイト", "カイヤナイト", "クリスタルクォーツ", "アパタイト", "青", "10号", "11号", "12号", "13号", "14号"],
+        "image": "images/緑カイヤナイト.クリスタルクォーツ.アパタイト.jpg",
+        "url": "ring3-9.html"
+      },
+
+      "C014-9": {
+        "name": "カイヤナイト/アメジスト/シトリン 8-10号",
+        "price": 10000,
+        "stock": 1,
+        "soldOut": true,
+        "tags": ["カイヤナイト", "アメジスト", "シトリン", "8号", "9号", "10号"],
+        "image": "images/カイヤナイト.アメジスト.シトリン.jpg",
+        "url": "ring3-10.html"
+      },
+
+      "C015-10": {
+        "name": "クリスタルクォーツ/カイヤナイト/タンザナイト 10-11号",
+        "price": 15000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["クリスタルクォーツ", "カイヤナイト", "タンザナイト", "青", "紫", "10号", "11号"],
+        "image": "images/クリスタル.カイヤナイト.タンザナイト横.jpg",
+        "url": "ring3-11.html"
+      },
+
+      "C017-8": {
+        "name": "カイヤナイト/アパタイト/クリスタルクォーツ 8-9号",
+        "price": 22000,
+        "stock": 1,
+        "soldOut": true,
+        "tags": ["クリスタルクォーツ", "カイヤナイト", "タンザナイト", "青", "紫", "8号", "9号"],
+        "image": "images/銀カイヤ.アパタイト.クリスタル横.jpg",
+        "url": "ring3-12.html"
+      },
+
+      "C020-10①": {
+        "name": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号",
+        "price": 22000,
+        "stock": 1,
+        "soldOut": true,
+        "tags": ["ブラックルチルクォーツ", "オニキス", "クリスタルクォーツ", "黒", "透明", "10号", "11号", "12号"],
+        "image": "images/ルチル.オニキス.クリスタル横.jpg",
+        "url": "ring3-13.html"
+      },
+
+      "D001-8": {
+        "name": "タンザナイト/アメジスト/ガーネット/ローズクォーツ 8-11号",
+        "price": 10000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["タンザナイト", "アメジスト", "ガーネット", "ローズクォーツ", "紫", "8号", "9号", "10号", "11号"],
+        "image": "images/紫4粒横.jpg",
+        "url": "ring4-1.html"
+      },
+
+      "D002-12": {
+        "name": "アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号",
+        "price": 15000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "12号", "13号", "14号"],
+        "image": "images/水色4粒横.jpg",
+        "url": "ring4-2.html"
+      },
+
+      "D002-13": {
+        "name": "アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号",
+        "price": 15000,
+        "stock": 1,
+        "soldOut": true,
+        "tags": ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "12号", "13号", "14号"],
+        "image": "",
+        "url": "ring4-2-2.html"
+      }
+
       
     }
   }
