@@ -502,7 +502,44 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
     </script>
-    
+  <script type="module">
+    // Firebase SDKの読み込み
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyAJkO5HyZPp4D_D3YW_nle-SkcbBfp867c",
+      authDomain: "xxx.firebaseapp.com",
+      projectId: "ayra-rings",
+      storageBucket: "xxx.appspot.com",
+      messagingSenderId: "xxx",
+      appId: "xxx"
+    };
+  
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+  
+    // 商品 ID に基づく SOLD OUT チェック
+    const productId = "ring1-1"; // 商品のドキュメントID
+    const label = document.getElementById("sold-out-label");
+    const buyButton = document.querySelector(".buy-button");
+  
+    onSnapshot(doc(db, "products", productId), (docSnap) => {
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        if (data.isSoldOut) {
+          if (label) label.style.display = "block";
+          if (buyButton) {
+            buyButton.disabled = true;
+            buyButton.style.backgroundColor = "gray";
+            buyButton.textContent = "SOLD OUT";
+          }
+        }
+      }
+    });
+  </script>
+  
+
       
 </body>
 

@@ -56,6 +56,7 @@
         <div class="product-info">
             <h1 class="product-title">アメジスト 10号<h1>
             <p><strong>素材:</strong>アメジスト</p>
+            <p><strong>ベース:</strong>Brass, 18K gold plated (詳しくは<a href="faqs.html">こちら</a>)</p>
             <p><strong>価格:</strong>¥6,000</p>
             <p><strong>サイズ:</strong>10号</p>
             <p><strong>商品番号:</strong>C003-10</p>
@@ -437,6 +438,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
+        id: "C003-10",
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "アメジスト 10号",  // 素材
         price: 6000,  // 価格

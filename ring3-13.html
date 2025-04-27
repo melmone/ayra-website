@@ -53,7 +53,7 @@
        
         <div class="product-images">
             <div class="main-image-wrapper">
-                <img id="main-image2" src="images/ルチル.オニキス.クリスタル横.jpg" alt="商品1横から">
+                <img id="main-image" src="images/ルチル.オニキス.クリスタル横.jpg" alt="商品1横から">
                 <div class="sold-out-label2">SOLD OUT</div>
             </div>
             
@@ -66,6 +66,7 @@
         <div class="product-info">
             <h1 class="product-title">ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号</h1>
             <p><strong>素材:</strong>ブラックルチルクォーツ/オニキス/クリスタルクォーツ</p>
+            <p><strong>ベース:</strong>Brass, 18K gold plated (詳しくは<a href="faqs.html">こちら</a>)</p>
             <p><strong>価格:</strong>¥23,000</p>
             <p><strong>サイズ:</strong>10-12号</p>
             <p><strong>商品番号:</strong>C020-10①</p>
@@ -451,6 +452,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
+        id: "C020-10①",
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号",  // 素材
         price: 23000,  // 価格

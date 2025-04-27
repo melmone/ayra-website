@@ -63,6 +63,7 @@
         <div class="product-info">
             <h1 class="product-title">クリスタルクォーツ/カイヤナイト/タンザナイト 10-13号</h1>
             <p><strong>素材:</strong>クリスタルクォーツ/カイヤナイト/タンザナイト</p>
+            <p><strong>ベース:</strong>Brass, 18K gold plated (詳しくは<a href="faqs.html">こちら</a>)</p>
             <p><strong>価格:</strong>¥15,000</p>
             <p><strong>サイズ:</strong>10-13号</p>
             <p><strong>商品番号:</strong>C015-10</p>
@@ -74,6 +75,9 @@
                 <a href="tag.html?tag=青" class="tag">青</a>
                 <a href="tag.html?tag=紫" class="tag">紫</a>
                 <a href="tag.html?tag=10号" class="tag">10号</a>
+                <a href="tag.html?tag=11号" class="tag">11号</a>
+                <a href="tag.html?tag=12号" class="tag">12号</a>
+                <a href="tag.html?tag=13号" class="tag">13号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -442,6 +446,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
+        id: "C015-10",
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "クリスタルクォーツ/カイヤナイト/タンザナイト 10-13号",  // 素材
         price: 15000,  // 価格

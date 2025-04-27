@@ -52,8 +52,18 @@
       }
     }).render('#paypal-button-container');
   </script>
+  
+  <script>
+  import { getFirestore, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
+const db = getFirestore();
+const productId = "ring1-1"; // 対象の商品ID
 
+await updateDoc(doc(db, "products", productId), {
+  isSoldOut: true
+});
+
+</script>
 
 
 

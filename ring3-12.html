@@ -53,7 +53,7 @@
        
         <div class="product-images">
             <div class="main-image-wrapper">
-                <img id="main-image2" src="images/銀カイヤ.アパタイト.クリスタル横.jpg" alt="商品1横から">
+                <img id="main-image" src="images/銀カイヤ.アパタイト.クリスタル横.jpg" alt="商品1横から">
                 <div class="sold-out-label2">SOLD OUT</div>
             </div>
 
@@ -66,6 +66,7 @@
         <div class="product-info">
             <h1 class="product-title">カイヤナイト/アパタイト/クリスタルクォーツ 8-9号</h1>
             <p><strong>素材:</strong>カイヤナイト/アパタイト/クリスタルクォーツ</p>
+            <p><strong>ベース:</strong>Silver 925 (詳しくは<a href="faqs.html">こちら</a>)</p>
             <p><strong>価格:</strong>¥22,000</p>
             <p><strong>サイズ:</strong>8-9号</p>
             <p><strong>商品番号:</strong>C017-8</p>
@@ -451,6 +452,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
+        id: "C017-8",
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "カイヤナイト/アパタイト/クリスタルクォーツ 8-9号",  // 素材
         price: 22000,  // 価格

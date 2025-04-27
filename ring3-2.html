@@ -64,6 +64,7 @@
         <div class="product-info">
             <h1 class="product-title">グリーンハイドロクォーツ/ラリマー/フローライト 12-14号</h1>
             <p><strong>素材:</strong>グリーンハイドロクォーツ/ラリマー/フローライト</p>
+            <p><strong>ベース:</strong>Brass, 18K gold plated (詳しくは<a href="faqs.html">こちら</a>)</p>
             <p><strong>価格:</strong>¥20,000</p>
             <p><strong>サイズ:</strong>12-14号</p>
             <p><strong>商品番号:</strong>C001-12</p>
@@ -73,6 +74,8 @@
                 <a href="tag.html?tag=フローライト" class="tag">フローライト</a>
                 <a href="tag.html?tag=緑" class="tag">緑</a>
                 <a href="tag.html?tag=12号" class="tag">12号</a>
+                <a href="tag.html?tag=13号" class="tag">13号</a>
+                <a href="tag.html?tag=14号" class="tag">14号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -441,6 +444,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
+        id: "C002-12",
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "グリーンハイドロクォーツ/ラリマー/フローライト 12-14号",  // 素材
         price: 20000,  // 価格

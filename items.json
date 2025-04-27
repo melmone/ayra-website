@@ -1,0 +1,365 @@
+{
+    "products": {
+      "A001-10①": {
+        "name": "クリスタルクォーツ 10号",
+        "price": 4500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["クリスタルクォーツ","楕円形", "透明", "10号"],
+        "image": "images/クリスタルクォーツ楕円横.jpg",
+        "url": "ring1-1-2.html"
+      },
+
+      "A001-10②": {
+        "name": "クリスタルクォーツ 10号",
+        "price": 4500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["クリスタルクォーツ","楕円形", "透明", "10号"],
+        "image": "images/クリスタルクォーツ楕円横.jpg",
+        "url": "ring1-1.html"
+      },
+
+      "A002-9": {
+        "name": "クリスタルクォーツ 9号",
+        "price": 3500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["クリスタルクォーツ","丸形", "透明", "9号"],
+        "image": "images/クリスタルクォーツ丸横.jpg",
+        "url": "ring1-2.html"
+      },
+
+      "A002-10": {
+        "name": "クリスタルクォーツ 10号",
+        "price": 3500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["クリスタルクォーツ","丸形", "透明", "10号"],
+        "image": "images/クリスタルクォーツ丸横.jpg",
+        "url": "ring1-2-2.html"
+      },
+
+      "A003-10": {
+        "name": "クリスタルクォーツ 10号",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+
+      "": {
+        "name": "",
+        "price": ,
+        "stock": ,
+        "soldOut": false,
+        "tags": ["",""],
+        "image": "",
+        "url": ""
+      },
+      
+    }
+  }
+  
