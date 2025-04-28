@@ -3,31 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>ご購入手続き | Ayra</title>
-
-  
-  <!-- ① Firebase SDK 読み込み -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
-  
-  <!-- ② Firebase 初期化 -->
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAJkO5HyZPp4D_D3YW_nle-SkcbBfp867c",
-      authDomain: "ayra-rings.firebaseapp.com",
-      databaseURL: "https://ayra-rings-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "ayra-rings",
-      storageBucket: "ayra-rings.firebasestorage.app",
-      messagingSenderId: "285508091332",
-      appId: "1:285508091332:web:6d272347377b4669cb3891"
-    };
-    // ③ 初期化
-    const app = firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-  </script>
-
-  <!-- 以降、あなたのカスタム CSS や JS -->
+  <script type="module" src="js/firebase-init.js"></script>
+  <script type="module" src="js/product-soldout.js" defer></script>
   <link rel="stylesheet" href="stylesheet.css">
-  <script src="js/main.js" defer></script>
   
 </head>
 

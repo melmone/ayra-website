@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品10詳細</title>
+    <script type="module" src="js/firebase-init.js"></script>
+    <script type="module" src="js/product-soldout.js" defer></script>
+    
     <link rel="stylesheet" href="stylesheet.css"> <!-- CSSファイルを適用 -->
 </head>
 
@@ -61,13 +64,13 @@
             </div>
         </div>
        
-        <div class="product-info">
+        <div class="product-info" id="product-info" data-product-id="A011-9">
             <h1 class="product-title">ピンクカルセドニー 9号</h1>
-            <p><strong>素材:</strong>ピンクカルセドニー</p>
-            <p><strong>ベース:</strong>Brass, 18K gold plated (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong>¥3,500</p>
-            <p><strong>サイズ:</strong>9号</p>
-            <p><strong>商品番号:</strong>A0011-9</p>
+            <p><strong>素材:</strong><span class="product-material">ピンクカルセドニー</span></p>
+            <p><strong>ベース:</strong><span class="product-base">Brass, 18K gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
+            <p><strong>価格:</strong><span class="product-price">¥3,500</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">9号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">A011-9</span></p>
             <div class="tags">
                 <a href="tag.html?tag=モナリザピンク" class="tag">ピンクカルセドニー</a>
                 <a href="tag.html?tag=丸形" class="tag">丸型</a>

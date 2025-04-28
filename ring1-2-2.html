@@ -5,30 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品1詳細</title>
-
-    <!-- ① Firebase SDK 読み込み -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
-  
-  <!-- ② Firebase 初期化 -->
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAJkO5HyZPp4D_D3YW_nle-SkcbBfp867c",
-      authDomain: "ayra-rings.firebaseapp.com",
-      databaseURL: "https://ayra-rings-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "ayra-rings",
-      storageBucket: "ayra-rings.firebasestorage.app",
-      messagingSenderId: "285508091332",
-      appId: "1:285508091332:web:6d272347377b4669cb3891"
-    };
-    // ③ 初期化
-    const app = firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-  </script>
-
-  <!-- 以降、あなたのカスタム CSS や JS -->
-  <link rel="stylesheet" href="stylesheet.css">
-  <script src="js/main.js" defer></script>
+    <script type="module" src="js/firebase-init.js"></script>
+    <script type="module" src="js/product-soldout.js" defer></script>
+    
     <link rel="stylesheet" href="stylesheet.css"> <!-- CSSファイルを適用 -->
 </head>
 
@@ -87,14 +66,13 @@
             </div>
         </div>
        
-        <div class="product-info">
+        <div class="product-info" id="product-info" data-product-id="A002-10">
             <h1 class="product-title">クリスタルクォーツ 10号</h1>
-            <p><strong>素材:18k plated/brass</strong>クリスタルクォーツ/18k plated/brass</p>
-            <p><strong>素材:</strong>クリスタルクォーツ</p>
-            <p><strong>ベース:</strong>Brass, 18K gold plated (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong> ¥4,500</p>
-            <p><strong>サイズ:</strong>10号</p>
-            <p><strong>商品番号:</strong>A002-10</p>
+            <p><strong>素材:</strong><span class="product-material">クリスタルクォーツ</span></p>
+            <p><strong>ベース:</strong><span class="product-base">Brass, 18K gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
+            <p><strong>価格:</strong><span class="product-price"> ¥4,500</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">10号</p>
+            <p><strong>商品番号:</strong><span class="product-sku">A002-10</span></p>
             <div class="tags">
                 <a href="tag.html?tag=クリスタルクォーツ" class="tag">クリスタルクォーツ</a>
                 <a href="tag.html?tag=丸形" class="tag">丸形</a>
