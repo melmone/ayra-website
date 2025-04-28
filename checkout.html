@@ -15,7 +15,7 @@
 
   <form class="checkout-form" id="checkout-form">
     <label for="checkout-email" class="checkout-label">メールアドレス:</label><br>
-      <input type="email" name="email" class="checkout-input" required>
+      <input id="checkout-email" type="email" name="email" class="checkout-input" required>
     <br><br>
 
     <label for="checkout-address" class="checkout-label">お届け先住所:</label><br>
@@ -37,39 +37,66 @@
     const total = cart.reduce((s, i) => s + i.price, 0);
 
     paypal.Buttons({
-      createOrder: (_, actions) =>
+      createOrder: (data, actions) =>
         actions.order.create({ 
           purchase_units: [{ 
             amount: { value: total.toString() } 
           }] 
         }),
 
-      onApprove: (_, actions) =>
-        actions.order.capture()
-          .then(() => {
-            // 2) cart の中にある全商品の soldOut=true をまとめて更新
+      // 決済承認後の処理
+      onApprove: async (data, actions) => {
+        try {
+          // 1) 決済を確定して details を取得
+          const details = await actions.order.capture();
+          console.log("PayPal capture details:", details);
+
+          // 2) details から必要な情報を抜き出し
+          const orderId      = details.id;
+          const status       = details.status;
+          const payerName    = `${details.payer.name.given_name} ${details.payer.name.surname}`;
+          const payerEmail   = details.payer.email_address;
+          const shippingInfo = details.purchase_units[0].shipping.address;
+          const emailInput    = document.getElementById('checkout-email').value;
+          const amount       = details.purchase_units[0].amount.value;
+          const currency     = details.purchase_units[0].amount.currency_code;
+          const addressInput = document.getElementById('checkout-address').value;
+
+          // 3) Firebase に注文データを保存
+          await window.db.ref('orders').push({
+            orderId,
+            status,
+            payerName,
+            payerEmail,
+            shipping: shippingInfo,
+            noteAddress: addressInput,
+            email: emailInput,
+            amount,
+            currency,
+            cart,
+            purchasedAt: Date.now()
+          });
+
+          // 4) soldOut フラグ更新（カートの商品すべて）
           const updates = {};
           cart.forEach(item => {
-            // item.id は items.json のキー（例 "A001-10①"）
             updates[`products/${item.id}/soldOut`] = true;
           });
-          // Realtime Database のルートで一括更新
-          return db.ref().update(updates);
-        })
-          .then(() => {
-            // 3) UI フィードバック
-          alert('決済が完了しました！該当商品を SOLD OUT にしました。');
-          // 4) カートをクリア
+          await window.db.ref().update(updates);
+
+          // 5) ユーザーへのフィードバック＆遷移
+          alert(`決済完了！\n注文ID: ${orderId}\n合計: ¥${amount}`);
           localStorage.removeItem('cart');
-          // 5) 好きなページへリダイレクト（例：トップページ or サンクスページ）
           window.location.href = 'index.html';
-        })
-        .catch(err => {
+
+        } catch (err) {
           console.error(err);
-          alert('エラーが発生しました。コンソールログを確認してください。');
-        })
-  }).render('#paypal-button-container');
-</script>
+          alert('決済完了時にエラーが発生しました。');
+        }
+      }
+    }).render('#paypal-button-container');
+  </script>
+
 
 
 </body>
