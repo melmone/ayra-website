@@ -3,7 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>ご購入手続き | Ayra</title>
+
+  
+  <!-- ① Firebase SDK 読み込み -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
+  
+  <!-- ② Firebase 初期化 -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAJkO5HyZPp4D_D3YW_nle-SkcbBfp867c",
+      authDomain: "ayra-rings.firebaseapp.com",
+      databaseURL: "https://ayra-rings-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "ayra-rings",
+      storageBucket: "ayra-rings.firebasestorage.app",
+      messagingSenderId: "285508091332",
+      appId: "1:285508091332:web:6d272347377b4669cb3891"
+    };
+    // ③ 初期化
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+  </script>
+
+  <!-- 以降、あなたのカスタム CSS や JS -->
   <link rel="stylesheet" href="stylesheet.css">
+  <script src="js/main.js" defer></script>
+  
 </head>
 
 <body>
@@ -30,41 +55,43 @@
   <script src="https://www.paypal.com/sdk/js?client-id=AT8cSY5uNZPTDuIEpFSCkQ4_mIFeEU30WAuXl9wK64vIodxOA9R2EXBatYNxt50vKM76XRE_TFztEnH0&currency=JPY"></script>
   
   <script>
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const total = cart.reduce((sum, item) => sum + item.price, 0); // item.price に価格が入ってる前提
-  
+    const cart  = JSON.parse(localStorage.getItem('cart')) || [];
+    const total = cart.reduce((s, i) => s + i.price, 0);
+
     paypal.Buttons({
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: total.toString()
-            }
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          alert('決済が完了しました。ありがとうございます！');
+      createOrder: (_, actions) =>
+        actions.order.create({ 
+          purchase_units: [{ 
+            amount: { value: total.toString() } 
+          }] 
+        }),
+
+      onApprove: (_, actions) =>
+        actions.order.capture()
+          .then(() => {
+            // 2) cart の中にある全商品の soldOut=true をまとめて更新
+          const updates = {};
+          cart.forEach(item => {
+            // item.id は items.json のキー（例 "A001-10①"）
+            updates[`products/${item.id}/soldOut`] = true;
+          });
+          // Realtime Database のルートで一括更新
+          return db.ref().update(updates);
+        })
+          .then(() => {
+            // 3) UI フィードバック
+          alert('決済が完了しました！該当商品を SOLD OUT にしました。');
+          // 4) カートをクリア
           localStorage.removeItem('cart');
-          location.reload();
-        });
-      }
-    }).render('#paypal-button-container');
-  </script>
-  
-  <script>
-  import { getFirestore, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-const db = getFirestore();
-const productId = "ring1-1"; // 対象の商品ID
-
-await updateDoc(doc(db, "products", productId), {
-  isSoldOut: true
-});
-
+          // 5) 好きなページへリダイレクト（例：トップページ or サンクスページ）
+          window.location.href = 'index.html';
+        })
+        .catch(err => {
+          console.error(err);
+          alert('エラーが発生しました。コンソールログを確認してください。');
+        })
+  }).render('#paypal-button-container');
 </script>
-
 
 
 </body>
