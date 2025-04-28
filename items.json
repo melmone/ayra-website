@@ -8,7 +8,7 @@
         "price": 4500,
         "size": "10号",
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["クリスタルクォーツ","楕円形", "透明", "10号"],
         "image": "images/クリスタルクォーツ楕円横.jpg",
         "url": "ring1-1-2.html"
@@ -190,7 +190,7 @@
         "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["エナメル", "イエロー", "14号"],
         "image": "images/黄スマイル横.jpg",
         "url": "ring1-11.html"
