@@ -28,7 +28,10 @@
       },
 
       "A002-9": {
+        "sku": "A002-9",
         "name": "クリスタルクォーツ 9号",
+        "material": "クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -38,7 +41,10 @@
       },
 
       "A002-10": {
+        "sku": "A002-10",
         "name": "クリスタルクォーツ 10号",
+        "material": "クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -48,7 +54,10 @@
       },
 
       "A003-10": {
+        "sku": "A003-10",
         "name": "クリスタルクォーツ 10号",
+        "material": "クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -58,7 +67,10 @@
       },
 
       "A003-11": {
+        "sku": "A003-11",
         "name": "クリスタルクォーツ 11号",
+        "material": "クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -67,8 +79,11 @@
         "url": "ring1-3.html"
       },
 
-      "A004-11②": {
+      "A004-11-2": {
+        "sku": "A004-11-2",
         "name": "ローズクォーツ 11号",
+        "material": "ローズクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 1500,
         "stock": 1,
         "soldOut": false,
@@ -78,7 +93,10 @@
       },
 
       "A005-14": {
+        "sku": "A005-14",
         "name": "スマイル ピンク 14号",
+        "material": "エナメル",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -88,7 +106,10 @@
       },
 
       "A006-11": {
+        "sku": "A006-11",
         "name": "カーネリアン 11号",
+        "material": "カーネリアン",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -98,7 +119,10 @@
       },
 
       "A008-9": {
+        "sku": "A008-9",
         "name": "グリーンアメジスト 9号",
+        "material": "グリーンアメジスト",
+        "base": "Brass, 18K gold plated",
         "price": 8000,
         "stock": 1,
         "soldOut": false,
@@ -108,7 +132,10 @@
       },
 
       "A009-12": {
+        "sku": "A009-12",
         "name": "アメジスト 12号",
+        "material": "アメジスト",
+        "base": "Brass, 18K gold plated",
         "price": 8000,
         "stock": 1,
         "soldOut": false,
@@ -117,8 +144,11 @@
         "url": "ring1-8.html"
       },
 
-      "A010-10①": {
+      "A010-10-1": {
+        "sku": "A010-10-1",
         "name": "カルセドニー 10号",
+        "material": "カルセドニー",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -128,7 +158,10 @@
       },
 
       "A011-9": {
+        "sku": "A011-9",
         "name": "モナリザピンク 9号",
+        "material": "モナリザピンク",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -138,7 +171,10 @@
       },
 
       "A011-10": {
+        "sku": "A011-10",
         "name": "モナリザピンク 10号",
+        "material": "モナリザピンク",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -148,7 +184,10 @@
       },
 
       "A012-14": {
+        "sku": "A012-14",
         "name": "スマイル イエロー 14号",
+        "material": "エナメル",
+        "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
         "soldOut": false,
@@ -158,7 +197,10 @@
       },
 
       "B001-9": {
+        "sku": "B001-9",
         "name": "アクアマリン 8-11号",
+        "material": "アクアマリン",
+        "base": "Brass, 18K gold plated",
         "price": 5000,
         "stock": 1,
         "soldOut": false,
@@ -168,7 +210,10 @@
       },
 
       "B002-12": {
+        "sku": "B002-12",
         "name": "ローズクォーツ/クリスタルクォーツ 12-14号",
+        "material": "ローズクォーツ/クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -178,7 +223,10 @@
       },
 
       "B003-12": {
+        "sku": "B003-12",
         "name": "ハーキマーダイヤモンド/クリスタルクォーツ 12-14号",
+        "material": "ハーキマーダイヤモンド/クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
@@ -188,7 +236,10 @@
       },
 
       "B004-12": {
+        "sku": "B004-12",
         "name": "カイヤナイト/アメジスト 12号-14号",
+        "material": "カイヤナイト/アメジスト",
+        "base": "Brass, 18K gold plated",
         "price": 8000,
         "stock": 1,
         "soldOut": true,
@@ -198,7 +249,10 @@
       },
 
       "B005-10": {
+        "sku": "B005-10",
         "name": "カーネリアン/シトリン 10-11号",
+        "material": "カーネリアン/シトリン",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -208,7 +262,10 @@
       },
 
       "B006-9": {
+        "sku": "B006-9",
         "name": "ブラックトルマリン/ハーキマーダイヤモンド 9-10号",
+        "material": "ブラックトルマリン/ハーキマーダイヤモンド",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": true,
@@ -218,7 +275,10 @@
       },
 
       "C001-10": {
+        "sku": "C001-10",
         "name": "ラリマー/カイヤナイト/タンザナイト 8-10 号",
+        "material": "ラリマー/カイヤナイト/タンザナイト",
+        "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
@@ -228,7 +288,10 @@
       },
 
       "C002-12": {
+        "sku": "C002-12",
         "name": "グリーンハイドロクォーツ/ラリマー/フローライト 12-14号",
+        "material": "グリーンハイドロクォーツ/ラリマー/フローライト",
+        "base": "Brass, 18K gold plated",
         "price": 20000,
         "stock": 1,
         "soldOut": false,
@@ -238,7 +301,10 @@
       },
 
       "C003-10": {
+        "sku": "C003-10",
         "name": "アメジスト 10号",
+        "material": "アメジスト",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -248,7 +314,10 @@
       },
 
       "C004-9": {
+        "sku": "C004-9",
         "name": "アクアマリン/アメジスト/シトリン 9号",
+        "material": "アクアマリン/アメジスト/シトリン",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -258,7 +327,10 @@
       },
 
       "C005-9": {
+        "sku": "C005-9",
         "name": "クリスタルクォーツ 9号",
+        "material": "クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -268,7 +340,10 @@
       },
 
       "C006-10": {
+        "sku": "C006-10",
         "name": "フローライト 10号",
+        "material": "フローライト",
+        "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
         "soldOut": false,
@@ -278,7 +353,10 @@
       },
 
       "C016-9": {
+         "sku": "C016-9",
         "name": "ピンクドゥルージー 9号",
+        "material": "ピンクドゥルージー",
+        "base": "Brass, 18K gold plated",
         "price": 6500,
         "stock": 1,
         "soldOut": false,
@@ -288,7 +366,10 @@
       },
 
       "C007-11": {
+        "sku": "C007-11",
         "name": "グリーンカイヤナイト/フローライト/シトリン 11-12号",
+        "material": "グリーンカイヤナイト/フローライト/シトリン",
+        "base": "Brass, 18K gold plated",
         "price": 12000,
         "stock": 1,
         "soldOut": false,
@@ -300,7 +381,10 @@
       
 
       "C008-10": {
+        "sku": "C008-10",
         "name": "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10-12号",
+        "material": "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー",
+        "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
@@ -310,7 +394,10 @@
       },
 
       "C009-9": {
+         "sku": "C009-9",
         "name": "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 9-10号",
+        "material": "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド",
+        "base": "Brass, 18K gold plated",
         "price": 12000,
         "stock": 1,
         "soldOut": false,
@@ -320,7 +407,10 @@
       },
 
       "C009-10": {
+        "sku": "C009-10",
         "name": "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 10-12号",
+        "material": "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド",
+        "base": "Brass, 18K gold plated",
         "price": 12000,
         "stock": 1,
         "soldOut": false,
@@ -330,7 +420,10 @@
       },
 
       "C010-9": {
+        "sku": "C010-9",
         "name": "ローズクォーツ/アクアマリン/シトリン 8-10号",
+        "material": "ローズクォーツ/アクアマリン/シトリン",
+        "base": "Brass, 18K gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -340,7 +433,10 @@
       },
 
       "C010-12": {
+        "sku": "C010-12",
         "name": "ローズクォーツ/アクアマリン/シトリン 11-13号",
+        "material": "ローズクォーツ/アクアマリン/シトリン",
+        "base": "Brass, 18K gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -350,7 +446,10 @@
       },
 
       "C011-9": {
+        "sku": "C011-9",
         "name": "フローライト/アメジスト/シトリン 9-10号",
+        "material": "フローライト/アメジスト/シトリン",
+        "base": "Brass, 18K gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -360,7 +459,10 @@
       },
 
       "C012-9": {
+        "sku": "C012-9",
         "name": "ローズクォーツ/ガーネット/アメジスト 8-11号",
+        "material": "ローズクォーツ/ガーネット/アメジスト",
+        "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
@@ -370,7 +472,10 @@
       },
 
       "C013-11": {
+        "sku": "C013-11",
         "name": "グリーンカイヤナイト/クリスタルクォーツ/アパタイト 10-14号",
+        "material": "グリーンカイヤナイト/クリスタルクォーツ/アパタイト",
+        "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
@@ -380,7 +485,10 @@
       },
 
       "C014-9": {
+        "sku": "C014-9",
         "name": "カイヤナイト/アメジスト/シトリン 8-10号",
+        "material": "カイヤナイト/アメジスト/シトリン",
+        "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": true,
@@ -390,7 +498,10 @@
       },
 
       "C015-10": {
+        "sku": "C015-10",
         "name": "クリスタルクォーツ/カイヤナイト/タンザナイト 10-11号",
+        "material": "クリスタルクォーツ/カイヤナイト/タンザナイト",
+        "base": "Brass, 18K gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -400,7 +511,10 @@
       },
 
       "C017-8": {
+        "sku": "C017-8",
         "name": "カイヤナイト/アパタイト/クリスタルクォーツ 8-9号",
+        "material": "カイヤナイト/アパタイト/クリスタルクォーツ",
+        "base": "Silver 925",
         "price": 22000,
         "stock": 1,
         "soldOut": true,
@@ -409,8 +523,11 @@
         "url": "ring3-12.html"
       },
 
-      "C020-10①": {
+      "C020-10-1": {
+        "sku": "C020-10-1",
         "name": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号",
+        "material": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 22000,
         "stock": 1,
         "soldOut": true,
@@ -420,7 +537,10 @@
       },
 
       "D001-8": {
+        "sku": "D001-8",
         "name": "タンザナイト/アメジスト/ガーネット/ローズクォーツ 8-11号",
+        "material": "タンザナイト/アメジスト/ガーネット/ローズクォーツ",
+        "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
@@ -430,7 +550,10 @@
       },
 
       "D002-12": {
+        "sku": "D002-12",
         "name": "アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号",
+        "material": "アマゾナイト/ソーラークォーツ/シトリン/アゲート",
+        "base": "Brass, 18K gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -440,7 +563,10 @@
       },
 
       "D002-13": {
+        "sku": "D002-13",
         "name": "アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号",
+        "material": "アマゾナイト/ソーラークォーツ/シトリン/アゲート",
+        "base": "Brass, 18K gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": true,
