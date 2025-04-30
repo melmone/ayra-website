@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品3詳細</title>
-
+    <title>商品1詳細</title>
     <script type="module" src="js/firebase-init.js"></script>
     <script type="module" src="js/product-soldout.js" defer></script>
     
@@ -17,31 +16,31 @@
             <a href="index.html" class="header-logo">
                 <img src="images/Ayraロゴ.jpg" alt="冠付きロゴ">
             </a>
-  
-        <div class="hamburger-menu">
-            ☰
-        </div>
-        
-        <ul class="nav-list">
-            <li><a href="about.html">About</a></li>
-            <li><a href="onlineshop.html">Online shop</a></li>
-            <li><a href="custom.html">Custom</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            
+            
+            <div class="hamburger-menu">
+                ☰
+            </div>
+            
+            <ul class="nav-list">
+                <li><a href="about.html">About</a></li>
+                <li><a href="onlineshop.html">Online shop</a></li>
+                <li><a href="custom.html">Custom</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-        <div class="cart-icon-wrapper">
-            <a href="cart.html">
-              <img src="images/cart.png" alt="カート" class="cart-icon">
-              <span class="cart-count" id="cart-count">0</span>
-            </a>
-          </div>
+            <div class="cart-icon-wrapper">
+                <a href="cart.html">
+                  <img src="images/cart.png" alt="カート" class="cart-icon">
+                  <span class="cart-count" id="cart-count">0</span>
+                </a>
+              </div>
         </div>
     </div>
 
-
     <header class="ring-category">
-      
+        
         <nav class="category">
             <a href="onlineshop.html">Online shop</a> |
             <a href="ring3.html">トリーニ</a> |
@@ -56,26 +55,34 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/クリスタル五角形10号横.jpg" alt="商品1横から">
-            
+            <div class="main-image-wrapper">
+                <img id="main-image" src="images/水色4粒横12号.jpg" alt="商品1横から">
+                <div class="sold-out-label2">SOLD OUT</div>
+            </div>
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/クリスタル五角形正面10号正面.jpg" alt="商品1正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/クリスタル五角形イメージ.jpg" alt="商品1の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/水色4粒正面12号.jpg" alt="商品1正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/モナリザピンクイメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="A003-10">
-            <h1 class="product-title">クリスタルクォーツ 10号</h1>
-            <p><strong>素材:</strong><span class="product-material">クリスタルクォーツ</span></p>
+        <div class="product-info" id="product-info" data-product-id="D002-12">
+            <h1 class="product-title">アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号</h1>
+            <p><strong>素材:</strong><span class="product-material">アマゾナイト/ソーラークォーツ/シトリン/アゲート</span></p>
             <p><strong>ベース:</strong><span class="product-base">Brass, 18K gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price"> ¥6,000</span></p>
-            <p><strong>サイズ:</strong><span class="product-size">10号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">A003-10</span></p>
+            <p><strong>価格:</strong><span class="product-price">¥15,000</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">12-14号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">D002-12</span></p>
+
             <div class="tags">
-                <a href="tag.html?tag=クリスタルクォーツ" class="tag">クリスタルクォーツ</a>
-                <a href="tag.html?tag=多角形" class="tag">多角形</a>
-                <a href="tag.html?tag=透明" class="tag">透明</a>
-                <a href="tag.html?tag=10号" class="tag">10号</a>
+                <a href="tag.html?tag=アマゾナイト" class="tag">アマゾナイト</a>
+                <a href="tag.html?tag=ソーラークォーツ" class="tag">ソーラークォーツ</a>
+                <a href="tag.html?tag=シトリン" class="tag">シトリン</a>
+                <a href="tag.html?tag=アゲート" class="tag">アゲート</a>
+                <a href="tag.html?tag=青" class="tag">青</a>
+                <a href="tag.html?tag=水色" class="tag">水色</a>
+                <a href="tag.html?tag=12号" class="tag">12号</a>
+                <a href="tag.html?tag=13号" class="tag">13号</a>
+                <a href="tag.html?tag=14号" class="tag">14号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -85,7 +92,6 @@
     <div class="related-products-container">
         <h2>Related items</h2>
         <div id="related-products">
-            
             <div id="related-items" class="product-grid"></div>
         </div>
     </div>
@@ -98,6 +104,9 @@
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+
+        
+        </div>
     </div>
 
     <script>
@@ -110,8 +119,7 @@
           });
         });
       </script>
-   
-
+    
 
     <script>
         
@@ -394,7 +402,7 @@
         },
         ];
          
-        const currentProduct = products.find(p => p.url === "ring1-3.html");
+        const currentProduct = products.find(p => p.url === "ring4-2.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -442,11 +450,11 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
-        id: "A003-10",
+        id: "D002-12",
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "クリスタルクォーツ",  // 素材
-        price: 3500,  // 価格
-        size: "10号",  // サイズ
+        material: "アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号",  // 素材
+        price: 15000,  // 価格
+        size: "12-14号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
@@ -501,10 +509,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateCartCount, 5000); 
 });
 
-      </script>
-      
-      
-      
+  </script>
 </body>
 
 </html>
