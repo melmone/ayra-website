@@ -445,7 +445,8 @@ if (relatedProducts.length > 0) {
         updateCartCount(); // ← これを最初に実行！
 
     document.querySelector(".buy-button").addEventListener("click", function () {
-    const product = {
+        const productInfo = document.getElementById("product-info");
+        const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "カーネリアン/シトリン 10-12号",  // 素材
