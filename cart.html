@@ -27,6 +27,7 @@
 
 
 <script>
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
     // カートをローカルストレージに保存
 localStorage.setItem("cart", JSON.stringify(cart));
 

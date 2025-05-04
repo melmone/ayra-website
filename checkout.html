@@ -95,6 +95,13 @@
             price: itemPrices,
             total_price: `¥${totalAmount.toLocaleString()}`,
             address: addressInputValue,
+          })
+          .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert("確認メールを送信しました。");
+          })
+          .catch((error) => {
+          console.error('EmailJS Error:', error);
           });
 
 
