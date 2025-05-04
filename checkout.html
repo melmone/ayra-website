@@ -30,12 +30,11 @@
   <button class="back-button" onclick="history.back()">← カートに戻る</button>
 
   <script src="https://www.paypal.com/sdk/js?client-id=AT8cSY5uNZPTDuIEpFSCkQ4_mIFeEU30WAuXl9wK64vIodxOA9R2EXBatYNxt50vKM76XRE_TFztEnH0&currency=JPY"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    emailjs.init("_fURrEfDsMp3v9oNM");
-  </script>
-
-  <script>
+  
+  <script type="module">
+    import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    emailjs.init('_fURrEfDsMp3v9oNM'); // ← あなたの Public Key を使ってください
+  
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const total = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
   
@@ -95,13 +94,12 @@
             price: itemPrices,
             total_price: `¥${totalAmount.toLocaleString()}`,
             address: addressInputValue,
-          })
-          .then((response) => {
+          }).then((response) => {
           console.log('SUCCESS!', response.status, response.text);
           alert("確認メールを送信しました。");
-          })
-          .catch((error) => {
+          }).catch((error) => {
           console.error('EmailJS Error:', error);
+          alert("確認メールの送信に失敗しました。");
           });
 
 
