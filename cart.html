@@ -7,8 +7,6 @@
   <script type="module" src="js/firebase-init.js"></script>
   <script type="module" src="js/product-soldout.js" defer></script>
   <link rel="stylesheet" href="stylesheet.css">
- 
-
 </head>
 
 <body>
@@ -24,33 +22,26 @@
 <div class="checkout-area">
     <a href="checkout.html" id="checkout-button" class="checkout-button">ご購入手続きへ</a>
 </div>
-
-
-<script>
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    // カートをローカルストレージに保存
-localStorage.setItem("cart", JSON.stringify(cart));
-
-// カートの個数を更新 ← 追加！
-updateCartCount();
-
-// ユーザーに確認メッセージを表示
-alert("商品がカートに追加されました！");
-
-document.addEventListener('DOMContentLoaded', function () {
-    updateCartCount(); // ← ページ読み込み時に呼ぶ
-    // 既存の buy-button イベントなどもここに書いてOK
-});
-
-</script>
-
-
   
   <script>
+    function updateCartCount() {
+      const THIRTY_MINUTES = 30 * 60 * 1000;
+      const now = Date.now();
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart = cart.filter(item => !item.timestamp || (now - item.timestamp < THIRTY_MINUTES));
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      const countElem = document.getElementById('cart-count');
+      if (countElem) {
+        countElem.textContent = totalQuantity;
+        countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+      }
+    }
+
     function renderCart() {
       const now = new Date().getTime();
       const THIRTY_MINUTES = 30 * 60 * 1000;
-  
       // カートを取得 & 30分経過商品を削除
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
       cart = cart.filter(item => !item.timestamp || (now - item.timestamp < THIRTY_MINUTES));
@@ -104,19 +95,18 @@ document.addEventListener('DOMContentLoaded', function () {
           cart.splice(index, 1);
           localStorage.setItem('cart', JSON.stringify(cart));
           renderCart(); // 再描画
+          updateCartCount();
         });
       });
     }
   
     // 初期表示
     document.addEventListener('DOMContentLoaded', function () {
-  renderCart(); // 初回表示
-
-  // ← ★これを追加：5秒ごとにカートを再描画（削除チェック用）
-  setInterval(renderCart, 5000);
+      renderCart(); // 初回表示
+      updateCartCount();
+      setInterval(renderCart, 5000);
     });
   </script>
-
 
 </body>
 </html>
