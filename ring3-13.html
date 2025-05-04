@@ -455,7 +455,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
-        id: "C020-10①",
+        id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号",  // 素材
         price: 23000,  // 価格

@@ -26,77 +26,115 @@
   <h3>お支払い</h3>
   <!-- ▼ここにPayPalのコードを貼り付け▼ -->
   <div id="paypal-button-container"></div>
-  
   <br>
   <button class="back-button" onclick="history.back()">← カートに戻る</button>
 
   <script src="https://www.paypal.com/sdk/js?client-id=AT8cSY5uNZPTDuIEpFSCkQ4_mIFeEU30WAuXl9wK64vIodxOA9R2EXBatYNxt50vKM76XRE_TFztEnH0&currency=JPY"></script>
-  
-  <script>
-    const cart  = JSON.parse(localStorage.getItem('cart')) || [];
-    const total = cart.reduce((s, i) => s + i.price, 0);
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init("_fURrEfDsMp3v9oNM");
+  </script>
 
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const total = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+  
+    // 初期では PayPal ボタンを非表示に
+    const paypalContainer = document.getElementById("paypal-button-container");
+    paypalContainer.style.display = "none";
+  
+    // 入力欄
+    const emailInput = document.getElementById("checkout-email");
+    const addressInput = document.getElementById("checkout-address");
+  
+    // 入力チェック → 両方入力されたら PayPal ボタン表示
+    function validateForm() {
+      const emailValid = emailInput.checkValidity();
+      const addressValid = addressInput.checkValidity();
+      paypalContainer.style.display = (emailValid && addressValid) ? "block" : "none";
+      
+    }
+  
+    emailInput.addEventListener("input", validateForm);
+    addressInput.addEventListener("input", validateForm);
+    document.addEventListener("DOMContentLoaded", validateForm);
+  
+    // PayPal ボタン初期化
     paypal.Buttons({
       createOrder: (data, actions) =>
-        actions.order.create({ 
-          purchase_units: [{ 
-            amount: { value: total.toString() } 
-          }] 
+        actions.order.create({
+          purchase_units: [{
+            amount: { value: total.toString() }
+          }]
         }),
-
-      // 決済承認後の処理
+  
       onApprove: async (data, actions) => {
         try {
-          // 1) 決済を確定して details を取得
           const details = await actions.order.capture();
-          console.log("PayPal capture details:", details);
-
-          // 2) details から必要な情報を抜き出し
-          const orderId      = details.id;
-          const status       = details.status;
-          const payerName    = `${details.payer.name.given_name} ${details.payer.name.surname}`;
-          const payerEmail   = details.payer.email_address;
+          const orderId = details.id;
+          const status = details.status;
+          const payerName = `${details.payer.name.given_name} ${details.payer.name.surname}`;
+          const payerEmail = details.payer.email_address;
           const shippingInfo = details.purchase_units[0].shipping.address;
-          const emailInput    = document.getElementById('checkout-email').value;
-          const amount       = details.purchase_units[0].amount.value;
-          const currency     = details.purchase_units[0].amount.currency_code;
-          const addressInput = document.getElementById('checkout-address').value;
+          const emailInputValue = emailInput.value;
+          const addressInputValue = addressInput.value;
+          const amount = details.purchase_units[0].amount.value;
+          const currency = details.purchase_units[0].amount.currency_code;
+  
+          // EmailJSで確認メール送信
+          const itemNames = cart.map(i => i.title).join(", ");
+          const itemQuantities = cart.map(i => i.quantity || 1).join(", ");
+          const itemPrices = cart.map(i => `¥${i.price}`).join(", ");
+          const totalAmount    = cart.reduce((sum, i) => sum + (i.price * (i.quantity || 1)), 0);
+          
+          await emailjs.send("service_w64j7kp", "template_k78ru0o", {
+            email: emailInputValue,
+            name: payerName,
+            item_name: itemNames,
+            quantity: itemQuantities,
+            price: itemPrices,
+            total_price: `¥${totalAmount.toLocaleString()}`,
+            address: addressInputValue,
+          });
 
-          // 3) Firebase に注文データを保存
-          await window.db.ref('orders').push({
+
+
+
+          // ② Firebase に注文情報を保存
+          await window.db.ref("orders").push({
             orderId,
             status,
             payerName,
             payerEmail,
             shipping: shippingInfo,
-            noteAddress: addressInput,
-            email: emailInput,
+            noteAddress: addressInputValue,
+            email: emailInputValue,
             amount,
             currency,
             cart,
             purchasedAt: Date.now()
           });
-
-          // 4) soldOut フラグ更新（カートの商品すべて）
+  
+          // ③ 各商品の soldOut を true に更新
           const updates = {};
-          cart.forEach(item => {
+          cart.forEach((item) => {
             updates[`products/${item.id}/soldOut`] = true;
           });
           await window.db.ref().update(updates);
-
-          // 5) ユーザーへのフィードバック＆遷移
-          alert(`決済完了！\n注文ID: ${orderId}\n合計: ¥${amount}`);
-          localStorage.removeItem('cart');
-          window.location.href = 'index.html';
-
+  
+          // ④ 完了メッセージ表示とリダイレクト
+          alert(`決済完了！\n注文ID: ${orderId}\n合計: \u00a5${amount}`);
+          localStorage.removeItem("cart");
+          window.location.href = "index.html";
         } catch (err) {
           console.error(err);
-          alert('決済完了時にエラーが発生しました。');
+          alert("決済完了時にエラーが発生しました。");
         }
       }
-    }).render('#paypal-button-container');
+    }).render("#paypal-button-container");
   </script>
-
+  
+  
 
 
 </body>

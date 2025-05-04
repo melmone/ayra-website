@@ -447,7 +447,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
-        id: "C002-12",
+        id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "グリーンハイドロクォーツ/ラリマー/フローライト 12-14号",  // 素材
         price: 20000,  // 価格

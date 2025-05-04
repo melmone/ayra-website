@@ -441,7 +441,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
-        id: "C006-20",
+        id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "グリーンフローライト 9号",  // 素材
         price: 6000,  // 価格

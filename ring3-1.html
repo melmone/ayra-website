@@ -444,7 +444,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
-        id: "C001-10",
+        id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "ラリマー/カイヤナイト/タンザナイト 9-11号",  // 素材
         price: 10000,  // 価格

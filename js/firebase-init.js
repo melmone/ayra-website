@@ -7,7 +7,7 @@ const firebaseConfig = {
     authDomain: "ayra-rings.firebaseapp.com",
     databaseURL: "https://ayra-rings-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "ayra-rings",
-    storageBucket: "ayra-rings.firebasestorage.app",
+    storageBucket: "ayra-rings.appspot.com",
     messagingSenderId: "285508091332",
     appId: "1:285508091332:web:6d272347377b4669cb3891"
 };

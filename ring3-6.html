@@ -444,7 +444,7 @@ if (relatedProducts.length > 0) {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
-        id: "C010-12",
+        id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "ローズクォーツ/アクアマリン/シトリン 11-14号",  // 素材
         price: 15000,  // 価格

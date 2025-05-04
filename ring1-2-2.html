@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector(".buy-button").addEventListener("click", function () {
     const product = {
-        id: "A002-10",
+        id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "クリスタルクォーツ",  // 素材
         price: 4500,  // 価格
