@@ -20,6 +20,6 @@ const firebaseConfig = {
 // 初期化してグローバルに置いておく
 const app = initializeApp(firebaseConfig);
 window.db = getDatabase(app);
-window.firebaseRef = ref;     // ✅ ref関数もグローバルに保存
+window.firebaseRef = ref;
 window.firebasePush = push;
 window.firebaseUpdate = update;

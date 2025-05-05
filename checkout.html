@@ -115,7 +115,7 @@
 
           // ② Firebase に注文情報を保存
           const ordersRef = window.firebaseRef(window.db, "orders");
-          await push(ordersRef, {
+          await window.firebasePush(ordersRef, {
             orderId,
             status,
             payerName,
@@ -135,7 +135,7 @@
             updates[`products/${item.id}/soldOut`] = true;
           });
           const rootRef = window.firebaseRef(window.db); // ルート参照
-          await update(rootRef, updates);
+          await window.firebaseUpdate(rootRef, updates);
 
   
           // ④ 完了メッセージ表示とリダイレクト
