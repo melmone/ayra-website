@@ -77,6 +77,11 @@
   
       onApprove: async (data, actions) => {
         try {
+          console.log("push:", window.firebasePush);
+          console.log("update:", window.firebaseUpdate);
+          console.log("ref:", window.firebaseRef);
+          console.log("db:", window.db);
+          
           const details = await actions.order.capture();
           const orderId = details.id;
           const status = details.status;
