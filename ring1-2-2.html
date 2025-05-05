@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品1詳細</title>
+
     <script type="module" src="js/firebase-init.js"></script>
     <script type="module" src="js/product-soldout.js" defer></script>
     
@@ -35,10 +35,7 @@
               <img src="images/cart.png" alt="カート" class="cart-icon">
               <span class="cart-count" id="cart-count">0</span>
             </a>
-          </div>
-          
-
-
+        </div>
         </div>
     </div>
 
@@ -60,7 +57,7 @@
         <div class="product-images">
             <div class="main-image-box">
                 <img class="mainImage" id="main-image" src="images/クリスタルクォーツ丸横.jpg" alt="商品1横から">
-                
+            </div>    
             <div class="thumbnail-container">
                 <img class="thumbnail" src="images/クリスタル丸正面.jpg" alt="商品1正面" onclick="swapImages(this)">
                 <img class="thumbnail" src="images/クリスタル丸イメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
@@ -397,7 +394,7 @@
         const currentProduct = products.find(p => p.url === "ring1-1.html");
         
         // 関連商品を取得（同じタグを含む）
-const relatedProducts = products.filter(p => 
+        const relatedProducts = products.filter(p => 
     p !== currentProduct && // 自分自身を除外
     p.tags.some(tag => currentProduct.tags.includes(tag)) // タグが一致する商品を取得
 );
