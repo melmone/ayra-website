@@ -86,7 +86,7 @@
         "base": "Brass, 18K gold plated",
         "price": 1500,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["ローズクォーツ","長方形", "11号"],
         "image": "images/ローズクォーツ長方形横.jpg",
         "url": "ring1-4.html"
