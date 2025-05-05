@@ -32,9 +32,9 @@
   <script src="https://www.paypal.com/sdk/js?client-id=AT8cSY5uNZPTDuIEpFSCkQ4_mIFeEU30WAuXl9wK64vIodxOA9R2EXBatYNxt50vKM76XRE_TFztEnH0&currency=JPY"></script>
   
   <script type="module">
-    import { init, send } from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    import * as emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/es/email.min.js';
 
-    init('_fURrEfDsMp3v9oNM');
+    emailjs.init('_fURrEfDsMp3v9oNM');
   
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const total = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
