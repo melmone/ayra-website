@@ -18,3 +18,6 @@ const app = initializeApp(firebaseConfig);
 window.db = getDatabase(app);
 
 window.db = db;
+window.firebaseRef = ref;     // ✅ ref関数もグローバルに保存
+window.firebasePush = push;
+window.firebaseUpdate = update;

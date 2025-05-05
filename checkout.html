@@ -114,7 +114,8 @@
 
 
           // ② Firebase に注文情報を保存
-          await window.db.ref("orders").push({
+          const ordersRef = window.firebaseRef(window.db, "orders");
+          await push(ordersRef, {
             orderId,
             status,
             payerName,
@@ -133,7 +134,9 @@
           cart.forEach((item) => {
             updates[`products/${item.id}/soldOut`] = true;
           });
-          await window.db.ref().update(updates);
+          const rootRef = window.firebaseRef(window.db); // ルート参照
+          await update(rootRef, updates);
+
   
           // ④ 完了メッセージ表示とリダイレクト
           alert(`決済完了！\n注文ID: ${orderId}\n合計: \u00a5${amount}`);
