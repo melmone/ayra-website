@@ -15,7 +15,6 @@ const firebaseConfig = {
     storageBucket: "ayra-rings.appspot.com",
     messagingSenderId: "285508091332",
     appId: "1:285508091332:web:6d272347377b4669cb3891",
-    databaseURL: "https://ayra-rings-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 
 // 初期化してグローバルに置いておく
