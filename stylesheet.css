@@ -252,7 +252,7 @@ input, textarea {
 button {
     width: 100%;
     padding: 10px;
-    background: #0d4888;
+    background: #010c18;
     color: white;
     border: none;
     border-radius: 5px;
@@ -262,7 +262,7 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #464647;
 }
 
 .footer img {
@@ -582,7 +582,7 @@ button:hover {
 }
 
 .buy-button:hover {
-    background-color: #a10c6f;
+    background-color: #be0f83;
 }
 
 .product-images img {
@@ -659,19 +659,6 @@ button:hover {
 }
 
 
-.buy-button {
-    background-color: #ff6600;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.buy-button:hover {
-    background-color: #cc5500;
-}
 
 .related-products-container {
     width: 100%;
