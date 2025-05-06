@@ -572,7 +572,7 @@ button:hover {
 }
 
 .buy-button {
-    background-color: #ff6600;
+    background-color: #d51093;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -582,7 +582,7 @@ button:hover {
 }
 
 .buy-button:hover {
-    background-color: #cc5500;
+    background-color: #a10c6f;
 }
 
 .product-images img {
