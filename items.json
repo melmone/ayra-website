@@ -84,10 +84,10 @@
         "name": "ローズクォーツ 11号",
         "material": "ローズクォーツ",
         "base": "Brass, 18K gold plated",
-        "price": 1500,
-        "stock": 1,
+        "price": 4500,
+        "stock": 0,
         "soldOut": true,
-        "tags": ["ローズクォーツ","長方形", "11号"],
+        "tags": ["ローズクォーツ","長方形", "ピンク", "11号"],
         "image": "images/ローズクォーツ長方形横.jpg",
         "url": "ring1-4.html"
       },
