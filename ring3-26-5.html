@@ -400,13 +400,13 @@
         },
         ];
          
-        const currentProduct = products.find(p => p.url === "ring1-10.html");
+        const currentProduct = products.find(p => p.url === "ring3-26-5.html");
         
         // 関連商品を取得（同じタグを含む）
-const relatedProducts = products.filter(p => 
-    p !== currentProduct && // 自分自身を除外
-    p.tags.some(tag => currentProduct.tags.includes(tag)) // タグが一致する商品を取得
-);
+        const relatedProducts = products.filter(p => 
+            p !== currentProduct && // 自分自身を除外
+            p.tags.some(tag => currentProduct.tags.includes(tag)) // タグが一致する商品を取得
+        );
 
 console.log("Related items:", relatedProducts);
 

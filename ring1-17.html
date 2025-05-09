@@ -64,19 +64,18 @@
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="A011-9">
-            <h1 class="product-title"></h1>
-            <p><strong>素材:</strong><span class="product-material"></span></p>
+        <div class="product-info" id="product-info" data-product-id="A018-9">
+            <h1 class="product-title">グリーンアメジスト 9号</h1>
+            <p><strong>素材:</strong><span class="product-material">グリーンアメジスト</span></p>
             <p><strong>ベース:</strong><span class="product-base"></span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price">¥</span></p>
-            <p><strong>サイズ:</strong><span class="product-size">号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">A011-9</span></p>
+            <p><strong>価格:</strong><span class="product-price">¥8,000</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">9号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">A018-9</span></p>
             <div class="tags">
-                <a href="tag.html?tag=モナリザピンク" class="tag"></a>
-                <a href="tag.html?tag=丸形" class="tag"></a>
-                <a href="tag.html?tag=ピンク" class="tag"></a>
-                <a href="tag.html?tag=カボション" class="tag"></a>
-                <a href="tag.html?tag=9号" class="tag"></a>
+                <a href="tag.html?tag=グリーンアメジスト" class="tag">グリーンアメジスト</a>
+                <a href="tag.html?tag=緑" class="tag">緑</a>
+                <a href="tag.html?tag=長方形" class="tag">長方形</a>
+                <a href="tag.html?tag=9号" class="tag">9号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -400,7 +399,7 @@
         },
         ];
          
-        const currentProduct = products.find(p => p.url === "ring1-10.html");
+        const currentProduct = products.find(p => p.url === "ring1-17.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -451,9 +450,9 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "",  // 素材
-        price: ,  // 価格
-        size: "",  // サイズ
+        material: "グリーンアメジスト",  // 素材
+        price: 8000,  // 価格
+        size: "9号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
