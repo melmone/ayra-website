@@ -47,7 +47,7 @@
         "base": "Brass, 18K gold plated",
         "price": 3500,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["クリスタルクォーツ","丸形", "透明", "10号"],
         "image": "images/クリスタルクォーツ丸横.jpg",
         "url": "ring1-2-2.html"
@@ -413,7 +413,7 @@
         "base": "Brass, 18K gold plated",
         "price": 12000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["カイヤナイト", "グリーンカイヤナイト", "ハーキマーダイヤモンド", "青", "10号", "11号", "12号"],
         "image": "images/カイヤ.緑カイヤ.ハーキマー.10-12号横.jpg",
         "url": "ring3-5-2.html"
