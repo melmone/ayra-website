@@ -556,7 +556,7 @@
         "base": "Brass, 18K gold plated",
         "price": 15000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "12号", "13号", "14号"],
         "image": "images/水色4粒横12号.jpg",
         "url": "ring4-2.html"
