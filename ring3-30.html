@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品3詳細</title>
-
+    <title>商品10詳細</title>
     <script type="module" src="js/firebase-init.js"></script>
     <script type="module" src="js/product-soldout.js" defer></script>
     
@@ -35,13 +34,14 @@
               <img src="images/cart.png" alt="カート" class="cart-icon">
               <span class="cart-count" id="cart-count">0</span>
             </a>
-          </div>
+        </div>
+
         </div>
     </div>
 
 
     <header class="ring-category">
-      
+        
         <nav class="category">
             <a href="onlineshop.html">Online shop</a> |
             <a href="ring3.html">トリーニ</a> |
@@ -56,27 +56,31 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/クリスタル五角形10号横.jpg" alt="商品1横から">
+            <img id="main-image" src="images/オニキス.パール.ピンククォーツ横.jpg" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/クリスタル五角形正面10号正面.jpg" alt="商品1正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/クリスタル五角形イメージ.jpg" alt="商品1の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/オニキス.パール.ピンククォーツ正面.jpg" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="A003-10">
-            <h1 class="product-title">クリスタルクォーツ 10号</h1>
-            <p>インパクトある大胆なカットの大ぶりのクォーツは、ぜひ中指化人差し指に。</p>
-            <p><strong>素材:</strong><span class="product-material">クリスタルクォーツ</span></p>
-            <p><strong>ベース:</strong><span class="product-base">Brass, 18K polished gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price">¥6,000(税込)</span></p>
-            <p><strong>サイズ:</strong><span class="product-size">10号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">A003-10</span></p>
+        <div class="product-info" id="product-info" data-product-id="C019-9">
+            <h1 class="product-title">オニキス/パール/ローズクォーツ 10-13号</h1>
+            <p></p>
+            <p><strong>素材:</strong><span class="product-material">オニキス/パール/ローズクォーツ</span></p>
+            <p><strong>ベース:</strong><span class="product-base">Brass, 18K matte gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
+            <p><strong>価格:</strong><span class="product-price">¥20,000(税込)</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">10-13号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">C034-10</span></p>
             <div class="tags">
-                <a href="tag.html?tag=クリスタルクォーツ" class="tag">クリスタルクォーツ</a>
-                <a href="tag.html?tag=多角形" class="tag">多角形</a>
-                <a href="tag.html?tag=透明" class="tag">透明</a>
+        
+                <a href="tag.html?tag=オニキス" class="tag">オニキス</a>
+                <a href="tag.html?tag=パール" class="tag">パール</a>
+                <a href="tag.html?tag=ローズクォーツ" class="tag">ローズクォーツ</a>
                 <a href="tag.html?tag=10号" class="tag">10号</a>
+                <a href="tag.html?tag=11号" class="tag">11号</a>
+                <a href="tag.html?tag=12号" class="tag">12号</a>
+                <a href="tag.html?tag=13号" class="tag">13号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -86,7 +90,6 @@
     <div class="related-products-container">
         <h2>Related items</h2>
         <div id="related-products">
-            
             <div id="related-items" class="product-grid"></div>
         </div>
     </div>
@@ -99,8 +102,15 @@
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </div>
 
+        <div class="cart-icon-wrapper">
+            <a href="cart.html">
+              <img src="images/cart.png" alt="カート" class="cart-icon">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
           const hamburger = document.querySelector(".hamburger-menu");
@@ -112,7 +122,6 @@
         });
       </script>
    
-
 
     <script>
         
@@ -395,7 +404,7 @@
         },
         ];
          
-        const currentProduct = products.find(p => p.url === "ring1-3.html");
+        const currentProduct = products.find(p => p.url === "ring3-30.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -446,9 +455,9 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "クリスタルクォーツ",  // 素材
-        price: 3500,  // 価格
-        size: "10号",  // サイズ
+        material: "オニキス/パール/ローズクォーツ",  // 素材
+        price: 20000,  // 価格
+        size: "10-13号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
@@ -504,9 +513,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
       </script>
-      
-      
-      
 </body>
 
 </html>
