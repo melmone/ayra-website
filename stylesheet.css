@@ -1291,4 +1291,13 @@ img.delete-btn:hover {
         font-size: 8px; /*スマホように小さく*/
         font-family: serif;
     }
+    .product-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        justify-items: center; /* 各アイテムを中央に配置 */
+        text-align: center;
+        padding-top: 30px;
+        
+    }
 }
