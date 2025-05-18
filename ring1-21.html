@@ -463,7 +463,7 @@ if (relatedProducts.length > 0) {
 });
 
 // カートデータをローカルストレージに保存
-function addToCart(product) {
+    function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
     const existing = cart.find(item => item.id === product.id);
