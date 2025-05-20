@@ -377,7 +377,7 @@
         "base": "Brass, 18K matte gold plated",
         "price": 9000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["ブラックルチルクォーツ", "ハーキマーダイヤモンド", "9号", "10号", "11号", "12号", "13号", "14号"],
         "image": "",
         "url": "ring6-3.html"
@@ -531,7 +531,7 @@
         "base": "Brass, 18K gold plated",
         "price": 10000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["クリスタルクォーツ", "ブルードゥルージー", "ホワイトドゥルージー", "透明", "白", "青", "10号", "11号", "12号"],
         "image": "images/クリスタル.ドゥルージー.ドゥルージー横.jpg",
         "url": "ring3-4.html"
