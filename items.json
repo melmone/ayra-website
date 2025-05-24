@@ -202,7 +202,7 @@
         "base": "Brass, 18K matte gold plated",
         "price": 9000,
         "stock": 0,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["ロードクロサイト", "ピンク", "長方形", "8号"],
         "image": "",
         "url": "ring1-13-1.html"
