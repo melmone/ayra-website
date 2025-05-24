@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品1詳細</title>
+    <title>商品7詳細</title>
     <script type="module" src="js/firebase-init.js"></script>
     <script type="module" src="js/product-soldout.js" defer></script>
     
@@ -16,21 +16,28 @@
             <a href="index.html" class="header-logo">
                 <img src="images/Ayraロゴ.jpg" alt="冠付きロゴ">
             </a>
-            
-            
-            <div class="hamburger-menu">
-                ☰
-            </div>
-            
-            <ul class="nav-list">
-                <li><a href="about.html">About</a></li>
-                <li><a href="onlineshop.html">Online shop</a></li>
-                <li><a href="custom.html">Custom</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+  
+        <div class="hamburger-menu">
+            ☰
+        </div>
+        
+        <ul class="nav-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="onlineshop.html">Online shop</a></li>
+            <li><a href="custom.html">Custom</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="cart-icon-wrapper">
+            <a href="cart.html">
+              <img src="images/cart.png" alt="カート" class="cart-icon">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
         </div>
     </div>
+
 
     <header class="ring-category">
         
@@ -48,28 +55,27 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/ピンクドゥルージー縦横.jpg" alt="商品1横から">
+            <img id="main-image" src="images/緑アメジスト横.jpg" alt="商品1横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/ピンクドゥルージー縦正面.jpg" alt="商品1正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/ピンクドゥルージー縦イメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/ピンクドゥルージー着画.JPG" alt="商品1の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/緑アメジスト正面.jpg" alt="商品1正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/緑ハイドロ.ラリマー.フローライトイメージ.JPG" alt="商品1の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="C016-9">
-            <h1 class="product-title">ピンクドゥルージー 9号</h1>
-            <p><strong>素材:</strong><span class="product-material">ピンクドゥルージー</span></p>
+        <div class="product-info" id="product-info" data-product-id="A008-9">
+            <h1 class="product-title">グリーンアメジスト 10号</h1>
+            <p>美しい澄んだグリーンクォーツを上品なバゲットカットにいたしました。</p>
+            <p><strong>素材:</strong><span class="product-material">グリーンアメジスト</span></p>
             <p><strong>ベース:</strong><span class="product-base">Brass, 18K polished gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price">¥6,500(税込)</span></p>
+            <p><strong>価格:</strong><span class="product-price">¥8,000(税込)</span></p>
             <p><strong>サイズ:</strong><span class="product-size">9号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">C016-9</span></p>
-
+            <p><strong>商品番号:</strong><span class="product-sku">A008-9</span></p>
             <div class="tags">
-                <a href="tag.html?tag=ピンクドゥルージー" class="tag">ピンクドゥルージー</a>
-                <a href="tag.html?tag=ドゥルージー 9号" class="tag">ドゥルージー</a>
-                <a href="tag.html?tag=ピンク" class="tag">ピンク</a>
-                <a href="tag.html?tag=9号" class="tag">9号</a>
+                <a href="tag.html?tag=グリーンアメジスト" class="tag">グリーンアメジスト</a>
+                <a href="tag.html?tag=長方形" class="tag">長方形</a>
+                <a href="tag.html?tag=緑" class="tag">緑</a>
+                <a href="tag.html?tag=10号" class="tag">10号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -78,7 +84,8 @@
 
     <div class="related-products-container">
         <h2>Related items</h2>
-        <div id="related-products">     
+        <div id="related-products">
+            
             <div id="related-items" class="product-grid"></div>
         </div>
     </div>
@@ -91,14 +98,6 @@
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
-        <div class="cart-icon-wrapper">
-            <a href="cart.html">
-              <img src="images/cart.png" alt="カート" class="cart-icon">
-              <span class="cart-count" id="cart-count">0</span>
-            </a>
-          </div>
-        </div>
     </div>
 
     <script>
@@ -111,7 +110,7 @@
           });
         });
       </script>
-
+    
 
     <script>
         
@@ -639,7 +638,7 @@
         },
         ];
          
-        const currentProduct = products.find(p => p.url === "ring5-4.html");
+        const currentProduct = products.find(p => p.url === "ring1-7-2.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -690,8 +689,8 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "ピンクドゥルージー 9号",  // 素材
-        price: 6500,  // 価格
+        material: "グリーンアメジスト 9号",  // 素材
+        price: 8000,  // 価格
         size: "9号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
@@ -747,9 +746,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateCartCount, 5000); 
 });
 
-  </script>
-      
-      
+      </script>
       
 </body>
 
