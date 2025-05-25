@@ -313,7 +313,7 @@
         "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["ローズクォーツ", "クリスタルクォーツ", "透明", "12号", "13号", "14号"],
         "image": "images/クリスタル.ローズ横.jpg",
         "url": "ring2-1.html"
