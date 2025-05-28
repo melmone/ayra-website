@@ -87,7 +87,7 @@
   
       const totalPriceEl = document.createElement('div');
       totalPriceEl.id = 'total-price';
-      totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}</h3>`;
+      totalPriceEl.innerHTML = `<h3>合計: ¥${total.toLocaleString()}(税込)</h3>`;
       container.appendChild(totalPriceEl);
   
       document.querySelectorAll('.delete-btn').forEach(btn => {

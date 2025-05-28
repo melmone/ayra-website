@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品1詳細</title>
+
     <script type="module" src="js/firebase-init.js"></script>
     <script type="module" src="js/product-soldout.js" defer></script>
     
@@ -29,9 +30,16 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
+            <div class="cart-icon-wrapper">
+                <a href="cart.html">
+                  <img src="images/cart.png" alt="カート" class="cart-icon">
+                  <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
         </div>
     </div>
-
+    
     <header class="ring-category">
         
         <nav class="category">
@@ -48,7 +56,7 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/ピンクドゥルージー縦横.jpg" alt="商品1横から">
+                <img id="main-image" src="images/ピンクドゥルージー縦横.jpg" alt="商品1横から">
             
             <div class="thumbnail-container">
                 <img class="thumbnail" src="images/ピンクドゥルージー縦正面.jpg" alt="商品1正面" onclick="swapImages(this)">
@@ -67,7 +75,7 @@
 
             <div class="tags">
                 <a href="tag.html?tag=ピンクドゥルージー" class="tag">ピンクドゥルージー</a>
-                <a href="tag.html?tag=ドゥルージー 9号" class="tag">ドゥルージー</a>
+                <a href="tag.html?tag=ドゥルージー" class="tag">ドゥルージー</a>
                 <a href="tag.html?tag=ピンク" class="tag">ピンク</a>
                 <a href="tag.html?tag=9号" class="tag">9号</a>
             </div>
@@ -75,6 +83,17 @@
         </div>
 
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger-menu");
+          const navList = document.querySelector(".nav-list");
+      
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+        });
+    </script>
 
     <div class="related-products-container">
         <h2>Related items</h2>
@@ -91,26 +110,7 @@
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
-        <div class="cart-icon-wrapper">
-            <a href="cart.html">
-              <img src="images/cart.png" alt="カート" class="cart-icon">
-              <span class="cart-count" id="cart-count">0</span>
-            </a>
-          </div>
-        </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const hamburger = document.querySelector(".hamburger-menu");
-          const navList = document.querySelector(".nav-list");
-      
-          hamburger.addEventListener("click", function () {
-            navList.classList.toggle("active");
-          });
-        });
-      </script>
 
 
     <script>
@@ -615,7 +615,7 @@
             price: "¥3,900(税込)", 
             tags: ["ピンクドゥルージー", "ドゥルージー", "ピンク", "9号"], 
             img: "images/ピンクドゥルージー縦横.jpg",
-            url: "ring5-5html" 
+            url: "ring5-5.html" 
         },
         { 
             name: "アクアマリン 8-11号",
@@ -643,12 +643,12 @@
         const currentProduct = products.find(p => p.url === "ring5-5.html");
         
         // 関連商品を取得（同じタグを含む）
-const relatedProducts = products.filter(p => 
+    const relatedProducts = products.filter(p => 
     p !== currentProduct && // 自分自身を除外
     p.tags.some(tag => currentProduct.tags.includes(tag)) // タグが一致する商品を取得
-);
+    );
 
-console.log("Related items:", relatedProducts);
+    console.log("Related items:", relatedProducts);
 
 // 関連商品をHTMLに表示
 const relatedContainer = document.getElementById("related-products");
@@ -682,6 +682,9 @@ if (relatedProducts.length > 0) {
         // 元のメイン画像をサムネイルに戻す
         thumbnail.src = tempSrc;
     }
+
+    const relatedItems = document.getElementById('related-items');
+
     // カートに追加する関数
     document.addEventListener('DOMContentLoaded', function () {
         updateCartCount(); // ← これを最初に実行！
@@ -692,7 +695,7 @@ if (relatedProducts.length > 0) {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "ピンクドゥルージー 9号",  // 素材
-        price: 6500,  // 価格
+        price: 3900,  // 価格
         size: "9号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
