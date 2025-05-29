@@ -477,7 +477,7 @@
         "base": "Brass, 18K gold plated",
         "price": 6000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["クリスタルクォーツ", "透明", "9号"],
         "image": "images/クリスタルクォーツ縦3横.jpg",
         "url": "ring5-3.html"

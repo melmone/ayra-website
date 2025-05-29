@@ -683,11 +683,16 @@ if (relatedProducts.length > 0) {
         // 元のメイン画像をサムネイルに戻す
         thumbnail.src = tempSrc;
     }
+
+    const relatedItems = document.getElementById('related-items');
+
     // カートに追加する関数
     document.addEventListener('DOMContentLoaded', function () {
         updateCartCount(); // ← これを最初に実行！
 
-    document.querySelector(".buy-button").addEventListener("click", function () {
+    const button = document.querySelector(".buy-button");
+        if (button) {
+            button.addEventListener("click", function () {
         const productInfo = document.getElementById("product-info");
         const product = {
         id: productInfo.dataset.productId,
@@ -703,6 +708,7 @@ if (relatedProducts.length > 0) {
 
         alert("商品がカートに追加されました！※30分でカートから削除されます");
     });
+}
 });
 
 // カートデータをローカルストレージに保存
@@ -710,6 +716,11 @@ function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
     const existing = cart.find(item => item.id === product.id);
+
+    if (existing && existing.quantity >= 1) {
+        alert("在庫は1つしかないので、同一の商品を2つ以上カートに入れることは出来ません。");
+        return false; // 追加処理を中断
+    }
 
     if (existing) {
         existing.quantity += 1;
@@ -721,6 +732,8 @@ function addToCart(product) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
+
+    return true;
 }
 
     // ★新しい updateCartCount（これだけでOK！）
