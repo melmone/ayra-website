@@ -61,7 +61,7 @@
         "price": 6000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["クリスタルクォーツ","多角形", "透明", "10号"],
+        "tags": ["クリスタルクォーツ", "多角形", "透明", "10号"],
         "image": "images/クリスタル五角形10号横.jpg",
         "url": "ring1-3-2.html"
       },
@@ -74,7 +74,7 @@
         "price": 6000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["クリスタルクォーツ","多角形", "透明", "11号"],
+        "tags": ["クリスタルクォーツ", "多角形", "透明", "11号"],
         "image": "images/クリスタル五角形横.jpg",
         "url": "ring1-3.html"
       },
@@ -236,7 +236,7 @@
       
       "A018-9": {
         "sku": "A018-9",
-        "name": "グリーンアメジスト 9号",
+        "name": "グリーンアメジスト 8号",
         "material": "グリーンアメジスト",
         "base": "Brass, 18K matte gold plated",
         "price": 8000,
@@ -253,10 +253,10 @@
         "material": "ブルークォーツ",
         "base": "Brass, 18K matte gold plated",
         "price": 6000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
         "tags": ["ブルークォーツ", "青", "9号"],
-        "image": "",
+        "image": "images/青クォーツ横.jpg",
         "url": "ring1-18.html"
       },
       "A020-9": {
@@ -265,11 +265,11 @@
         "material": "スモーキークォーツ",
         "base": "Brass, 18K matte gold plated",
         "price": 8000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
         "tags": ["スモーキークォーツ", "茶色", "8号"],
-        "image": "",
-        "url": "ring1-18.html"
+        "image": "images/スモーキー横.jpg",
+        "url": "ring1-19.html"
       },
       "A022-9": {
         "sku": "A022-9",
@@ -277,23 +277,35 @@
         "material": "ラブラドライト",
         "base": "Brass, 18K matte gold plated",
         "price": 8000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
         "tags": ["ラブラドライト", "アーモンド形", "8号"],
-        "image": "",
-        "url": "ring1-18.html"
+        "image": "images/ラブアーモンド横.JPG",
+        "url": "ring1-21.html"
       },
       "A023-9": {
-        "sku": "A022-9",
+        "sku": "A023-9",
         "name": "ブルーレースアゲート 8号",
         "material": "ブルーレースアゲート",
         "base": "Brass, 18K matte gold plated",
         "price": 12000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["ブルーレースアゲート", "8号"],
-        "image": "",
+        "tags": ["ブルーレースアゲート", "アゲート", "青", "水色", "8号"],
+        "image": "images/青レースアゲート横横.jpg",
         "url": "ring1-22.html"
+      },
+      "A024-9": {
+        "sku": "A024-9",
+        "name": "ブルーレースアゲート 8号",
+        "material": "ブルーレースアゲート",
+        "base": "Brass, 18K matte gold plated",
+        "price": 12000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブルーレースアゲート", "アゲート", "青", "水色", "8号"],
+        "image": "images/青レースアゲート縦横.jpg",
+        "url": "ring1-23.html"
       },
 
       "B001-9": {
@@ -315,9 +327,9 @@
         "material": "ローズクォーツ/クリスタルクォーツ",
         "base": "Brass, 18K gold plated",
         "price": 6000,
-        "stock": 1,
+        "stock": 0,
         "soldOut": true,
-        "tags": ["ローズクォーツ", "クリスタルクォーツ", "透明", "12号", "13号", "14号"],
+        "tags": ["ローズクォーツ", "クリスタルクォーツ", "透明", "ピンク", "12号", "13号", "14号"],
         "image": "images/クリスタル.ローズ横.jpg",
         "url": "ring2-1.html"
       },
@@ -379,9 +391,9 @@
         "material": "ブラックルチルクォーツ/ハーキマーダイヤモンド",
         "base": "Brass, 18K matte gold plated",
         "price": 8000,
-        "stock": 1,
+        "stock": 0,
         "soldOut": true,
-        "tags": ["ブラックルチルクォーツ", "ハーキマーダイヤモンド", "9号", "10号", "11号", "12号", "13号", "14号"],
+        "tags": ["ブラックルチルクォーツ", "ハーキマーダイヤモンド", "黒", "透明", "9号", "10号", "11号", "12号", "13号", "14号"],
         "image": "images/黒ルチル.ハーキマー正面.jpg",
         "url": "ring6-3.html"
       },
@@ -394,18 +406,18 @@
         "stock": 1,
         "soldOut": false,
         "tags": ["ラピスラズリ", "ターコイズ", "青", "水色","9号", "10号", "11号"],
-        "image": "images/ラピスラズリ.ターコイズイメージ.JPG",
+        "image": "images/ラピスラズリ.ターコイズ横.jpg",
         "url": "ring2-6.html"
       },
       "B009-9": {
         "sku": "B009-9",
-        "name": "オニキス/シトリン 9-11号",
-        "material": "オニキス/シトリン",
+        "name": "シトリン/オニキス 9-11号",
+        "material": "シトリン/オニキス",
         "base": "Brass, 18K matte gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["オニキス", "シトリン", "黒", "黄色", "9号", "10号", "11号"],
+        "tags": ["シトリン", "オニキス", "黄色", "黒", "9号", "10号", "11号"],
         "image": "images/シトリン.オニキス横.jpg",
         "url": "ring2-7.html"
       },
@@ -417,14 +429,14 @@
         "price": 8500,
         "stock": 1,
         "soldOut": false,
-        "tags": ["アマゾナイ", "タイガーアイ", "水色", "茶色","9号", "10号", "11号"],
+        "tags": ["アマゾナイト", "タイガーアイ", "水色", "茶色","9号", "10号", "11号"],
         "image": "images/アマゾナイト.虎横.jpg",
         "url": "ring2-8.html"
       },
 
-      "C001-10": {
+      "C001-8": {
         "sku": "C001-8",
-        "name": "ラリマー/カイヤナイト/タンザナイト 8-10 号",
+        "name": "ラリマー/カイヤナイト/タンザナイト 8-10号",
         "material": "ラリマー/カイヤナイト/タンザナイト",
         "base": "Brass, 18K polished gold plated",
         "price": 10000,
@@ -526,8 +538,6 @@
         "url": "ring3-3.html"
       },
 
-      
-
       "C008-10": {
         "sku": "C008-10",
         "name": "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10-12号",
@@ -571,7 +581,7 @@
         "sku": "C010-9",
         "name": "ローズクォーツ/アクアマリン/シトリン 8-10号",
         "material": "ローズクォーツ/アクアマリン/シトリン",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -580,11 +590,11 @@
         "url": "ring3-6-2.html"
       },
 
-      "C010-12": {
-        "sku": "C010-12",
+      "C010-10": {
+        "sku": "C010-10",
         "name": "ローズクォーツ/アクアマリン/シトリン 11-13号",
         "material": "ローズクォーツ/アクアマリン/シトリン",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -597,7 +607,7 @@
         "sku": "C011-9",
         "name": "フローライト/アメジスト/シトリン 9-10号",
         "material": "フローライト/アメジスト/シトリン",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
@@ -606,15 +616,15 @@
         "url": "ring3-7.html"
       },
 
-      "C012-9": {
-        "sku": "C012-9",
-        "name": "ローズクォーツ/ガーネット/アメジスト 8-11号",
+      "C012-8": {
+        "sku": "C012-8",
+        "name": "ローズクォーツ/ガーネット/アメジスト 8-10号",
         "material": "ローズクォーツ/ガーネット/アメジスト",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["ローズクォーツ", "ガーネット", "アメジスト", "紫", "8号", "9号", "10号", "11号"],
+        "tags": ["ローズクォーツ", "ガーネット", "アメジスト", "紫", "8号", "9号", "10号"],
         "image": "images/ローズクォーツ.ガーネット.アメジスト.jpg",
         "url": "ring3-8.html"
       },
@@ -623,7 +633,7 @@
         "sku": "C013-11",
         "name": "グリーンカイヤナイト/クリスタルクォーツ/アパタイト 10-14号",
         "material": "グリーンカイヤナイト/クリスタルクォーツ/アパタイト",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 10000,
         "stock": 1,
         "soldOut": false,
@@ -636,7 +646,7 @@
         "sku": "C014-9",
         "name": "カイヤナイト/アメジスト/シトリン 8-10号",
         "material": "カイヤナイト/アメジスト/シトリン",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 10000,
         "stock": 0,
         "soldOut": true,
@@ -647,13 +657,13 @@
 
       "C015-10": {
         "sku": "C015-10",
-        "name": "クリスタルクォーツ/カイヤナイト/タンザナイト 10-11号",
+        "name": "クリスタルクォーツ/カイヤナイト/タンザナイト 10-13号",
         "material": "クリスタルクォーツ/カイヤナイト/タンザナイト",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 15000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["クリスタルクォーツ", "カイヤナイト", "タンザナイト", "青", "紫", "10号", "11号"],
+        "tags": ["クリスタルクォーツ", "カイヤナイト", "タンザナイト", "青", "紫", "10号", "11号", "12号", "13号"],
         "image": "images/クリスタル.カイヤナイト.タンザナイト横.jpg",
         "url": "ring3-11.html"
       },
@@ -666,7 +676,7 @@
         "price": 22000,
         "stock": 0,
         "soldOut": true,
-        "tags": ["クリスタルクォーツ", "カイヤナイト", "タンザナイト", "青", "紫", "8号", "9号"],
+        "tags": ["カイヤナイト", "アパタイト", "クリスタルクォーツ", "青", "緑", "透明", "8号", "9号"],
         "image": "images/銀カイヤ.アパタイト.クリスタル横.jpg",
         "url": "ring3-12.html"
       },
@@ -684,30 +694,43 @@
         "url": "ring3-13.html"
       },
 
-      "C020-10": {
-        "sku": "C020-10",
+      "C020-10-2": {
+        "sku": "C020-10-2",
         "name": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号",
         "material": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ",
         "base": "Brass, 18K matte gold plated",
         "price": 20000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
         "tags": ["ブラックルチルクォーツ", "オニキス", "クリスタルクォーツ", "黒", "透明", "10号", "11号", "12号"],
-        "image": "images/ルチル.オニキス.クリスタル横.jpg",
+        "image": "images/黒ルチル.オニキス.クリスタル横10-12-2.jpg",
         "url": "ring3-13-2.html"
       },
 
       "C020-11": {
-        "sku": "C020-10-1",
+        "sku": "C020-11",
         "name": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 11-13号",
         "material": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ",
         "base": "Brass, 18K matte gold plated",
         "price": 20000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["ブラックルチルクォーツ", "オニキス", "クリスタルクォーツ", "黒", "透明", "11号", "12号", "10号"],
-        "image": "images/ルチル.オニキス.クリスタル横.jpg",
+        "tags": ["ブラックルチルクォーツ", "オニキス", "クリスタルクォーツ", "黒", "透明", "11号", "12号", "13号"],
+        "image": "images/黒ルチル.オニキス.クリスタル横11-13.jpg",
         "url": "ring3-13-3.html"
+      },
+
+      "C021-9": {
+        "sku": "C021-9",
+        "name": "ラブラドライト/オパライト/グリーンオニキス 9-11号",
+        "material": "ブラックルチルクォーツ/オニキス/クリスタルクォーツ",
+        "base": "Brass, 18K matte gold plated",
+        "price": 20000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ラブラドライト", "オパライト", "グリーンオニキス", "緑", "9号", "10号", "11号"],
+        "image": "images/ラブ.オパ.緑オニキス横.jpg",
+        "url": "ring3-14.html"
       },
 
       "C022-9": {
@@ -716,10 +739,10 @@
         "material": "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ",
         "base": "Brass, 18K matte gold plated",
         "price": 22000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
         "tags": ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "9号", "10号", "11号"],
-        "image": "images/ルチル.オニキス.クリスタル横.jpg",
+        "image": "images/黒ルチル.ムーン.ローズ横9-11.jpg",
         "url": "ring3-15-1.html"
       },
       "C022-10-1": {
@@ -728,10 +751,10 @@
         "material": "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ",
         "base": "Brass, 18K matte gold plated",
         "price": 22000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "透明", "11号", "12号", "10号"],
-        "image": "",
+        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "10号", "11号", "12号"],
+        "image": "images/黒ルチル.ムーン.ローズ横10-12.jpg",
         "url": "ring3-15-2.html"
       },
       "C022-10-2": {
@@ -740,10 +763,10 @@
         "material": "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ",
         "base": "Brass, 18K matte gold plated",
         "price": 22000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "透明", "11号", "12号", "13号"],
-        "image": "",
+        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "11号", "12号", "13号"],
+        "image": "images/黒ルチル.ムーン.ローズ横11-13.jpg",
         "url": "ring3-15-3.html"
       },
       "C024-9": {
@@ -752,10 +775,10 @@
         "material": "オニキス/ムーンストーン/グリーンオニキス",
         "base": "Brass, 18K matte gold plated",
         "price": 22000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
         "tags": ["オニキス", "ムーンストーン", "グリーンオニキス", "黒", "緑", "9号", "10号", "11号"],
-        "image": "",
+        "image": "images/オニキス.真珠.ムーン横.jpg",
         "url": "ring3-17.html"
       },
       "C025-9": {
@@ -764,22 +787,34 @@
         "material": "ローズクォーツ/コーラル/ムーンストーン",
         "base": "Brass, 18K matte gold plated",
         "price": 18000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
         "tags": ["ローズクォーツ", "コーラル", "ムーンストーン", "ピンク", "9号", "10号", "11号"],
-        "image": "",
+        "image": "images/ローズ.コーラル.ムーン横.jpg",
         "url": "ring3-18.html"
       },
-      "C026-10": {
-        "sku": "C026-10",
-        "name": "ブラックルチルクォーツ/ムーンストーン/カルセドニー 10-13号",
+      "C026-9": {
+        "sku": "C026-9",
+        "name": "ブラックルチルクォーツ/ムーンストーン/カルセドニー 10-12号",
         "material": "ブラックルチルクォーツ/ムーンストーン/カルセドニー",
         "base": "Brass, 18K matte gold plated",
         "price": 22000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "黒", "10号", "11号", "12号", "13号"],
-        "image": "",
+        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "10号", "11号", "12号"],
+        "image": "images/黒ルチル.ムーン.カルセドニー横10-13.JPG",
+        "url": "ring3-19-1.html"
+      },
+      "C026-10": {
+        "sku": "C026-10",
+        "name": "ブラックルチルクォーツ/ムーンストーン/カルセドニー 11-13号",
+        "material": "ブラックルチルクォーツ/ムーンストーン/カルセドニー",
+        "base": "Brass, 18K matte gold plated",
+        "price": 22000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "11号", "12号", "13号"],
+        "image": "images/黒ルチル.ムーン.カルセドニー横11-13.jpg",
         "url": "ring3-19-2.html"
       },
       "C026-11": {
@@ -788,58 +823,107 @@
         "material": "ブラックルチルクォーツ/ムーンストーン/カルセドニー",
         "base": "Brass, 18K matte gold plated",
         "price": 22000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "黒", "緑", "11号", "12号", "13号"],
+        "tags": ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "11号", "12号", "13号"],
         "image": "",
         "url": "ring3-19-3.html"
       },
-      "C028-11": {
-        "sku": "C028-11",
-        "name": "レッドコーラル/オニキス/グリーンクォーツ 9-12号",
-        "material": "レッドコーラル/オニキス/グリーンクォーツ",
+      "C027-9": {
+        "sku": "C027-9",
+        "name": "ゴールデンルチルクォーツ/オニキス/ハーキマーダイヤモンド 9-11号",
+        "material": "ゴールデンルチルクォーツ/オニキス/ハーキマーダイヤモンド",
         "base": "Brass, 18K matte gold plated",
-        "price": 23000,
-        "stock": 0,
+        "price": 22000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["レッドコーラル", "オニキス", "グリーンクォーツ", "9号", "10号", "11号", "12号"],
-        "image": "",
+        "tags": ["ゴールデンルチルクォーツ", "オニキス", "ハーキマーダイヤモンド", "黒", "透明", "9号", "10号", "11号"],
+        "image": "images/金ルチル.オニキス.ハーキマー横.jpg",
+        "url": "ring3-20.html"
+      },
+      "C028-9": {
+        "sku": "C028-9",
+        "name": "ラブラドライト/グリーンオニキス/アメジスト 9-11号",
+        "material": "ラブラドライト/グリーンオニキス/アメジスト",
+        "base": "Brass, 18K matte gold plated",
+        "price": 22000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ラブラドライト", "グリーンオニキス", "アメジスト", "緑", "紫", "9号", "10号", "11号"],
+        "image": "images/ラブ.緑オニキス.アメジスト横.jpg",
         "url": "ring3-21.html"
       },
       "C029-9": {
-        "sku": "C028-9",
+        "sku": "C029-9",
         "name": "グリーンオニキス/プレナイト/アマゾナイト 9-12号",
         "material": "グリーンオニキス/プレナイト/アマゾナイト",
         "base": "Brass, 18K matte gold plated",
         "price": 20000,
-        "stock": 0,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["グリーンオニキス", "プレナイト", "アマゾナイト", "9号", "10号", "11号", "12号"],
-        "image": "",
+        "tags": ["グリーンオニキス", "プレナイト", "アマゾナイト", "緑", "9号", "10号", "11号", "12号"],
+        "image": "images/緑オニキス.プレナイト.アマゾナイト横.jpg",
         "url": "ring3-22.html"
       },
+      
       "C030-10": {
         "sku": "C030-10",
-        "name": "グリーンオニキス/パール/アメジスト 10-13号",
+        "name": "グリーンオニキス/パール/アメジスト 9-12号",
         "material": "グリーンオニキス/パール/アメジスト",
         "base": "Brass, 18K matte gold plated",
-        "price": 23000,
-        "stock": 0,
+        "price": 20000,
+        "stock": 1,
         "soldOut": false,
-        "tags": ["レッドコーラル", "オニキス", "グリーンクォーツ", "9号", "10号", "11号", "12号"],
-        "image": "",
-        "url": "ring3-21.html"
+        "tags": ["グリーンオニキス", "パール", "アメジスト", "緑", "紫", "9号", "10号", "11号", "12号"],
+        "image": "images/緑オニキス.真珠.アメジスト横.jpg",
+        "url": "ring3-23.html"
+      },
+      "C019-9": {
+        "sku": "C019-9",
+        "name": "レッドコーラル/オニキス/グリーンハイドロクォーツ 9-12号",
+        "material": "レッドコーラル/オニキス/グリーンハイドロクォーツ",
+        "base": "Brass, 18K matte gold plated",
+        "price": 23000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["レッドコーラル", "オニキス", "グリーンハイドロクォーツ", "赤", "黒", "緑", "9号", "10号", "11号", "12号"],
+        "image": "images/赤コーラル.オニキス.緑クォーツ横.jpg",
+        "url": "ring3-28.html"
+      },
+      "C018-9": {
+        "sku": "C018-9",
+        "name": "オニキス/ローズクォーツ/ローズクォーツ 9-11号",
+        "material": "オニキス/ローズクォーツ/ローズクォーツ",
+        "base": "Brass, 18K matte gold plated",
+        "price": 22000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["オニキス", "クリスタルクォーツ", "黒", "透明", "9号", "10号", "11号"],
+        "image": "images/オニキス.ローズ.ローズ横.jpg",
+        "url": "ring3-29.html"
+      },
+      "C034-10": {
+        "sku": "C034-10",
+        "name": "オニキス/パール/ピンクハイドロクォーツ 10-13号",
+        "material": "オニキス/パール/ピンクハイドロクォーツ",
+        "base": "Brass, 18K matte gold plated",
+        "price": 20000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["オニキス", "パール", "ピンクハイドロクォーツ", "10号", "11号", "12号", "13号"],
+        "image": "images/オニキス.パール.ピンククォーツ横.jpg",
+        "url": "ring3-30.html"
       },
 
       "D001-8": {
         "sku": "D001-8",
-        "name": "タンザナイト/アメジスト/ガーネット/ローズクォーツ 8-11号",
+        "name": "タンザナイト/アメジスト/ガーネット/ローズクォーツ 8-10号",
         "material": "タンザナイト/アメジスト/ガーネット/ローズクォーツ",
-        "base": "Brass, 18K gold plated",
-        "price": 10000,
+        "base": "Brass, 18K polished gold plated",
+        "price": 5000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["タンザナイト", "アメジスト", "ガーネット", "ローズクォーツ", "紫", "8号", "9号", "10号", "11号"],
+        "tags": ["タンザナイト", "アメジスト", "ガーネット", "ローズクォーツ", "紫", "8号", "9号", "10号"],
         "image": "images/紫4粒横.jpg",
         "url": "ring4-1.html"
       },
@@ -848,9 +932,9 @@
         "sku": "D002-12",
         "name": "アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号",
         "material": "アマゾナイト/ソーラークォーツ/シトリン/アゲート",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 15000,
-        "stock": 1,
+        "stock": 0,
         "soldOut": true,
         "tags": ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "12号", "13号", "14号"],
         "image": "images/水色4粒横12号.jpg",
@@ -861,11 +945,11 @@
         "sku": "D002-13",
         "name": "アマゾナイト/ソーラークォーツ/シトリン/アゲート 13-15号",
         "material": "アマゾナイト/ソーラークォーツ/シトリン/アゲート",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 15000,
         "stock": 0,
         "soldOut": true,
-        "tags": ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "12号", "13号", "14号"],
+        "tags": ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "13号", "14号", "15号"],
         "image": "images/水色4粒横.jpg",
         "url": "ring4-2-2.html"
       }
