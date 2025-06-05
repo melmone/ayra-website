@@ -340,8 +340,8 @@
         "material": "ハーキマーダイヤモンド/クリスタルクォーツ",
         "base": "Brass, 18K polished gold plated",
         "price": 10000,
-        "stock": 1,
-        "soldOut": false,
+        "stock": 0,
+        "soldOut": true,
         "tags": ["ハーキマーダイヤモンド", "クリスタルクォーツ", "透明", "12号", "13号", "14号"],
         "image": "images/B003-12正面.webp",
         "url": "B003-12.html"
@@ -352,11 +352,11 @@
         "name": "カイヤナイト/アメジスト 12号-14号",
         "material": "カイヤナイト/アメジスト",
         "base": "Brass, 18K polished gold plated",
-        "price": 8000,
+        "price": 7000,
         "stock": 0,
         "soldOut": true,
         "tags": ["カイヤナイト", "アメジスト", "青", "紫", "12号", "13号", "14号"],
-        "image": "images/B004-12横.jpg",
+        "image": "images/B004-12横.webp",
         "url": "B004-12.html"
       },
 
@@ -453,8 +453,8 @@
         "material": "グリーンハイドロクォーツ/ラリマー/フローライト",
         "base": "Brass, 18K polished gold plated",
         "price": 20000,
-        "stock": 1,
-        "soldOut": false,
+        "stock": 0,
+        "soldOut": true,
         "tags": ["グリーンハイドロクォーツ", "ラリマー", "フローライト", "緑", "12号", "13号", "14号"],
         "image": "images/C002-12横.webpg",
         "url": "C002-12.html"
@@ -482,7 +482,7 @@
         "stock": 1,
         "soldOut": false,
         "tags": ["アクアマリン", "アメジスト", "シトリン", "9号"],
-        "image": "images/C004-9横.jpg",
+        "image": "images/C004-9横.webp",
         "url": "C004-9.html"
       },
 
