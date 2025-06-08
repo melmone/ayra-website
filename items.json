@@ -233,6 +233,32 @@
         "image": "images/A015-10横.webp",
         "url": "A015-10.html"
       },
+
+      "A016-10": {
+        "sku": "A016-10",
+        "name": "クリスタルクォーツ 10号",
+        "material": "クリスタルクォーツ",
+        "base": "Brass, rhodium plated",
+        "price": 1500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["クリスタルクォーツ", "透明", "10号"],
+        "image": "images/A016-10横.webp",
+        "url": "A016-10.html"
+      },
+
+      "A017-10": {
+        "sku": "A017-10",
+        "name": "アマゾナイト 11号",
+        "material": "アマゾナイト",
+        "base": "Brass, 18K matte gold plated",
+        "price": 5000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["アマゾナイト", "水色", "11号"],
+        "image": "images/A017-10横.webp",
+        "url": "A017-10.html"
+      },
       
       "A018-9": {
         "sku": "A018-9",
@@ -295,6 +321,20 @@
         "image": "images/A023-9横.webp",
         "url": "A023-9.html"
       },
+
+      "A023-14": {
+        "sku": "A023-14",
+        "name": "ブルーレースアゲート 14号",
+        "material": "ブルーレースアゲート",
+        "base": "Brass, 18K matte gold plated",
+        "price": 12000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブルーレースアゲート", "アゲート", "青", "水色", "14号"],
+        "image": "images/A023-14横.webp",
+        "url": "A023-14.html"
+      },
+
       "A024-9": {
         "sku": "A024-9",
         "name": "ブルーレースアゲート 8号",
@@ -409,6 +449,20 @@
         "image": "images/B008-9横.webp",
         "url": "B008-9.html"
       },
+
+      "B008-12": {
+        "sku": "B008-12",
+        "name": "ターコイズ/ラピスラズリ 11-13号",
+        "material": "ターコイズ/ラピスラズリ",
+        "base": "Brass, 18K matte gold plated",
+        "price": 8500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ラピスラズリ", "ターコイズ", "青", "水色", "11号", "12号", "13号"],
+        "image": "images/B008-12横.webp",
+        "url": "B008-12.html"
+      },
+
       "B009-9": {
         "sku": "B009-9",
         "name": "シトリン/オニキス 9-11号",
@@ -432,6 +486,19 @@
         "tags": ["アマゾナイト", "タイガーアイ", "水色", "茶色","9号", "10号", "11号"],
         "image": "images/B010-9横.webp",
         "url": "B010-9.html"
+      },
+
+      "B010-12": {
+        "sku": "B010-12",
+        "name": "アマゾナイト/タイガーアイ 11-13号",
+        "material": "アマゾナイト/タイガーアイ",
+        "base": "Brass, 18K matte gold plated",
+        "price": 8500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["アマゾナイト", "タイガーアイ", "水色", "茶色","11号", "12号", "13号"],
+        "image": "images/B010-12横.webp",
+        "url": "B010-12.html"
       },
 
       "C001-8": {
@@ -853,6 +920,20 @@
         "image": "images/C028-9横.webp",
         "url": "C028-9.html"
       },
+
+      "C028-11": {
+        "sku": "C028-11",
+        "name": "ラブラドライト/グリーンオニキス/アメジスト 10-12号",
+        "material": "ラブラドライト/グリーンオニキス/アメジスト",
+        "base": "Brass, 18K matte gold plated",
+        "price": 22000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ラブラドライト", "グリーンオニキス", "アメジスト", "緑", "紫", "10号", "11号", "12号"],
+        "image": "images/C028-11横.webp",
+        "url": "C028-11.html"
+      },
+
       "C029-9": {
         "sku": "C029-9",
         "name": "グリーンオニキス/プレナイト/アマゾナイト 9-12号",
@@ -878,6 +959,57 @@
         "image": "images/C030-10横.webp",
         "url": "C030-10.html"
       },
+
+    "C031-10": {
+        "sku": "C031-10",
+        "name": "ラリマー/シトリン/アメジスト 9-12号",
+        "material": "グリーンオニキス/パール/アメジスト",
+        "base": "Brass, 18K matte gold plated",
+        "price": 20000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["グリーンオニキス", "パール", "アメジスト", "緑", "紫", "9号", "10号", "11号", "12号"],
+        "image": "images/C030-10横.webp",
+        "url": "C030-10.html"
+      },
+
+      "C030-10": {
+        "sku": "C030-10",
+        "name": "グリーンオニキス/パール/アメジスト 9-12号",
+        "material": "グリーンオニキス/パール/アメジスト",
+        "base": "Brass, 18K matte gold plated",
+        "price": 20000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["グリーンオニキス", "パール", "アメジスト", "緑", "紫", "9号", "10号", "11号", "12号"],
+        "image": "images/C030-10横.webp",
+        "url": "C030-10.html"
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       "C019-9": {
         "sku": "C019-9",
         "name": "レッドコーラル/オニキス/グリーンハイドロクォーツ 9-12号",
