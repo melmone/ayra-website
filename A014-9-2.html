@@ -56,24 +56,21 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <div class="main-image-wrapper">
-                <img id="main-image" src="images/A014-9横.webp" alt="商品10横から">
-                <div class="sold-out-label2">SOLD OUT</div>
-            </div>
+            <img id="main-image" src="" alt="商品10横から">
+            
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/A014-9正面.webp" alt="商品10正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/C022-9イメージ.webp" alt="商品10正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/A014-9着画.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="A014-9">
+        <div class="product-info" id="product-info" data-product-id="A014-9-2">
             <h1 class="product-title">ロードクロサイト 9号</h1>
             <p><strong>素材:</strong><span class="product-material">ロードクロサイト</span></p>
             <p><strong>ベース:</strong><span class="product-base">Brass, 18K matte gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price">¥9,000(税込)</span></p>
+            <p><strong>価格:</strong><span class="product-price">¥4,000(税込)</span></p>
             <p><strong>サイズ:</strong><span class="product-size">9号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">A014-9</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">A014-9-2</span></p>
             <div class="tags">
                 <a href="tag.html?tag=ロードクロサイト" class="tag">ロードクロサイト</a>
                 <a href="tag.html?tag=長方形" class="tag">長方形</a>
@@ -647,7 +644,7 @@
             url: "B007-9.html" 
         },
         ];
-        const currentProduct = products.find(p => p.url === "A014-9.html");
+        const currentProduct = products.find(p => p.url === "A014-10.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -696,7 +693,7 @@ if (relatedProducts.length > 0) {
     document.addEventListener('DOMContentLoaded', function () {
         updateCartCount(); // ← これを最初に実行！
 
-    const button = document.querySelector(".buy-button");
+        const button = document.querySelector(".buy-button");
         if (button) {
             button.addEventListener("click", function () {
         const productInfo = document.getElementById("product-info");
@@ -704,7 +701,7 @@ if (relatedProducts.length > 0) {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
         material: "ロードクロサイト 9号",  // 素材
-        price: 9000,  // 価格
+        price: 4000,  // 価格
         size: "9号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
@@ -714,6 +711,7 @@ if (relatedProducts.length > 0) {
             if (result === true) {
                 alert("商品がカートに追加されました！※30分でカートから削除されます");
             }
+        
     });
 }
 });
