@@ -56,27 +56,26 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/A015-10横.webp" alt="商品10横から">
+            <img id="main-image" src="images/A019-9横.webp" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/A015-10正面.webp" alt="商品10正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/A015-10後.webp" alt="商品10の別角度" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/A015-10イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/C001-8着画.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/A019-9正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/A019-9イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/A019-9着画.webp" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="A015-10">
-            <h1 class="product-title">ペリドット 8.5号</h1>
-            <p><strong>素材:</strong><span class="product-material">ペリドット</span></p>
+        <div class="product-info" id="product-info" data-product-id="A019-11">
+            <h1 class="product-title">ブルークォーツ 11号</h1>
+            <p><strong>素材:</strong><span class="product-material">ブルークォーツ</span></p>
             <p><strong>ベース:</strong><span class="product-base">Brass, 18K matte gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price">¥5,000(税込)</span></p>
-            <p><strong>サイズ:</strong><span class="product-size">8.5号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">A015-10</span></p>
+            <p><strong>価格:</strong><span class="product-price">¥6,000(税込)</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">11号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">A019-11</span></p>
             <div class="tags">
-                <a href="tag.html?tag=ペリドット" class="tag">ペリドット</a>
-                <a href="tag.html?tag=緑" class="tag">緑</a>
-                <a href="tag.html?tag=8.5号" class="tag">8.5号</a>
+                <a href="tag.html?tag=ブルークォーツ" class="tag">ブルークォーツ</a>
+                <a href="tag.html?tag=青" class="tag">青</a>
+                <a href="tag.html?tag=11号" class="tag">11号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -645,7 +644,7 @@
             url: "B007-9.html" 
         },
         ];
-        const currentProduct = products.find(p => p.url === "A015-10.html");
+        const currentProduct = products.find(p => p.url === "A019-9.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -701,9 +700,9 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "ペリドット 8.5号",  // 素材
-        price: 5000,  // 価格
-        size: "8.5号",  // サイズ
+        material: "ブルークォーツ 11号",  // 素材
+        price: 6000,  // 価格
+        size: "11号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
