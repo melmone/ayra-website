@@ -507,8 +507,8 @@
         "material": "アマゾナイト/タイガーアイ",
         "base": "Brass, 18K matte gold plated",
         "price": 8500,
-        "stock": 1,
-        "soldOut": false,
+        "stock": 0,
+        "soldOut": true,
         "tags": ["アマゾナイト", "タイガーアイ", "水色", "茶色","9号", "10号", "11号"],
         "image": "images/B010-9横.webp",
         "url": "B010-9.html"

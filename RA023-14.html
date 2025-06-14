@@ -56,26 +56,28 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="" alt="商品10横から">
+            <img id="main-image" src="images/A023-9横.webp" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="" alt="商品10正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/A023-9正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/C026-9イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/A023-9着画.webp" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="A014-9-3">
-            <h1 class="product-title">ロードクロサイト 9号</h1>
-            <p><strong>素材:</strong><span class="product-material">ロードクロサイト</span></p>
-            <p><strong>ベース:</strong><span class="product-base">Brass, 18K matte gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price">¥1,500(税込)</span></p>
-            <p><strong>サイズ:</strong><span class="product-size">9号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">A014-9-3</span></p>
+        <div class="product-info" id="product-info" data-product-id="RA023-14">
+            <h1 class="product-title">ブルーレースアゲート 8号</h1>
+            <p><strong>素材:</strong><span class="product-material">ブルーレースアゲート</span></p>
+            <p><strong>ベース:</strong><span class="product-base">Brass, Rhodium plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
+            <p><strong>価格:</strong><span class="product-price">¥12,000(税込)</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">8号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">RA023-14</span></p>
             <div class="tags">
-                <a href="tag.html?tag=ロードクロサイト" class="tag">ロードクロサイト</a>
-                <a href="tag.html?tag=長方形" class="tag">長方形</a>
-                <a href="tag.html?tag=ピンク" class="tag">ピンク</a>
-                <a href="tag.html?tag=10号" class="tag">9号</a>
+                <a href="tag.html?tag=ブルーレースアゲート" class="tag">ブルーレースアゲート</a>
+                <a href="tag.html?tag=アゲート" class="tag">アゲート</a>
+                <a href="tag.html?tag=青" class="tag">青</a>
+                <a href="tag.html?tag=水色" class="tag">水色</a>
+                <a href="tag.html?tag=8号" class="tag">8号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -644,7 +646,7 @@
             url: "B007-9.html" 
         },
         ];
-        const currentProduct = products.find(p => p.url === "A014-10.html");
+        const currentProduct = products.find(p => p.url === "A023-9.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -688,7 +690,7 @@ if (relatedProducts.length > 0) {
     }
 
     const relatedItems = document.getElementById('related-items');
-
+    
     // カートに追加する関数
     document.addEventListener('DOMContentLoaded', function () {
         updateCartCount(); // ← これを最初に実行！
@@ -700,9 +702,9 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "ロードクロサイト 9号",  // 素材
-        price: 1500,  // 価格
-        size: "9号",  // サイズ
+        material: "ブルーレースアゲート 8号",  // 素材
+        price: 12000,  // 価格
+        size: "8号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
@@ -711,7 +713,6 @@ if (relatedProducts.length > 0) {
             if (result === true) {
                 alert("商品がカートに追加されました！※30分でカートから削除されます");
             }
-        
     });
 }
 });
