@@ -56,30 +56,33 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/C022-11横 .webp" alt="商品10横から">
-            
+            <div class="main-image-wrapper">
+                <img id="main-image" src="images/C028-9横.webp" alt="商品10横から">
+                <div class="sold-out-label2">SOLD OUT</div>
+            </div>
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/C022-11正面.webp" alt="商品10正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/C022-9イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/C022-9着画.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/C028-9正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/C028-9イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/C028-9着画.webp" alt="商品10の別角度" onclick="swapImages(this)">   
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="C022-11">
-            <h1 class="product-title">ブラックルチルクォーツ/ムーンストーン/ローズクォーツ 10-12号</h1>
-            <p><strong>素材:</strong><span class="product-material">ブラックルチルクォーツ/ムーンストーン/ローズクォーツ</span></p>
+        <div class="product-info" id="product-info" data-product-id="C028-11">
+            <h1 class="product-title">ラブラドライト/グリーンオニキス/アメジスト 9-11号</h1>
+            <p><strong>素材:</strong><span class="product-material">ラブラドライト/グリーンオニキス/アメジスト</span></p>
             <p><strong>ベース:</strong><span class="product-base">Brass, 18K matte gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
             <p><strong>価格:</strong><span class="product-price">¥22,000(税込)</span></p>
-            <p><strong>サイズ:</strong><span class="product-size">10-12号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">C022-11</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">9-11号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">C028-11</span></p>
             <div class="tags">
-                <a href="tag.html?tag=ブラックルチルクォーツ" class="tag">ブラックルチルクォーツ</a>
-                <a href="tag.html?tag=ムーンストーン" class="tag">ムーンストーン</a>
-                <a href="tag.html?tag=ローズクォーツ" class="tag">ローズクォーツ</a>
-                <a href="tag.html?tag=黒" class="tag">黒</a>
+                <a href="tag.html?tag=ラブラドライト" class="tag">ラブラドライト</a>
+                <a href="tag.html?tag=グリーンオニキス" class="tag">グリーンオニキス</a>
+                <a href="tag.html?tag=アメジスト" class="tag">アメジスト</a>
+                <a href="tag.html?tag=緑" class="tag">緑</a>
+                <a href="tag.html?tag=紫" class="tag">紫</a>
+                <a href="tag.html?tag=9号" class="tag">9号</a>
                 <a href="tag.html?tag=10号" class="tag">10号</a>
                 <a href="tag.html?tag=11号" class="tag">11号</a>
-                <a href="tag.html?tag=12号" class="tag">12号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -110,7 +113,6 @@
           </div>
         </div>
     </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
           const hamburger = document.querySelector(".hamburger-menu");
@@ -871,7 +873,8 @@
             url: "B007-9.html" 
         },
         ];
-        const currentProduct = products.find(p => p.url === "C022-11.html");
+        
+        const currentProduct = products.find(p => p.url === "C028-11.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -927,9 +930,9 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ 10-12号",  // 素材
+        material: "ラブラドライト/アメジスト/グリーンオニキス 9-11号",  // 素材
         price: 22000,  // 価格
-        size: "10-12号",  // サイズ
+        size: "9-11号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
