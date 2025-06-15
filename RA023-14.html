@@ -56,12 +56,12 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/RA023-9横.webp" alt="商品10横から">
+            <img id="main-image" src="images/RA023-14横.webp" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/RA023-9正面.webp" alt="商品10正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/RA023-9イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/RA023-9着画.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/RA023-14正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/RA023-14イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/RA023-14着画.webp" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
@@ -646,7 +646,7 @@
             url: "B007-9.html" 
         },
         ];
-        const currentProduct = products.find(p => p.url === "A023-9.html");
+        const currentProduct = products.find(p => p.url === "RA023-14.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -702,9 +702,9 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "ブルーレースアゲート 8号",  // 素材
+        material: "ブルーレースアゲート 14号",  // 素材
         price: 12000,  // 価格
-        size: "8号",  // サイズ
+        size: "14号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };
