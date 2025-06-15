@@ -56,25 +56,25 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/RA001-11横.webp" alt="商品10横から">
+            <img id="main-image" src="images/RA017-11横.webp" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/RA001-11正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img class="thumbnail" src="images/RA017-11正面.webp" alt="商品10正面" onclick="swapImages(this)">
                 <img class="thumbnail" src="" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="RA001-11">
-            <h1 class="product-title">ホワイトツリーアゲート 11号</h1>
-            <p><strong>素材:</strong><span class="product-material">ホワイトツリーアゲート</span></p>
+        <div class="product-info" id="product-info" data-product-id="RA017-11">
+            <h1 class="product-title">アマゾナイト 11号</h1>
+            <p><strong>素材:</strong><span class="product-material">アマゾナイト</span></p>
             <p><strong>ベース:</strong><span class="product-base">Brass, rhodium plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
             <p><strong>価格:</strong><span class="product-price">¥7,000(税込)</span></p>
             <p><strong>サイズ:</strong><span class="product-size">11号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">RA001-11</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">RA017-11</span></p>
             <div class="tags">
-                <a href="tag.html?tag=ホワイトツリーアゲート" class="tag">ホワイトツリーアゲート</a>
-                <a href="tag.html?tag=アゲート" class="tag">アゲート</a>
-                <a href="tag.html?tag=長方形" class="tag">長方形</a>
+                <a href="tag.html?tag=アマゾナイト" class="tag">アマゾナイト横</a>
+                <a href="tag.html?tag=青" class="tag">青</a>
+                <a href="tag.html?tag=水色" class="tag">水色</a>
                 <a href="tag.html?tag=11号" class="tag">11号</a>
             </div>
             <button class="buy-button">カートに入れる</button>
@@ -866,7 +866,7 @@
             url: "B007-9.html" 
         },
         ];
-        const currentProduct = products.find(p => p.url === "RA001-11.html");
+        const currentProduct = products.find(p => p.url === "RA017-11.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -922,7 +922,7 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "ホワイトツリーアゲート 11号",  // 素材
+        material: "アマゾナイト 11号",  // 素材
         price: 7000,  // 価格
         size: "11号",  // サイズ
         quantity: 1,  // 数量

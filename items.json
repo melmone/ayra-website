@@ -9,7 +9,7 @@
         "size": "10号",
         "stock": 0,
         "soldOut": true,
-        "tags": ["クリスタルクォーツ","楕円形", "透明", "10号"],
+        "tags": ["クリスタルクォーツ", "楕円形", "透明", "10号"],
         "image": "images/A001-10-2横.webp",
         "url": "A001-10-1.html"
       },
@@ -22,7 +22,7 @@
         "price": 4500,
         "stock": 1,
         "soldOut": false,
-        "tags": ["クリスタルクォーツ","楕円形", "透明", "10号"],
+        "tags": ["クリスタルクォーツ", "楕円形", "透明", "10号"],
         "image": "images/A001-10-2横.webp",
         "url": "A001-10-2.html"
       },
@@ -35,7 +35,7 @@
         "price": 3500,
         "stock": 1,
         "soldOut": false,
-        "tags": ["クリスタルクォーツ","丸形", "透明", "9号"],
+        "tags": ["クリスタルクォーツ", "丸形", "透明", "9号"],
         "image": "images/A002-9横.webp",
         "url": "A002-9.html"
       },
@@ -48,7 +48,7 @@
         "price": 3500,
         "stock": 0,
         "soldOut": true,
-        "tags": ["クリスタルクォーツ","丸形", "透明", "10号"],
+        "tags": ["クリスタルクォーツ", "丸形", "透明", "10号"],
         "image": "images/A002-9横.webp",
         "url": "A002-10.html"
       },
@@ -87,7 +87,7 @@
         "price": 4500,
         "stock": 0,
         "soldOut": true,
-        "tags": ["ローズクォーツ","長方形", "ピンク", "11号"],
+        "tags": ["ローズクォーツ", "長方形", "ピンク", "11号"],
         "image": "images/A004-11-2横.webp",
         "url": "A004-11-2.html"
       },
@@ -208,28 +208,52 @@
         "image": "images/A012-14横.webp",
         "url": "A012-14.html"
       },
-      "A014-9": {
-        "sku": "A014-9",
-        "name": "ロードクロサイト 9号",
+      "A014-9-1": {
+        "sku": "A014-9-1",
+        "name": "ロードクロサイト 8号",
         "material": "ロードクロサイト",
         "base": "Brass, 18K matte gold plated",
         "price": 9000,
         "stock": 0,
         "soldOut": true,
+        "tags": ["ロードクロサイト", "長方形", "ピンク", "8号"],
+        "image": "images/A014-9-1横.webp",
+        "url": "A014-9-1.html"
+      },
+      "A014-9-2": {
+        "sku": "A014-9-2",
+        "name": "ロードクロサイト 9号",
+        "material": "ロードクロサイト",
+        "base": "Brass, 18K matte gold plated",
+        "price": 4000,
+        "stock": 0,
+        "soldOut": true,
         "tags": ["ロードクロサイト", "長方形", "ピンク", "9号"],
-        "image": "images/A014-9横.webp",
-        "url": "A014-9.html"
+        "image": "images/A014-9-2横.webp",
+        "url": "A014-9-2.html"
+      },
+      "A014-9-3": {
+        "sku": "A014-9-3",
+        "name": "ロードクロサイト 9号",
+        "material": "ロードクロサイト",
+        "base": "Brass, 18K matte gold plated",
+        "price": 1500,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ロードクロサイト", "長方形", "ピンク", "9号"],
+        "image": "images/A014-9-3横.webp",
+        "url": "A014-9-3.html"
       },
       
       "A015-10": {
         "sku": "A015-10",
-        "name": "ペリドット 9号",
+        "name": "ペリドット 8.5号",
         "material": "ペリドット",
         "base": "Brass, 18K matte gold plated",
         "price": 5000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["ペリドット", "緑", "9号"],
+        "tags": ["ペリドット", "緑", "8.5号"],
         "image": "images/A015-10横.webp",
         "url": "A015-10.html"
       },
@@ -240,24 +264,11 @@
         "material": "クリスタルクォーツ",
         "base": "Brass, rhodium plated",
         "price": 1500,
-        "stock": 1,
-        "soldOut": false,
-        "tags": ["クリスタルクォーツ", "透明", "10号"],
+        "stock": 0,
+        "soldOut": true,
+        "tags": ["クリスタルクォーツ", "多角形", "10号"],
         "image": "images/A016-10横.webp",
         "url": "A016-10.html"
-      },
-
-      "A017-10": {
-        "sku": "A017-10",
-        "name": "アマゾナイト 11号",
-        "material": "アマゾナイト",
-        "base": "Brass, 18K matte gold plated",
-        "price": 5000,
-        "stock": 1,
-        "soldOut": false,
-        "tags": ["アマゾナイト", "水色", "11号"],
-        "image": "images/A017-10横.webp",
-        "url": "A017-10.html"
       },
       
       "A018-9": {
@@ -268,7 +279,7 @@
         "price": 8000,
         "stock": 1,
         "soldOut": false,
-        "tags": ["グリーンアメジスト", "緑", "長方形", "8号"],
+        "tags": ["グリーンアメジスト", "長方形", "緑", "8号"],
         "image": "images/A018-9横.webp",
         "url": "A018-9.html"
       },
@@ -284,6 +295,18 @@
         "tags": ["ブルークォーツ", "青", "9号"],
         "image": "images/A019-9横.webp",
         "url": "A019-9.html"
+      },
+      "A019-11": {
+        "sku": "A019-11",
+        "name": "ブルークォーツ 11号",
+        "material": "ブルークォーツ",
+        "base": "Brass, 18K matte gold plated",
+        "price": 6000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブルークォーツ", "青", "11号"],
+        "image": "images/A019-11横.webp",
+        "url": "A019-11.html"
       },
       "A020-9": {
         "sku": "A020-9",
@@ -322,19 +345,6 @@
         "url": "A023-9.html"
       },
 
-      "A023-14": {
-        "sku": "A023-14",
-        "name": "ブルーレースアゲート 14号",
-        "material": "ブルーレースアゲート",
-        "base": "Brass, 18K matte gold plated",
-        "price": 12000,
-        "stock": 1,
-        "soldOut": false,
-        "tags": ["ブルーレースアゲート", "アゲート", "青", "水色", "14号"],
-        "image": "images/A023-14横.webp",
-        "url": "A023-14.html"
-      },
-
       "A024-9": {
         "sku": "A024-9",
         "name": "ブルーレースアゲート 8号",
@@ -348,10 +358,63 @@
         "url": "A024-9.html"
       },
 
+      "RA001-11": {
+        "sku": "RA001-11",
+        "name": "ホワイトツリーアゲート 11号",
+        "material": "ホワイトツリーアゲート",
+        "base": "Brass, rhodium plated",
+        "price": 7000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ホワイトツリーアゲート", "アゲート", "長方形", "11号"],
+        "image": "images/RA001-11横.webp",
+        "url": "RA001-11.html"
+      },
+
+      "RA017-11": {
+        "sku": "RA017-11",
+        "name": "アマゾナイト 11号",
+        "material": "アマゾナイト",
+        "base": "Brass, rhodium plated",
+        "price": 7000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["アマゾナイト", "青", "水色", "11号"],
+        "image": "images/RA017-11横.webp",
+        "url": "RA017-11.html"
+      },
+
+      "RA019-11": {
+        "sku": "RA019-11",
+        "name": "ブルークォーツ 11号",
+        "material": "ブルークォーツ",
+        "base": "Brass, rhodium plated",
+        "price": 6000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブルークォーツ", "青", "11号"],
+        "image": "images/RA019-11横.webp",
+        "url": "RA019-11.html"
+      },
+
+      "RA023-14": {
+        "sku": "RA023-14",
+        "name": "ブルーレースアゲート 14号",
+        "material": "ブルーレースアゲート",
+        "base": "Brass, rhodium plated",
+        "price": 12000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブルーレースアゲート", "アゲート", "青", "水色", "14号"],
+        "image": "images/RA023-14横.webp",
+        "url": "RA023-14.html"
+      },
+
+
       "SA011-10": {
         "sku": "SA011-10",
         "name": "オニキス 10号",
-        "material": "ブルーレースアゲート",
+        "material": "オニキス",
         "base": "Silver 925",
         "price": 20000,
         "stock": 1,
@@ -364,7 +427,7 @@
       "SA013-10": {
         "sku": "SA013-10",
         "name": "ブルートパーズ 10号",
-        "material": "ブルーレースアゲート",
+        "material": "ブルートパーズ",
         "base": "Silver 925",
         "price": 20000,
         "stock": 1,
@@ -372,6 +435,18 @@
         "tags": ["ブルートパーズ", "青", "10号"],
         "image": "images/SA013-10横.webp",
         "url": "SA013-10.html"
+      },
+      "SA014-9": {
+        "sku": "SA014-9",
+        "name": "ブラックルチルクォーツ 11号",
+        "material": "ブラックルチルクォーツ",
+        "base": "Silver 925",
+        "price": 20000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブラックルチルクォーツ", "黒", "11号"],
+        "image": "images/SA014-9横.webp",
+        "url": "SA014-9.html"
       },
 
       "B001-9": {
@@ -391,7 +466,7 @@
         "sku": "B002-12",
         "name": "ローズクォーツ/クリスタルクォーツ 12-14号",
         "material": "ローズクォーツ/クリスタルクォーツ",
-        "base": "Brass, 18K gold plated",
+        "base": "Brass, 18K polished gold plated",
         "price": 6000,
         "stock": 0,
         "soldOut": true,
@@ -421,7 +496,7 @@
         "price": 7000,
         "stock": 0,
         "soldOut": true,
-        "tags": ["カイヤナイト", "アメジスト", "青", "紫", "12号", "13号", "14号"],
+        "tags": ["カイヤナイト", "アメジスト", "紫", "青", "12号", "13号", "14号"],
         "image": "images/B004-12横.webp",
         "url": "B004-12.html"
       },
@@ -484,7 +559,7 @@
         "price": 8500,
         "stock": 1,
         "soldOut": false,
-        "tags": ["ラピスラズリ", "ターコイズ", "青", "水色", "11号", "12号", "13号"],
+        "tags": ["ターコイズ", "ラピスラズリ", "青", "水色", "11号", "12号", "13号"],
         "image": "images/B008-12横.webp",
         "url": "B008-12.html"
       },
@@ -509,7 +584,7 @@
         "price": 8500,
         "stock": 0,
         "soldOut": true,
-        "tags": ["アマゾナイト", "タイガーアイ", "水色", "茶色","9号", "10号", "11号"],
+        "tags": ["アマゾナイト", "タイガーアイ", "水色", "茶色", "9号", "10号", "11号"],
         "image": "images/B010-9横.webp",
         "url": "B010-9.html"
       },
