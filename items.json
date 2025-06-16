@@ -20,8 +20,8 @@
         "material": "クリスタルクォーツ",
         "base": "Brass, 18K polished gold plated",
         "price": 4500,
-        "stock": 1,
-        "soldOut": false,
+        "stock": 0,
+        "soldOut": true,
         "tags": ["クリスタルクォーツ", "楕円形", "透明", "10号"],
         "image": "images/A001-10-2横.webp",
         "url": "A001-10-2.html"
@@ -59,8 +59,8 @@
         "material": "クリスタルクォーツ",
         "base": "Brass, 18K polished gold plated",
         "price": 6000,
-        "stock": 1,
-        "soldOut": false,
+        "stock": 0,
+        "soldOut": true,
         "tags": ["クリスタルクォーツ", "多角形", "透明", "10号"],
         "image": "images/A003-10横.webp",
         "url": "A003-10.html"
@@ -343,6 +343,18 @@
         "tags": ["ブルーレースアゲート", "アゲート", "青", "水色", "8号"],
         "image": "images/A023-9横.webp",
         "url": "A023-9.html"
+      },
+      "A023-14": {
+        "sku": "A023-14",
+        "name": "ブルーレースアゲート 14号",
+        "material": "ブルーレースアゲート",
+        "base": "Brass, 18K matte gold plated",
+        "price": 12000,
+        "stock": 1,
+        "soldOut": false,
+        "tags": ["ブルーレースアゲート", "アゲート", "青", "水色", "14号"],
+        "image": "images/A023-14横.webp",
+        "url": "A023-14.html"
       },
 
       "A024-9": {
