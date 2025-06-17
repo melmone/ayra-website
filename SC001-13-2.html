@@ -14,7 +14,7 @@
     <div class="wrapper">
         <div class="header">
             <a href="index.html" class="header-logo">
-                <img src="images/Ayraロゴ.jpg" alt="冠付きロゴ">
+                <img loading="lazy" src="images/Ayraロゴ.jpg" alt="冠付きロゴ">
             </a>
   
         <div class="hamburger-menu">
@@ -31,7 +31,7 @@
 
         <div class="cart-icon-wrapper">
             <a href="cart.html">
-              <img src="images/cart.png" alt="カート" class="cart-icon">
+              <img loading="lazy" src="images/cart.png" alt="カート" class="cart-icon">
               <span class="cart-count" id="cart-count">0</span>
             </a>
         </div>
@@ -56,11 +56,11 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img id="main-image" src="images/SC001-13-2横.webp" alt="商品10横から">
+            <img loading="lazy" id="main-image" src="images/SC001-13-2横.webp" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img class="thumbnail" src="images/SC001-13-2正面.webp" alt="商品10正面" onclick="swapImages(this)">
-                <img class="thumbnail" src="images/SC001-13イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img loading="lazy" class="thumbnail" src="images/SC001-13-2正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img loading="lazy" class="thumbnail" src="images/SC001-13イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
@@ -94,7 +94,7 @@
 
     <div class="footer">
         <a href="https://www.instagram.com/ayra_rings" target="_blank">
-            <img src="images/図1.png" alt="Instagram" class="instagram-icon">
+            <img loading="lazy" src="images/図1.png" alt="Instagram" class="instagram-icon">
         </a>
         <ul class="nav-list2">
             <li><a href="faqs.html">FAQs</a></li>
@@ -103,7 +103,7 @@
 
         <div class="cart-icon-wrapper">
             <a href="cart.html">
-              <img src="images/cart.png" alt="カート" class="cart-icon">
+              <img loading="lazy" src="images/cart.png" alt="カート" class="cart-icon">
               <span class="cart-count" id="cart-count">0</span>
             </a>
           </div>
@@ -887,7 +887,7 @@ if (relatedProducts.length > 0) {
         productElement.classList.add("related-product"); // ✅ クラスを追加
         productElement.innerHTML = `
             <a href="${product.url}">
-                <img src="${product.img}" alt="${product.name}" width="100">
+                <img loading="lazy" src="${product.img}" alt="${product.name}" width="100">
                 <p>${product.name}</p>
                 <p>${product.price}</p>
             </a>

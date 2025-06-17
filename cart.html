@@ -73,12 +73,12 @@
         itemDiv.className = 'cart-item';
   
         itemDiv.innerHTML = `
-          <img src="${item.image}" alt="${item.title}">
+          <img loading="lazy" src="${item.image}" alt="${item.title}">
           <div class="cart-item-info">
             <p><strong>${item.title}</strong></p>
             <p>価格: ¥${Number(item.price).toLocaleString()}</p>
           </div>
-          <img src="images/trash-icon.png" alt="削除" class="delete-btn" data-index="${index}">
+          <img loading="lazy" src="images/trash-icon.png" alt="削除" class="delete-btn" data-index="${index}">
         `;
   
         cartItemsDiv.appendChild(itemDiv);
