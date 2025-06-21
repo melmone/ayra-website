@@ -949,6 +949,11 @@ function addToCart(product) {
     
     const existing = cart.find(item => item.id === product.id);
 
+    if (existing && existing.quantity >= 1) {
+        alert("在庫は1つしかないので、同一の商品を2つ以上カートに入れることは出来ません。");
+        return false; // 追加処理を中断
+    }
+
     if (existing) {
         existing.quantity += 1;
         existing.timestamp = new Date().getTime(); // タイムスタンプ更新
@@ -959,6 +964,8 @@ function addToCart(product) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
+
+    return true;
 }
 
     // ★新しい updateCartCount（これだけでOK！）
@@ -991,4 +998,3 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
-
