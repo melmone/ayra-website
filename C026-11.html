@@ -56,27 +56,30 @@
     <div class="product-detail">
        
         <div class="product-images">
-            <img loading="lazy" id="main-image" src="" alt="商品10横から">
+            <img loading="lazy" id="main-image" src="images/C026-11横.webp" alt="商品10横から">
             
             <div class="thumbnail-container">
-                <img loading="lazy" class="thumbnail" src="" alt="商品10正面" onclick="swapImages(this)">
-                <img loading="lazy" class="thumbnail" src="" alt="商品10の別角度" onclick="swapImages(this)">
+                <img loading="lazy" class="thumbnail" src="images/C026-11正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img loading="lazy" class="thumbnail" src="images/C026-11イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
             </div>
         </div>
        
-        <div class="product-info" id="product-info" data-product-id="A011-9">
-            <h1 class="product-title">ブラックルチルクォーツ/ムーンストーン/カルセドニー 9号</h1>
-            <p><strong>素材:</strong><span class="product-material">ブラックルチルクォーツ/ムーンストーン/カルセドニー 9号</span></p>
-            <p><strong>ベース:</strong><span class="product-base"></span> (詳しくは<a href="faqs.html">こちら</a>)</p>
-            <p><strong>価格:</strong><span class="product-price">¥</span></p>
-            <p><strong>サイズ:</strong><span class="product-size">号</span></p>
-            <p><strong>商品番号:</strong><span class="product-sku">A011-9</span></p>
+        <div class="product-info" id="product-info" data-product-id="C026-11">
+            <h1 class="product-title">ブラックルチルクォーツ/ムーンストーン/カルセドニー 10-12号</h1>
+            <p>クールなブラックルチルクォーツとムーンストーンに、淡いカルセドニーが調和</p>
+            <p><strong>素材:</strong><span class="product-material">ブラックルチルクォーツ/ムーンストーン/カルセドニー</span></p>
+            <p><strong>ベース:</strong><span class="product-base">Brass, 18K matte gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
+            <p><strong>価格:</strong><span class="product-price">¥11,000(税込)</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">10-12号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">C026-11</span></p>
             <div class="tags">
-                <a href="tag.html?tag=モナリザピンク" class="tag"></a>
-                <a href="tag.html?tag=丸形" class="tag"></a>
-                <a href="tag.html?tag=ピンク" class="tag"></a>
-                <a href="tag.html?tag=カボション" class="tag"></a>
-                <a href="tag.html?tag=9号" class="tag"></a>
+                <a href="tag.html?tag=ブラックルチルクォーツ" class="tag">ブラックルチルクォーツ</a>
+                <a href="tag.html?tag=ムーンストーン" class="tag">ムーンストーン</a>
+                <a href="tag.html?tag=カルセドニー" class="tag">カルセドニー</a>
+                <a href="tag.html?tag=10号" class="tag">10号</a>
+                <a href="tag.html?tag=11号" class="tag">11号</a>
+                <a href="tag.html?tag=12号" class="tag">12号</a>
+                <a href="tag.html?tag=18K matte" class="tag">18K matte</a>
             </div>
             <button class="buy-button">カートに入れる</button>
         </div>
@@ -644,7 +647,7 @@
         },
         ];
          
-        const currentProduct = products.find(p => p.url === "ring3-19-3.html");
+        const currentProduct = products.find(p => p.url === "C026-11.html");
         
         // 関連商品を取得（同じタグを含む）
 const relatedProducts = products.filter(p => 
@@ -700,9 +703,9 @@ if (relatedProducts.length > 0) {
         const product = {
         id: productInfo.dataset.productId,
         title: document.querySelector(".product-title").textContent,  // 商品名
-        material: "",  // 素材
-        price: ,  // 価格
-        size: "",  // サイズ
+        material: "ブラックルチルクォーツ/ムーンストーン/カルセドニー 10-12号",  // 素材
+        price: 11000,  // 価格
+        size: "10-12号",  // サイズ
         quantity: 1,  // 数量
         image: document.getElementById("main-image").src  // 商品画像のURL
     };

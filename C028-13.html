@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラブラドライト/グリーンオニキス/アメジスト 9-11号</title>
+    <script type="module" src="js/firebase-init.js"></script>
+    <script type="module" src="js/product-soldout.js" defer></script>
+    
+    <link rel="stylesheet" href="stylesheet.css"> <!-- CSSファイルを適用 -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a href="index.html" class="header-logo">
+                <img loading="lazy" src="images/Ayraロゴ.jpg" alt="冠付きロゴ">
+            </a>
+  
+        <div class="hamburger-menu">
+            ☰
+        </div>
+        
+        <ul class="nav-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="onlineshop.html">Online shop</a></li>
+            <li><a href="custom.html">Custom</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="cart-icon-wrapper">
+            <a href="cart.html">
+              <img loading="lazy" src="images/cart.png" alt="カート" class="cart-icon">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
+
+        </div>
+    </div>
+
+
+    <header class="ring-category">
+        
+        <nav class="category">
+            <a href="onlineshop.html">Online shop</a> |
+            <a href="ring3.html">トリーニ</a> |
+            <a href="ring2.html">ドゥヴェ</a> |
+            <a href="ring5.html">ヴァーティカル</a> |
+            <a href="ring6.html">スクリュー</a> |
+            <a href="ring4.html">SPECIAL PRICE</a> |
+            <a href="ring1.html">エーカム</a> 
+        </nav>
+    </header>
+
+    <div class="product-detail">
+       
+        <div class="product-images">
+                <img loading="lazy" id="main-image" src="images/C028-13横.webp" alt="商品10横から">
+               
+            <div class="thumbnail-container">
+                <img loading="lazy" class="thumbnail" src="images/C028-13正面.webp" alt="商品10正面" onclick="swapImages(this)">
+                <img loading="lazy" class="thumbnail" src="images/C028-13イメージ.webp" alt="商品10の別角度" onclick="swapImages(this)">
+                <img loading="lazy" class="thumbnail" src="images/C028-13着画.webp" alt="商品10の別角度" onclick="swapImages(this)">   
+            </div>
+        </div>
+       
+        <div class="product-info" id="product-info" data-product-id="C028-13">
+            <h1 class="product-title">ラブラドライト/グリーンオニキス/アメジスト 12-14号</h1>
+            <p>光によって表情を変えるラブラドライトに、深みあるグリーンオニキス、華やかなアメジストが上質な彩りを添えます</p>
+            <p><strong>素材:</strong><span class="product-material">ラブラドライト/グリーンオニキス/アメジスト</span></p>
+            <p><strong>ベース:</strong><span class="product-base">Brass, 18K matte gold plated</span> (詳しくは<a href="faqs.html">こちら</a>)</p>
+            <p><strong>価格:</strong><span class="product-price">¥22,000(税込)</span></p>
+            <p><strong>サイズ:</strong><span class="product-size">12-14号</span></p>
+            <p><strong>商品番号:</strong><span class="product-sku">C028-13</span></p>
+            <div class="tags">
+                <a href="tag.html?tag=ラブラドライト" class="tag">ラブラドライト</a>
+                <a href="tag.html?tag=グリーンオニキス" class="tag">グリーンオニキス</a>
+                <a href="tag.html?tag=アメジスト" class="tag">アメジスト</a>
+                <a href="tag.html?tag=緑" class="tag">緑</a>
+                <a href="tag.html?tag=紫" class="tag">紫</a>
+                <a href="tag.html?tag=12号" class="tag">12号</a>
+                <a href="tag.html?tag=13号" class="tag">13号</a>
+                <a href="tag.html?tag=14号" class="tag">14号</a>
+                <a href="tag.html?tag=18K matte" class="tag">18K matte</a>
+            </div>
+            <button class="buy-button">カートに入れる</button>
+        </div>
+
+    </div>
+
+    <div class="related-products-container">
+        <h2>Related items</h2>
+        <div id="related-products">
+            <div id="related-items" class="product-grid"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.instagram.com/ayra_rings" target="_blank">
+            <img loading="lazy" src="images/図1.png" alt="Instagram" class="instagram-icon">
+        </a>
+        <ul class="nav-list2">
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="cart-icon-wrapper">
+            <a href="cart.html">
+              <img loading="lazy" src="images/cart.png" alt="カート" class="cart-icon">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger-menu");
+          const navList = document.querySelector(".nav-list");
+      
+          hamburger.addEventListener("click", function () {
+            navList.classList.toggle("active");
+          });
+        });
+      </script>
+   
+
+    <script>
+        
+        // 商品データ（実際はサーバーやデータベースで管理）
+        const products = [
+        { 
+            name: "クリスタルクォーツ 10号",
+            price: "¥4,500(税込)",
+            tags: ["クリスタルクォーツ", "楕円形", "透明", "10号", "18K polished"],                 
+            img: "images/A001-10-2横.webp",
+            url: "A001-10-1.html"
+        },
+        { 
+            name: "クリスタルクォーツ 10号",
+            price: "¥4,500(税込)",
+            tags: ["クリスタルクォーツ", "楕円形", "透明", "10号", "18K polished"],                 
+            img: "images/A001-10-2横so.webp",
+            url: "A001-10-2.html"
+        },
+        { 
+            name: "クリスタルクォーツ 9号", 
+            price: "¥3,500(税込)",
+            tags: ["クリスタルクォーツ", "丸形", "透明", "9号", "18K polished"], 
+            img: "images/A002-9横.webp",
+            url: "A002-9.html" 
+        },
+        { 
+            name: "クリスタルクォーツ 10号", 
+            price: "¥3,500(税込)",
+            tags: ["クリスタルクォーツ", "丸形", "透明", "10号", "18K polished"], 
+            img: "images/A002-9横.webp",
+            url: "A002-10.html" 
+        },
+        { 
+            name: "クリスタルクォーツ 11号",
+            price: "¥6,000(税込)", 
+            tags: ["クリスタルクォーツ", "多角形", "透明", "11号", "18K polished"], 
+            img: "images/A003-11横.webp",
+            url: "A003-11.html"
+        },
+        { 
+            name: "クリスタルクォーツ 10号",
+            price: "¥6,000(税込)", 
+            tags: ["クリスタルクォーツ", "多角形", "透明", "10号", "18K polished"], 
+            img: "images/A003-10横so.webp",
+            url: "A003-10.html"
+        },
+        { 
+            name: "ローズクォーツ 11号",
+            price: "¥4,500(税込)", 
+            tags: ["ローズクォーツ", "長方形", "ピンク", "11号", "18K polished"], 
+            img: "images/A004-11-2横so.webp",
+            url: "A004-11-2.html"
+        },
+        { 
+            name: "スマイル ピンク 14号",
+            price: "¥3,500(税込)",
+            tags: ["エナメル", "ピンク", "14号", "18K polished"],
+            img: "images/A005-14横.webp",
+            url: "A005-14.html"
+        },
+        { 
+            name: "スマイル イエロー 14号",
+            price: "¥3,500(税込)",
+            tags: ["エナメル", "黄色", "14号", "18K polished"],
+            img: "images/A012-14横so.webp",
+            url: "A012-14.html"
+        },
+        { 
+            name: "カーネリアン 11号",
+            price: "¥3,500(税込)",
+            tags: ["カーネリアン", "雫形", "オレンジ", "11号", "18K polished"],
+            img: "images/A006-11横.webp",
+            url: "A006-11.html"
+        },
+        { 
+            name: "グリーンアメジスト 9号",
+            price: "¥8,000(税込)",
+            tags: ["グリーンアメジスト", "長方形", "緑", "9号", "18K polished"],
+            img: "images/A008-9横.webp",
+            url: "A008-9.html" 
+        },
+        { 
+            name: "グリーンアメジスト 10号",
+            price: "¥8,000(税込)",
+            tags: ["グリーンアメジスト", "長方形", "緑", "10号", "18K polished"],
+            img: "images/A008-9-2横.webp",
+            url: "A008-9-2.html" 
+        },
+        { 
+            name: "アメジスト 12号",
+            price: "¥8,000(税込)", 
+            tags: ["アメジスト", "楕円形", "紫", "12号", "18K polished"], 
+            img: "images/A009-12横.webp",
+            url: "A009-12.html"
+        },
+        { 
+            name: "カルセドニー 10号",
+            price: "¥3,500", 
+            tags: ["カルセドニー", "丸形", "水色", "カボション", "10号", "18K polished"], 
+            img: "images/A010-10-1横.webp",
+            url: "A010-10-1.html" 
+        },
+        { 
+            name: "ピンクモナリザ 9号",
+            price: "¥3,500(税込)", 
+            tags: ["ピンクモナリザ", "丸形", "ピンク", "カボション", "9号", "18K polished"],
+            img: "images/A011-9横.webp",
+            url: "A011-9.html" 
+        },
+        { 
+            name: "ピンクモナリザ 10号",
+            price: "¥3,500(税込)", 
+            tags: ["ピンクモナリザ", "丸形", "ピンク", "カボション", "10号", "18K polished"],
+            img: "images/A011-10横.webp",
+            url: "A011-10.html" 
+        },
+        { 
+            name: "ロードクロサイト 8号",
+            price: "¥9,000(税込)", 
+            tags: ["ロードクロサイト", "長方形", "ピンク", "8号", "18K matte"],
+            img: "images/A014-9-1横so.webp",
+            url: "A014-9-1.html" 
+        },
+        { 
+            name: "ロードクロサイト 9号",
+            price: "¥4,000(税込)", 
+            tags: ["ロードクロサイト", "長方形", "ピンク", "9号", "18K matte"],
+            img: "images/A014-9-2横so.webp",
+            url: "A014-9-2.html" 
+        },
+        { 
+            name: "ロードクロサイト 9号",
+            price: "¥1,500(税込)", 
+            tags: ["ロードクロサイト", "長方形", "ピンク", "9号", "18K matte"],
+            img: "images/A014-9-3横.webp",
+            url: "A014-9-3.html" 
+        },
+        { 
+            name: "ペリドット 8.5号",
+            price: "¥5,000(税込)", 
+            tags: ["ペリドット", "緑", "8.5号", "18K matte"],
+            img: "images/A015-10横.webp",
+            url: "A015-10.html" 
+        },
+        { 
+            name: "クリスタルクォーツ 10号",
+            price: "¥1,500(税込)", 
+            tags: ["クリスタルクォーツ", "多角形", "10号", "Rhodium"],
+            img: "images/A016-10横so.webp",
+            url: "A016-10.html" 
+        },
+        { 
+            name: "アマゾナイト 11号",
+            price: "¥5,000(税込)", 
+            tags: ["アマゾナイト", "青", "水色", "11号", "18K matte"],
+            img: "images/A017-11横.webp",
+            url: "A017-11.html" 
+        },
+        
+        { 
+            name: "グリーンアメジスト 8号",
+            price: "¥8,000(税込)", 
+            tags: ["グリーンアメジスト", "長方形", "緑", "8号", "18K matte"],
+            img: "images/A018-9横.webp",
+            url: "A018-9.html" 
+        },
+        
+        { 
+            name: "ブルークォーツ 9号",
+            price: "¥6,000(税込)", 
+            tags: ["ブルークォーツ", "青", "9号", "18K matte"],
+            img: "images/A019-9横.webp",
+            url: "A019-9.html" 
+        },
+        { 
+            name: "ブルークォーツ 11号",
+            price: "¥6,000(税込)", 
+            tags: ["ブルークォーツ", "青", "11号", "18K matte"],
+            img: "images/A019-11横.webp",
+            url: "A019-11.html" 
+        },
+        { 
+            name: "スモーキークォーツ 8号",
+            price: "¥8,000(税込)", 
+            tags: ["スモーキークォーツ", "茶色", "8号", "18K matte"],
+            img: "images/A020-9横.webp",
+            url: "A020-9.html" 
+        },
+        { 
+            name: "ラブラドライト 8号",
+            price: "¥8,000(税込)", 
+            tags: ["ラブラドライト", "アーモンド形", "8号", "18K matte"],
+            img: "images/A022-9横.webp",
+            url: "A022-9.html" 
+        },
+        { 
+            name: "ブルーレースアゲート 8号",
+            price: "¥12,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "青", "水色", "8号", "18K matte"],
+            img: "images/A023-9横.webp",
+            url: "A023-9.html" 
+        },
+        { 
+            name: "ブルーレースアゲート 14号",
+            price: "¥12,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "青", "水色", "14号", "18K matte"],
+            img: "images/A023-14横.webp",
+            url: "A023-14.html" 
+        },
+        { 
+            name: "ブルーレースアゲート 8号",
+            price: "¥12,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "青", "水色", "8号", "18K matte"],
+            img: "images/A024-9横.webp",
+            url: "A024-9.html" 
+        },
+        { 
+            name: "ホワイトツリーアゲート 11号",
+            price: "¥7,000(税込)", 
+            tags: ["ホワイトツリーアゲート", "アゲート", "長方形", "11号", "Rhodium"],
+            img: "images/RA001-11横.webp",
+            url: "RA001-11.html" 
+        },
+        { 
+            name: "アマゾナイト 11号",
+            price: "¥5,000(税込)", 
+            tags: ["アマゾナイト", "青", "水色", "11号", "Rhodium"],
+            img: "images/RA017-11横.webp",
+            url: "RA017-11.html" 
+        },
+        { 
+            name: "ブルークォーツ 11号",
+            price: "¥6,000(税込)", 
+            tags: ["ブルークォーツ", "青", "11号", "Rhodium"],
+            img: "images/RA019-11横.webp",
+            url: "RA019-11.html" 
+        },
+        { 
+            name: "ブルーレースアゲート 14号",
+            price: "¥12,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "青", "水色", "14号", "Rhodium"],
+            img: "images/RA023-14横.webp",
+            url: "RA023-14.html" 
+        },
+        { 
+            name: "オニキス 10号",
+            price: "¥20,000(税込)", 
+            tags: ["オニキス", "黒", "10号", "Silver 925"],
+            img: "images/SA011-10横.webp",
+            url: "SA011-10.html" 
+        },
+        { 
+            name: "ブルートパーズ 10号",
+            price: "¥20,000(税込)", 
+            tags: ["ブルートパーズ", "青", "10号", "Silver 925"],
+            img: "images/SA013-10横.webp",
+            url: "SA013-10.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ 11号",
+            price: "¥20,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "黒", "11号", "Silver 925"],
+            img: "images/SA014-11横.webp",
+            url: "SA014-9.html" 
+        },
+
+        { 
+            name: "ローズクォーツ/クリスタルクォーツ 12-14号",
+            price: "¥6,000(税込)", 
+            tags: ["ローズクォーツ", "クリスタルクォーツ", "透明", "ピンク", "12号", "13号", "14号", "18K polished"], 
+            img: "images/B002-12横so.webp",
+            url: "B002-12.html" 
+        },
+        { 
+            name: "カイヤナイト/アメジスト 12号-14号",
+            price: "¥7,000(税込)", 
+            tags: ["カイヤナイト", "アメジスト", "紫", "青", "12号", "13号", "14号", "18K polished"], 
+            img: "images/B004-12横so.webp",
+            url: "B004-12.html" 
+        },
+        { 
+            name: "カーネリアン/シトリン 10-11号",
+            price: "¥6,000(税込)", 
+            tags: ["カーネリアン", "シトリン", "オレンジ", "10号", "11号", "18K polished"], 
+            img: "images/B005-10横.webp",
+            url: "B005-10.html" 
+        },
+        { 
+            name: "ブラックトルマリン/ハーキマーダイヤモンド 9-10号",
+            price: "¥6,000(税込)", 
+            tags: ["ブラックトルマリン", "ハーキマーダイヤモンド", "黒", "透明", "9号", "10号", "18K polished"], 
+            img: "images/B006-9横so.webp",
+            url: "B006-9.html" 
+        },
+        
+        { 
+            name: "ラピスラズリ/ターコイズ 9-11号",
+            price: "¥8,500(税込)", 
+            tags: ["ラピスラズリ", "ターコイズ", "青", "水色", "9号", "10号", "11号", "18K matte"], 
+            img: "images/B008-9横.webp",
+            url: "B008-9.html" 
+        },
+        { 
+            name: "ターコイズ /ラピスラズリ 11-13号",
+            price: "¥8,500(税込)", 
+            tags: ["ラピスラズリ", "ターコイズ", "青", "水色", "11号", "12号", "13号", "18K matte"], 
+            img: "images/B008-12横.webp",
+            url: "B008-12.html" 
+        },
+        { 
+            name: "シトリン/オニキス 9-11号",
+            price: "¥10,000(税込)", 
+            tags: ["シトリン", "オニキス", "黄色", "黒", "9号", "10号", "11号", "18K matte"], 
+            img: "images/B009-9横.webp",
+            url: "B009-9.html" 
+        },
+        { 
+            name: "アマゾナイト/タイガーアイ 9-11号",
+            price: "¥8,500(税込)", 
+            tags: ["アマゾナイト", "タイガーアイ", "水色", "茶色", "9号", "10号", "11号", "18K matte"], 
+            img: "images/B010-9横so.webp",
+            url: "B010-9.html" 
+        },
+        { 
+            name: "アマゾナイト/タイガーアイ 11-13号",
+            price: "¥8,500(税込)", 
+            tags: ["アマゾナイト", "タイガーアイ", "水色", "茶色", "11号", "12号", "13号", "18K matte"], 
+            img: "images/B010-12横.webp",
+            url: "B010-12.html" 
+        },
+        { 
+            name: "ラリマー/カイヤナイト/タンザナイト 8-10号",
+            price: "¥10,000(税込)", 
+            tags: ["ラリマー", "カイヤナイト", "タンザナイト", "青", "8号", "9号", "10号", "18K polished"], 
+            img: "images/C001-8横.webp",
+            url: "C001-8.html" 
+        },
+        { 
+            name: "グリーンハイドロクォーツ/ラリマー/フローライト 12-14号",
+            price: "¥20,000(税込)", 
+            tags: ["グリーンハイドロクォーツ", "ラリマー", "フローライト", "緑", "12号", "13号", "14号", "18K polished"], 
+            img: "images/C002-12横so.webp",
+            url: "C002-12.html" 
+        },
+        { 
+            name: "グリーンカイヤナイト/フローライト/シトリン 11-13号",
+            price: "¥12,000(税込)", 
+            tags: ["グリーンカイヤナイト", "カイヤナイト", "フローライト", "シトリン", "11号", "12号", "13号", "18K polished"], 
+            img: "images/C007-11横.webp",
+            url: "C007-11.html" 
+        },
+        { 
+            name: "クリスタルクォーツ/ブルードゥルージー/ホワイトドゥルージー 10-12号",
+            price: "¥10,000(税込)", 
+            tags: ["クリスタルクォーツ", "ブルードゥルージー", "ホワイトドゥルージー", "ドゥルージー", "透明", "青", "白", "10号", "11号", "12号", "18K polished"], 
+            img: "images/C008-10横so.webp",
+            url: "C008-10.html" 
+        },
+        { 
+            name: "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 9-11号",
+            price: "¥12,000(税込)", 
+            tags: ["カイヤナイト", "グリーンカイヤナイト", "ハーキマーダイヤモンド", "9号", "10号", "11号", "18K polished"], 
+            img: "images/C009-9横.webp",
+            url: "C009-9.html" 
+        },
+        { 
+            name: "カイヤナイト/グリーンカイヤナイト/ハーキマーダイヤモンド 10-13号",
+            price: "¥12,000(税込)", 
+            tags: ["カイヤナイト", "グリーンカイヤナイト", "ハーキマーダイヤモンド", "10号", "11号", "12号", "13号", "18K polished"], 
+            img: "images/C009-10横so.webp",
+            url: "C009-10.html" 
+        },
+        { 
+            name: "ローズクォーツ/アクアマリン/シトリン 8-10号",
+            price: "¥15,000(税込)", 
+            tags: ["ローズクォーツ", "アクアマリン", "シトリン", "8号", "9号", "10号", "18K polished"], 
+            img: "images/C010-9横.webp",
+            url: "C010-9.html" 
+        },
+        { 
+            name: "ローズクォーツ/アクアマリン/シトリン 11-13号",
+            price: "¥15,000(税込)", 
+            tags: ["ローズクォーツ", "アクアマリン", "シトリン", "11号", "12号", "13号", "18K polished"], 
+            img: "images/C010-10横.webp",
+            url: "C010-10.html" 
+        },
+        { 
+            name: "フローライト/アメジスト/シトリン 9-11号",
+            price: "¥15,000(税込)", 
+            tags: ["フローライト", "アメジスト", "シトリン", "9号", "10号", "11号", "18K polished"], 
+            img: "images/C011-9横.webp",
+            url: "C011-9.html" 
+        },
+        { 
+            name: "ローズクォーツ/ガーネット/アメジスト 8-10号",
+            price: "¥10,000(税込)", 
+            tags: ["ローズクォーツ", "ガーネット", "アメジスト", "紫", "8号", "9号", "10号", "18K polished"], 
+            img: "images/C012-8横.webp",
+            url: "C012-8.html" 
+        },
+        { 
+            name: "グリーンカイヤナイト/クリスタルクォーツ/アパタイト 10-14号",
+            price: "¥12,000(税込)", 
+            tags: ["グリーンカイヤナイト", "カイヤナイト", "クリスタルクォーツ", "アパタイト", "青", "10号", "11号", "12号", "13号", "14号", "18K polished"], 
+            img: "images/C013-10横.webp",
+            url: "C013-10.html" 
+        },
+        { 
+            name: "カイヤナイト/アメジスト/シトリン 8-10号",
+            price: "¥10,000(税込)", 
+            tags: ["カイヤナイト", "アメジスト", "シトリン", "8号", "9号", "10号", "18K polished"], 
+            img: "images/C014-9横so.webp",
+            url: "C014-9.html" 
+        },
+        { 
+            name: "クリスタルクォーツ/カイヤナイト/タンザナイト 10-13号",
+            price: "¥15,000(税込)", 
+            tags: ["クリスタルクォーツ", "カイヤナイト", "タンザナイト", "青", "紫", "10号", "11号", "12号", "13号", "18K polished"], 
+            img: "images/C015-10横.webp",
+            url: "C015-10.html" 
+        },
+        { 
+            name: "カイヤナイト/アパタイト/クリスタルクォーツ 8-9号",
+            price: "¥25,000(税込)", 
+            tags: ["カイヤナイト", "アパタイト", "クリスタルクォーツ", "青", "緑", "透明", "8号", "9号", "Silver 925"], 
+            img: "images/C017-8横so.webp",
+            url: "C017-8.html" 
+        },
+        { 
+            name: "オニキス/ローズクォーツ/ローズクォーツ 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["オニキス", "クリスタルクォーツ", "黒", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C018-9横.webp",
+            url: "C018-9.html" 
+        },
+        { 
+            name: "レッドコーラル/オニキス/グリーンハイドロクォーツ 10-12号",
+            price: "¥23,000(税込)", 
+            tags: ["レッドコーラル", "オニキス", "グリーンハイドロクォーツ", "赤", "黒", "緑", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C019-9横.webp",
+            url: "C019-9.html" 
+        },
+        
+        { 
+            name: "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "オニキス", "クリスタルクォーツ", "黒", "透明", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C020-10-1横so.webp",
+            url: "C020-10-1.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 10-12号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "オニキス", "クリスタルクォーツ", "黒", "透明", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C020-10-2横.webp",
+            url: "C020-10-2.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/オニキス/クリスタルクォーツ 11-13号",
+            price: "¥20,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "オニキス", "クリスタルクォーツ", "黒", "透明", "11号", "12号", "13号", "18K matte"], 
+            img: "images/C020-11横.webp",
+            url: "C020-11.html" 
+        },
+        { 
+            name: "ラブラドライト/オパライト/グリーンオニキス 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["ラブラドライト", "オパライト", "グリーンオニキス", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C021-9横.webp",
+            url: "C021-9.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C022-9横.webp",
+            url: "C022-9.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ 10-12号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C022-10-1横.webp",
+            url: "C022-10-1.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ 11-13号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "11号", "12号", "13号", "18K matte"], 
+            img: "images/C022-10-2横.webp",
+            url: "C022-10-2.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ムーンストーン/ローズクォーツ 10-12号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ムーンストーン", "ローズクォーツ", "黒", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C022-11横.webp",
+            url: "C022-11.html" 
+        },
+        { 
+            name: "オニキス/ムーンストーン/グリーンオニキス 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["オニキス", "ムーンストーン", "グリーンオニキス", "黒", "緑", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C024-9横.webp",
+            url: "C024-9.html" 
+        },
+        { 
+            name: "ローズクォーツ/コーラル/ムーンストーン 9-11号",
+            price: "¥18,000(税込)", 
+            tags: ["ローズクォーツ", "コーラル", "ムーンストーン", "ピンク", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C025-9横.webp",
+            url: "C025-9.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ムーンストーン/カルセドニー 10-12号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C026-9横.webp",
+            url: "C026-9.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ムーンストーン/カルセドニー 11-13号",
+            price: "¥22,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "11号", "12号", "13号", "18K matte"], 
+            img: "images/C026-10横.webp",
+            url: "C026-10.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ムーンストーン/カルセドニー 10-12号",
+            price: "¥11,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ムーンストーン", "カルセドニー", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C026-11横.webp",
+            url: "C026-11.html" 
+        },
+        { 
+            name: "ゴールデンルチルクォーツ/オニキス/ハーキマーダイヤモンド 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["ゴールデンルチルクォーツ", "オニキス", "ハーキマーダイヤモンド", "黒", "透明", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C027-9横.webp",
+            url: "C027-9.html" 
+        },
+        { 
+            name: "ラブラドライト/グリーンオニキス/アメジスト 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["ラブラドライト", "グリーンオニキス", "アメジスト", "緑", "紫", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C028-9横so.webp",
+            url: "C028-9.html" 
+        },
+        { 
+            name: "ラブラドライト/グリーンオニキス/アメジスト 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["ラブラドライト", "グリーンオニキス", "アメジスト", "緑", "紫", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C028-11横.webp",
+            url: "C028-11.html" 
+        },
+{ 
+            name: "ラブラドライト/グリーンオニキス/アメジスト 10-12号",
+            price: "¥22,000(税込)", 
+            tags: ["ラブラドライト", "グリーンオニキス", "アメジスト", "緑", "紫", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C028-11-2横.webp",
+            url: "C028-11-2.html" 
+        },
+        { 
+            name: "ラブラドライト/グリーンオニキス/アメジスト 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["ラブラドライト", "グリーンオニキス", "アメジスト", "緑", "紫", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C028-13横.webp",
+            url: "C028-13.html" 
+        },
+        { 
+            name: "グリーンオニキス/プレナイト/アマゾナイト 9-12号",
+            price: "¥20,000(税込)", 
+            tags: ["グリーンオニキス", "プレナイト", "アマゾナイト", "緑", "9号", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C029-9横.webp",
+            url: "C029-9.html" 
+        },
+        { 
+            name: "グリーンオニキス/パール/アメジスト 9-12号",
+            price: "¥20,000(税込)", 
+            tags: ["グリーンオニキス", "パール", "アメジスト", "緑", "紫", "9号","10号", "11号", "12号", "18K matte"], 
+            img: "images/C030-10横.webp",
+            url: "C030-10.html" 
+        },
+        { 
+            name: "ラリマー/シトリン/クリスタルクォーツ 8-10号",
+            price: "¥24,000(税込)", 
+            tags: ["ラリマー", "シトリン", "クリスタルクォーツ", "8号", "9号", "10号", "18K matte"], 
+            img: "images/C031-9横.webp",
+            url: "C031-9.html" 
+        },
+        { 
+            name: "ラリマー/シトリン/クリスタルクォーツ 9-11号",
+            price: "¥24,000(税込)", 
+            tags: ["ラリマー", "シトリン", "クリスタルクォーツ", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C031-10横so.webp",
+            url: "C031-10.html" 
+        },
+        { 
+            name: "ラリマー/シトリン/クリスタルクォーツ 11-13号",
+            price: "¥24,000(税込)", 
+            tags: ["ラリマー", "シトリン", "クリスタルクォーツ", "11号", "12号", "13号", "18K matte"], 
+            img: "images/C031-11-1横.webp",
+            url: "C031-11-1.html" 
+        },
+        { 
+            name: "ラリマー/シトリン/クリスタルクォーツ 10-12号",
+            price: "¥24,000(税込)", 
+            tags: ["ラリマー", "シトリン", "クリスタルクォーツ", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C031-11-2横.webp",
+            url: "C031-11-2.html" 
+        },
+        { 
+            name: "ラリマー/シトリン/クリスタルクォーツ 11-13号",
+            price: "¥24,000(税込)", 
+            tags: ["ラリマー", "シトリン", "クリスタルクォーツ", "11号", "12号", "13号", "18K matte"], 
+            img: "images/C031-11-3横.webp",
+            url: "C031-11-3.html" 
+        },
+        { 
+            name: "ブルーレースアゲート/ピンクモナリザ/ローズクォーツ 8-10号",
+            price: "¥24,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "ピンクモナリザ", "ローズクォーツ", "8号", "9号", "10号", "18K matte"], 
+            img: "images/C032-9-1横.webp",
+            url: "C032-9-1.html" 
+        },
+        { 
+            name: "ブルーレースアゲート/ピンクモナリザ/ローズクォーツ 9-11号",
+            price: "¥24,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "ピンクモナリザ", "ローズクォーツ", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C032-9-2横.webp",
+            url: "C032-9-2.html" 
+        },
+        { 
+            name: "ブルーレースアゲート/ピンクモナリザ/ローズクォーツ 9-11号",
+            price: "¥24,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "ピンクモナリザ", "ローズクォーツ", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C032-10-1横.webp",
+            url: "C032-10-1.html" 
+        },
+        { 
+            name: "ブルーレースアゲート/ピンクモナリザ/ローズクォーツ 10-12号",
+            price: "¥24,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "ピンクモナリザ", "ローズクォーツ", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C032-10-2横.webp",
+            url: "C032-10-2.html" 
+        },
+        { 
+            name: "ブルーレースアゲート/ピンクモナリザ/ローズクォーツ 10-13号",
+            price: "¥24,000(税込)", 
+            tags: ["ブルーレースアゲート", "アゲート", "ピンクモナリザ", "ローズクォーツ", "10号", "11号", "12号", "13号", "18K matte"], 
+            img: "images/C032-11横.webp",
+            url: "C032-11.html" 
+        },
+        { 
+            name: "グリーンアメジスト/ラリマー/アメジスト 8-10号",
+            price: "¥22,000(税込)", 
+            tags: ["グリーンアメジスト", "ラリマー", "アメジスト", "8号", "9号", "10号", "18K matte"], 
+            img: "images/C033-9-1横.webp",
+            url: "C033-9-1.html" 
+        },
+        { 
+            name: "グリーンアメジスト/ラリマー/アメジスト 8-10号",
+            price: "¥22,000(税込)", 
+            tags: ["グリーンアメジスト", "ラリマー", "アメジスト", "8号", "9号", "10号", "18K matte"], 
+            img: "images/C033-9-2横.webp",
+            url: "C033-9-2.html" 
+        },
+        { 
+            name: "グリーンアメジスト/ラリマー/アメジスト 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["グリーンアメジスト", "ラリマー", "アメジスト", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C033-9-3横.webp",
+            url: "C033-9-3.html" 
+        },
+        { 
+            name: "グリーンアメジスト/ラリマー/アメジスト 10-12号",
+            price: "¥22,000(税込)", 
+            tags: ["グリーンアメジスト", "ラリマー", "アメジスト", "10号", "11号", "12号", "18K matte"], 
+            img: "images/C033-10-1横.webp",
+            url: "C033-10-1.html" 
+        },
+        { 
+            name: "グリーンアメジスト/ラリマー/アメジスト 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["グリーンアメジスト", "ラリマー", "アメジスト", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C033-10-2横.webp",
+            url: "C033-10-2.html" 
+        },
+        
+        { 
+            name: "オニキス/パール/ピンクハイドロクォーツ 9-11号",
+            price: "¥22,000(税込)", 
+            tags: ["オニキス", "パール", "ピンクハイドロクォーツ", "9号", "10号", "11号", "18K matte"], 
+            img: "images/C034-10横.webp",
+            url: "C034-10.html" 
+        },
+
+        { 
+            name: "スモーキークォーツ/グリーンオニキス/ハーキマーダイヤモンド 12-14号",
+            price: "¥25,000(税込)", 
+            tags: ["スモーキークォーツ", "グリーンオニキス", "ハーキマーダイヤモンド", "12号", "13号", "14号", "Silver 925"], 
+            img: "images/SC001-13-1横.webp",
+            url: "SC001-13-1.html" 
+        },
+        { 
+            name: "スモーキークォーツ/グリーンオニキス/ハーキマーダイヤモンド 12-14号",
+            price: "¥25,000(税込)", 
+            tags: ["スモーキークォーツ", "グリーンオニキス", "ハーキマーダイヤモンド", "12号", "13号", "14号", "Silver 925"], 
+            img: "images/SC001-13-2横.webp",
+            url: "SC001-13-2.html" 
+        },
+        { 
+            name: "スモーキークォーツ/グリーンオニキス/ハーキマーダイヤモンド 12-14号",
+            price: "¥25,000(税込)", 
+            tags: ["スモーキークォーツ", "グリーンオニキス", "ハーキマーダイヤモンド", "12号", "13号", "14号", "Silver 925"], 
+            img: "images/SC001-13-3横.webp",
+            url: "SC001-13-3.html" 
+        },
+        { 
+            name: "スモーキークォーツ/グリーンオニキス/ハーキマーダイヤモンド 12-14号",
+            price: "¥25,000(税込)", 
+            tags: ["スモーキークォーツ", "グリーンオニキス", "ハーキマーダイヤモンド", "12号", "13号", "14号", "Silver 925"], 
+            img: "images/SC001-13-4横.webp",
+            url: "SC001-13-4.html" 
+        },
+        { 
+            name: "スモーキークォーツ/グリーンオニキス/ハーキマーダイヤモンド 12-14号",
+            price: "¥25,000(税込)", 
+            tags: ["スモーキークォーツ", "グリーンオニキス", "ハーキマーダイヤモンド", "12号", "13号", "14号", "Silver 925"], 
+            img: "images/SC001-13-5横.webp",
+            url: "SC001-13-5.html" 
+        },
+
+        { 
+            name: "タンザナイト/アメジスト/ガーネット/ローズクォーツ 8-10号",
+            price: "¥5,000(税込)", 
+            tags: ["タンザナイト", "アメジスト", "ガーネット", "ローズクォーツ", "紫", "8号", "9号", "10号", "18K polished"], 
+            img: "images/D001-8横.webp",
+            url: "D001-8.html" 
+        },
+        { 
+            name: "アマゾナイト/ソーラークォーツ/シトリン/アゲート 12-14号",
+            price: "¥15,000(税込)", 
+            tags: ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "12号", "13号", "14号", "18K polished"], 
+            img: "images/D002-12横so.webp",
+            url: "D002-12.html" 
+        },
+        { 
+            name: "アマゾナイト/ソーラークォーツ/シトリン/アゲート 13-15号",
+            price: "¥15,000(税込)", 
+            tags: ["アマゾナイト", "ソーラークォーツ", "シトリン", "アゲート", "青", "水色", "13号", "14号", "15号", "18K polished"], 
+            img: "images/D002-13横so.webp",
+            url: "D002-13.html" 
+        },
+        { 
+            name: "アメジスト 10号",
+            price: "¥6,000(税込)", 
+            tags: ["アメジスト", "紫", "10号", "18K polished"], 
+            img: "images/C003-10横.webp",
+            url: "C003-10.html" 
+        },
+        { 
+            name: "アクアマリン/アメジスト/シトリン 9号",
+            price: "¥6,000(税込)", 
+            tags: ["アクアマリン", "アメジスト", "シトリン", "9号", "18K polished"], 
+            img: "images/C004-9横.webp",
+            url: "C004-9.html" 
+        },
+        { 
+            name: "クリスタルクォーツ 9号",
+            price: "¥6,000(税込)", 
+            tags: ["クリスタルクォーツ", "透明", "9号", "18K polished"], 
+            img: "images/C005-9横so.webp",
+            url: "C005-9.html" 
+        },
+        { 
+            name: "フローライト 9号",
+            price: "¥6,000(税込)", 
+            tags: ["グリーンフローライト", "フローライト", "緑", "9号", "18K polished"], 
+            img: "images/C006-10横.webp",
+            url: "C006-10.html" 
+        },
+        { 
+            name: "ピンクドゥルージー 9号",
+            price: "¥3,900(税込)", 
+            tags: ["ピンクドゥルージー", "ドゥルージー", "ピンク", "9号", "18K polished"], 
+            img: "images/C016-9横.webp",
+            url: "C016-9.html" 
+        },
+        { 
+            name: "アクアマリン 8-11号",
+            price: "¥6,000(税込)", 
+            tags: ["アクアマリン", "水色", "8号", "9号", "10号", "11号", "18K polished"], 
+            img: "images/B001-9正面.webp",
+            url: "B001-9.html"
+        },
+        { 
+            name: "ハーキマーダイヤモンド/クリスタルクォーツ 12-14号",
+            price: "¥10,000(税込)", 
+            tags: ["ハーキマーダイヤモンド", "クリスタルクォーツ", "透明", "12号", "13号", "14号", "18K polished"], 
+            img: "images/B003-12正面so.webp",
+            url: "B003-12.html" 
+        },
+        { 
+            name: "ブラックルチルクォーツ/ハーキマーダイヤモンド 9-14号",
+            price: "¥8,000(税込)", 
+            tags: ["ブラックルチルクォーツ", "ハーキマーダイヤモンド", "黒", "透明", "9号", "10号", "11号", "12号", "13号", "14号", "18K matte"], 
+            img: "images/B007-9正面so.webp",
+            url: "B007-9.html" 
+        },
+        ];
+        
+        const currentProduct = products.find(p => p.url === "C028-11.html");
+        
+        // 関連商品を取得（同じタグを含む）
+const relatedProducts = products.filter(p => 
+    p !== currentProduct && // 自分自身を除外
+    p.tags.some(tag => currentProduct.tags.includes(tag)) // タグが一致する商品を取得
+);
+
+console.log("Related items:", relatedProducts);
+
+// 関連商品をHTMLに表示
+const relatedContainer = document.getElementById("related-products");
+if (relatedProducts.length > 0) {
+    relatedProducts.forEach(product => {
+        const productElement = document.createElement("div");
+        productElement.classList.add("related-product"); // ✅ クラスを追加
+        productElement.innerHTML = `
+            <a href="${product.url}">
+                <img loading="lazy" src="${product.img}" alt="${product.name}" width="100">
+                <p>${product.name}</p>
+                <p>${product.price}</p>
+            </a>
+        `;
+        relatedContainer.appendChild(productElement);
+    });
+} else {
+    relatedContainer.innerHTML = "<p>関連商品がありません</p>";
+}
+
+
+    function swapImages(thumbnail) {
+        let mainImage = document.getElementById("main-image");
+
+        // 現在のメイン画像を一時保存
+        let tempSrc = mainImage.src;
+
+        // クリックされたサムネイルの画像をメイン画像に設定
+        mainImage.src = thumbnail.src;
+
+        // 元のメイン画像をサムネイルに戻す
+        thumbnail.src = tempSrc;
+    }
+
+    const relatedItems = document.getElementById('related-items');
+
+    // カートに追加する関数
+    document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount(); // ← これを最初に実行！
+
+    const button = document.querySelector(".buy-button");
+        if (button) {
+            button.addEventListener("click", function () {
+        const productInfo = document.getElementById("product-info");
+        const product = {
+        id: productInfo.dataset.productId,
+        title: document.querySelector(".product-title").textContent,  // 商品名
+        material: "ラブラドライト/アメジスト/グリーンオニキス 12-14号",  // 素材
+        price: 22000,  // 価格
+        size: "12-14号",  // サイズ
+        quantity: 1,  // 数量
+        image: document.getElementById("main-image").src  // 商品画像のURL
+    };
+
+    const result = addToCart(product); // ✅ 結果を受け取る
+            if (result === true) {
+                alert("商品がカートに追加されました！※30分でカートから削除されます");
+            }
+    });
+}
+});
+
+// カートデータをローカルストレージに保存
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    const existing = cart.find(item => item.id === product.id);
+
+    if (existing && existing.quantity >= 1) {
+        alert("在庫は1つしかないので、同一の商品を2つ以上カートに入れることは出来ません。");
+        return false; // 追加処理を中断
+    }
+
+    if (existing) {
+        existing.quantity += 1;
+        existing.timestamp = new Date().getTime(); // タイムスタンプ更新
+    } else {
+    product.timestamp = new Date().getTime(); // 新しい商品にもtimestampを追加
+    cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+
+    return true;
+}
+
+    // ★新しい updateCartCount（これだけでOK！）
+function updateCartCount() {
+    const THIRTY_MINUTES = 30 * 60 * 1000;
+    const now = new Date().getTime();
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // 30分以内の商品だけ残す
+    cart = cart.filter(item => !item.timestamp || (now - item.timestamp < THIRTY_MINUTES));
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const countElem = document.getElementById('cart-count');
+    countElem.textContent = totalQuantity;
+    countElem.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+}
+
+// ページ読み込み時にもチェック
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount(); // ページ読み込み時にまず1回チェックする
+
+    // 5秒ごとにカート内容をチェック・更新（テスト用）
+    setInterval(updateCartCount, 5000); 
+});
+
+      </script>
+</body>
+
+</html>
+
