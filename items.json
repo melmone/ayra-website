@@ -1316,7 +1316,7 @@
         "base": "Brass, 18K matte gold plated",
         "price": 22000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["グリーンアメジスト", "ラリマー", "アメジスト", "9号", "10号", "11号"],
         "image": "images/C033-10-2横.webp",
         "url": "C033-10-2.html"
