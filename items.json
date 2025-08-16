@@ -1342,9 +1342,9 @@
         "base": "Silver 925",
         "price": 25000,
         "stock": 1,
-        "soldOut": false,
+        "soldOut": true,
         "tags": ["スモーキークォーツ", "グリーンオニキス", "ハーキマーダイヤモンド", "12号", "13号", "14号"],
-        "image": "images/SC001-13-1横.webp",
+        "image": "images/SC001-13-1横so.webp",
         "url": "SC001-13-1.html"
       },
 
